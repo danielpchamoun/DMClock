@@ -1,0 +1,23 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid fefe862a-759c-4cf5-9578-f34436bd9c4d)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "Barrel Jack" (shape output) (at 69.596 106.807 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 55085cf0-6754-44a3-b6fa-4e5ba25ebd1e)
+  )
+  (hierarchical_label "HV" (shape output) (at 69.723 102.362 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid a19d9106-1fdd-44d7-9ff4-8eac2efa72a0)
+  )
+  (hierarchical_label "9V" (shape input) (at 69.596 110.109 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid d5b3ca18-e03a-423d-a33b-e50b3ffefd8d)
+  )
+)
