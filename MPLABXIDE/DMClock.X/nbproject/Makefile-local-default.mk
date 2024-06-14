@@ -34,4 +34,4 @@ MP_CC_DIR="D:\Microchip\bin"
 MP_AS_DIR="D:\Microchip\bin"
 MP_LD_DIR="D:\Microchip\bin"
 MP_AR_DIR="D:\Microchip\bin"
-DFP_DIR=D:/Microchip/packs/Microchip/PIC16Fxxx_DFP/1.6.156
+DFP_DIR=D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387

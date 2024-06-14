@@ -9,5 +9,12 @@
 #include <xc.h>
 
 void main(void) {
+    
+    SYSTEM_Initialize();
+    
+    // Initialize SPI and I2C modules
+    I2C1_Initialize();
+    SPI2_Initialize();
+    
     return;
 }
