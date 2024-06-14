@@ -42,7 +42,6 @@
 #include "config_bits.h"
 #include "../system/pins.h"
 #include "../i2c_host/mssp1.h"
-#include "../spi/mssp2.h"
 #include "../system/interrupt.h"
 #include "../system/clock.h"
 

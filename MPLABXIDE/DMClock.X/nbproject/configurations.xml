@@ -13,11 +13,6 @@
           <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="spi" displayName="spi" projectFiles="true">
-          <itemPath>mcc_generated_files/spi/spi_polling_types.h</itemPath>
-          <itemPath>mcc_generated_files/spi/spi_interface.h</itemPath>
-          <itemPath>mcc_generated_files/spi/mssp2.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <itemPath>mcc_generated_files/system/system.h</itemPath>
           <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
@@ -46,11 +41,6 @@
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/i2c_host/src/mssp1.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="spi" displayName="spi" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/spi/src/mssp2.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
