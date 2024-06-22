@@ -173,12 +173,16 @@
       ],
       "track_widths": [
         0.0,
-        0.5
+        0.45
       ],
       "via_dimensions": [
         {
           "diameter": 0.0,
           "drill": 0.0
+        },
+        {
+          "diameter": 0.45,
+          "drill": 0.4
         }
       ],
       "zones_allow_external_fillets": false
@@ -391,7 +395,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -427,6 +431,23 @@
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.32,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "HV",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgb(25, 255, 0)",
+        "track_width": 0.45,
+        "via_diameter": 0.45,
+        "via_drill": 0.4,
+        "wire_width": 6
       }
     ],
     "meta": {
@@ -434,7 +455,424 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9A"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NA1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NA1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9B"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NB1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NB1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9C"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NC1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NC1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9D"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(ND1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(ND1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9E"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NE1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NE1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9F"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NF1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NF1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9G"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NG1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NG1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/0H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/1H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/2H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/3H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/4H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/5H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/6H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/7H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/8H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "/User Interface/9H"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NH1-PadRHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NH1-PadLHDP)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NA1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NB1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NC1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(ND1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NE1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NF1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NG1-PadA)"
+      },
+      {
+        "netclass": "HV",
+        "pattern": "Net-(NH1-PadA)"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
