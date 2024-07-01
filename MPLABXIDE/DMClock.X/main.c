@@ -7,13 +7,19 @@
 
 
 #include <xc.h>
+#include "mcc_generated_files\system\system.h"
 
 void main(void) {
-    
+    // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
     
-    // Initialize SPI and I2C modules
-    I2C1_Initialize();
     
+    
+    //rtc driver
+    //stored current time in 
+    while(true){
+        I2C1_ReadStart();        
+        
+    }
     return;
 }
