@@ -42,7 +42,6 @@
 #include "config_bits.h"
 #include "../system/pins.h"
 #include "../i2c_host/mssp1.h"
-#include "../nvm/nvm.h"
 #include "../pwm/pwm5.h"
 #include "../pwm/pwm6.h"
 #include "../timer/tmr2.h"

@@ -7,18 +7,11 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="eeprom-lib" displayName="eeprom-lib" projectFiles="true">
-          <itemPath>mcc_generated_files/eeprom-lib/eeprom.h</itemPath>
-          <itemPath>mcc_generated_files/eeprom-lib/eeprom_interface.h</itemPath>
-        </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <itemPath>mcc_generated_files/i2c_host/mssp1.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
-        </logicalFolder>
-        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
-          <itemPath>mcc_generated_files/nvm/nvm.h</itemPath>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm5.h</itemPath>
@@ -53,19 +46,9 @@
       <logicalFolder name="MCC Generated Files"
                      displayName="MCC Generated Files"
                      projectFiles="true">
-        <logicalFolder name="eeprom-lib" displayName="eeprom-lib" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/eeprom-lib/src/eeprom.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/i2c_host/src/mssp1.c</itemPath>
-          </logicalFolder>
-        </logicalFolder>
-        <logicalFolder name="nvm" displayName="nvm" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/nvm/src/nvm.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
