@@ -12,9 +12,7 @@
 
 
 //saved in non volatile eeprom
-__eeprom extern uint8_t time = 0xC;
-__eeprom extern uint8_t alarm1 = 0xC;
-__eeprom extern uint8_t alarm2 = 0xC;
+__eeprom extern uint8_t alarm = 0xC;
 
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
