@@ -52,6 +52,22 @@
 
 /**
  * @ingroup nvm_driver
+ * @def EEPROM_START_ADDRESS
+ * Contains the starting address of EEPROM.
+ */
+#define EEPROM_START_ADDRESS (0xF000U)
+
+/**
+ * @ingroup nvm_driver
+ * @def EEPROM_SIZE
+ * Contains the size of EEPROM in bytes.
+ */
+#ifndef EEPROM_SIZE
+#define EEPROM_SIZE          (256U)
+#endif
+
+/**
+ * @ingroup nvm_driver
  * @def UNLOCK_KEY
  * Contains the unlock key required for the NVM operations.
  */
@@ -67,6 +83,17 @@ typedef uint16_t flash_data_t; //Flash data size is 14-bit. Two most significant
  * @brief Data type for the Flash address.
  */
 typedef uint16_t flash_address_t;
+
+/**
+ * @ingroup nvm_driver
+ * @brief Data type for the EEPROM data.
+ */
+typedef uint8_t eeprom_data_t;
+/**
+ * @ingroup nvm_driver
+ * @brief Data type for the EEPROM address.
+ */
+typedef uint16_t eeprom_address_t;
 
 /**
  * @ingroup nvm_driver
@@ -180,5 +207,26 @@ uint16_t FLASH_PageOffsetGet(flash_address_t address);
 //Below macros are added to provide backward compatibility. These will be deprecated in the future versions.
 #define FLASH_ErasePageAddressGet FLASH_PageAddressGet
 #define FLASH_ErasePageOffsetGet FLASH_PageOffsetGet
+
+/**
+ * @ingroup nvm_driver
+ * @brief Reads one byte from the given EEPROM address.
+ * @param [in] address - Address of the EEPROM location to be read.
+ * @return Byte read from the given EEPROM address.
+ */
+eeprom_data_t EEPROM_Read(eeprom_address_t address);
+
+/**
+ * @ingroup nvm_driver
+ * @brief Writes one byte to the given EEPROM address. 
+ *      The NVM busy status must be checked using the @ref NVM_IsBusy() API to know if the write operation is completed.
+ *      Use the @ref NVM_StatusGet() API to see the result of the write operation.
+ * @pre Set the unlock key using the @ref NVM_UnlockKeySet() API, if the key has been cleared before. 
+ *       AoU: **Address Qualifiers** must be configured to **Require** under *Project Properties>XC8 Compiler>Optimizations*.
+ * @param [in] address - Address of the EEPROM location to be written.
+ * @param [in] data - Byte to be written to the given EEPROM location.
+ * @return None.
+ */
+void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
 
 #endif /* NVM_H */

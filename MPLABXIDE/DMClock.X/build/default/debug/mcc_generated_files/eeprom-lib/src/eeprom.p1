@@ -1,49 +1,50 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6682 `(v ~T0 @X0 0 tf ]
-"8310 D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8310: extern volatile unsigned char PR4 __attribute__((address(0x416)));
-[v _PR4 `Vuc ~T0 @X0 0 e@1046 ]
-"8290
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8290: extern volatile unsigned char TMR4 __attribute__((address(0x415)));
-[v _TMR4 `Vuc ~T0 @X0 0 e@1045 ]
-"636
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 636:     struct {
-[s S43 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S43 . NCO1IF TMR4IF BCL2IF SSP2IF NVMIF C1IF C2IF TMR6IF ]
-"635
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 635: typedef union {
-[u S42 `S43 1 ]
-[n S42 . . ]
-"647
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 647: extern volatile PIR2bits_t PIR2bits __attribute__((address(0x012)));
-[v _PIR2bits `VS42 ~T0 @X0 0 e@18 ]
-"8330
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8330: extern volatile unsigned char T4CON __attribute__((address(0x417)));
-[v _T4CON `Vuc ~T0 @X0 0 e@1047 ]
-[v F6677 `(v ~T0 @X0 0 tf ]
-"108 mcc_generated_files/timer/src/../tmr4.h
-[; ;mcc_generated_files/timer/src/../tmr4.h: 108: void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void));
-[v _TMR4_OverflowCallbackRegister `(v ~T0 @X0 0 ef1`*F6677 ]
-"42 mcc_generated_files/timer/src/tmr4.c
-[; ;mcc_generated_files/timer/src/tmr4.c: 42: static void TMR4_DefaultOverflowCallback(void);
-[v _TMR4_DefaultOverflowCallback `(v ~T0 @X0 0 sf ]
-"8336 D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8336:     struct {
-[s S397 :2 `uc 1 :1 `uc 1 :4 `uc 1 ]
-[n S397 . T4CKPS TMR4ON T4OUTPS ]
-"8341
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8341:     struct {
-[s S398 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S398 . T4CKPS0 T4CKPS1 . T4OUTPS0 T4OUTPS1 T4OUTPS2 T4OUTPS3 ]
-"8335
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8335: typedef union {
-[u S396 `S397 1 `S398 1 ]
-[n S396 . . . ]
-"8351
-[; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 8351: extern volatile T4CONbits_t T4CONbits __attribute__((address(0x417)));
-[v _T4CONbits `VS396 ~T0 @X0 0 e@1047 ]
-[v F6695 `(v ~T0 @X0 0 tf ]
-[v F6697 `(v ~T0 @X0 0 tf ]
+[v F198 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F203 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F208 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F212 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F216 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F220 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F224 `(a ~T0 @X0 0 tf ]
+"46 mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom_interface.h: 46: {
+[s S6 `*F198 1 `*F203 1 `*F208 1 `*F212 1 `*F216 1 `*F220 1 `*F224 1 ]
+[n S6 EEPROM_INTERFACE SequentialWrite SequentialRead PageWrite PageRead ByteWrite ByteRead IsBusy ]
+[v F6737 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F6741 `(a ~T0 @X0 0 tf3`ul`*uc`ui ]
+[v F6745 `(a ~T0 @X0 0 tf2`ul`*uc ]
+[v F6748 `(a ~T0 @X0 0 tf2`ul`*uc ]
+"52 mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h: 52: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data);
+[v _EEPROM_ByteWrite `(a ~T0 @X0 0 ef2`ul`*uc ]
+"62
+[; ;mcc_generated_files/eeprom-lib/src/../../eeprom-lib/eeprom.h: 62: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data);
+[v _EEPROM_ByteRead `(a ~T0 @X0 0 ef2`ul`*uc ]
+"124 mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 124: _Bool NVM_IsBusy(void);
+[v _NVM_IsBusy `(a ~T0 @X0 0 ef ]
+"149
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 149: void NVM_UnlockKeySet(uint16_t unlockKey);
+[v _NVM_UnlockKeySet `(v ~T0 @X0 0 ef1`us ]
+"230
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 230: void EEPROM_Write(eeprom_address_t address, eeprom_data_t data);
+[v _EEPROM_Write `(v ~T0 @X0 0 ef2`us`uc ]
+"157
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 157: void NVM_UnlockKeyClear(void);
+[v _NVM_UnlockKeyClear `(v ~T0 @X0 0 ef ]
+"56 mcc_generated_files/eeprom-lib/src/eeprom.c
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 56:     if (NVM_StatusGet() == NVM_OK)
+[c E6709 0 1 .. ]
+[n E6709 . NVM_OK NVM_ERROR  ]
+"133 mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 133: nvm_status_t NVM_StatusGet(void);
+[v _NVM_StatusGet `(E6709 ~T0 @X0 0 ef ]
+"141
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 141: void NVM_StatusClear(void);
+[v _NVM_StatusClear `(v ~T0 @X0 0 ef ]
+"217
+[; ;mcc_generated_files/eeprom-lib/src/../../nvm/nvm.h: 217: eeprom_data_t EEPROM_Read(eeprom_address_t address);
+[v _EEPROM_Read `(uc ~T0 @X0 0 ef1`us ]
 "54 D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
 [; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1103,175 +1104,121 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19666
 [; ;D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 19666: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"41 mcc_generated_files/timer/src/tmr4.c
-[; ;mcc_generated_files/timer/src/tmr4.c: 41: static void (*TMR4_OverflowCallback)(void);
-[v _TMR4_OverflowCallback `*F6682 ~T0 @X0 1 s ]
+"38 mcc_generated_files/eeprom-lib/src/eeprom.c
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 38: const EEPROM_INTERFACE_t eeprom_interface = {
+[v _eeprom_interface `CS6 ~T0 @X0 1 e ]
+[i _eeprom_interface
+:U ..
+:U ..
+-> -> -> 0 `i `*v `*F6737
+-> -> -> 0 `i `*v `*F6741
+-> -> -> 0 `i `*v `*F6745
+-> -> -> 0 `i `*v `*F6748
+&U _EEPROM_ByteWrite
+&U _EEPROM_ByteRead
+&U _NVM_IsBusy
+..
+..
+]
 "48
-[; ;mcc_generated_files/timer/src/tmr4.c: 48: void TMR4_Initialize(void){
-[v _TMR4_Initialize `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 48: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data)
+[v _EEPROM_ByteWrite `(a ~T0 @X0 1 ef2`ul`*uc ]
+"49
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 49: {
 {
-[e :U _TMR4_Initialize ]
+[e :U _EEPROM_ByteWrite ]
+"48
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 48: _Bool EEPROM_ByteWrite(uint32_t address, uint8_t *data)
+[v _address `ul ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+"49
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 49: {
 [f ]
+"50
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 50:     uint8_t getData = *data;
+[v _getData `uc ~T0 @X0 1 a ]
+[e = _getData *U _data ]
+"51
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 51:     eeprom_address_t writeAddress = (eeprom_address_t) (address);
+[v _writeAddress `us ~T0 @X0 1 a ]
+[e = _writeAddress -> _address `us ]
 "52
-[; ;mcc_generated_files/timer/src/tmr4.c: 52:     PR4 = 0x7F;
-[e = _PR4 -> -> 127 `i `uc ]
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 52:     NVM_UnlockKeySet((0xAA55U));
+[e ( _NVM_UnlockKeySet (1 -> -> 43605 `ui `us ]
+"53
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 53:     EEPROM_Write(writeAddress, getData);
+[e ( _EEPROM_Write (2 , _writeAddress _getData ]
 "54
-[; ;mcc_generated_files/timer/src/tmr4.c: 54:     TMR4 = 0x0;
-[e = _TMR4 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 54:     NVM_UnlockKeyClear();
+[e ( _NVM_UnlockKeyClear ..  ]
+"55
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 55:     while (NVM_IsBusy());
+[e $U 964  ]
+[e :U 965 ]
+[e :U 964 ]
+[e $ != -> ( _NVM_IsBusy ..  `i -> 0 `i 965  ]
+[e :U 966 ]
+"56
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 56:     if (NVM_StatusGet() == NVM_OK)
+[e $ ! == -> ( _NVM_StatusGet ..  `ui -> . `E6709 0 `ui 967  ]
 "57
-[; ;mcc_generated_files/timer/src/tmr4.c: 57:      PIR2bits.TMR4IF = 0;
-[e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
-"59
-[; ;mcc_generated_files/timer/src/tmr4.c: 59:     T4CON = 0x7;
-[e = _T4CON -> -> 7 `i `uc ]
-"62
-[; ;mcc_generated_files/timer/src/tmr4.c: 62:     TMR4_OverflowCallbackRegister(TMR4_DefaultOverflowCallback);
-[e ( _TMR4_OverflowCallbackRegister (1 &U _TMR4_DefaultOverflowCallback ]
-"63
-[; ;mcc_generated_files/timer/src/tmr4.c: 63: }
-[e :UE 962 ]
-}
-"65
-[; ;mcc_generated_files/timer/src/tmr4.c: 65: void TMR4_Start(void)
-[v _TMR4_Start `(v ~T0 @X0 1 ef ]
-"66
-[; ;mcc_generated_files/timer/src/tmr4.c: 66: {
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 57:     {
 {
-[e :U _TMR4_Start ]
-[f ]
-"68
-[; ;mcc_generated_files/timer/src/tmr4.c: 68:     T4CONbits.TMR4ON = 1;
-[e = . . _T4CONbits 0 1 -> -> 1 `i `uc ]
-"69
-[; ;mcc_generated_files/timer/src/tmr4.c: 69: }
+"58
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 58:         return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 963  ]
+"59
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 59:     }
+}
+[e $U 968  ]
+"60
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 60:     else
+[e :U 967 ]
+"61
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 61:     {
+{
+"62
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 62:         NVM_StatusClear();
+[e ( _NVM_StatusClear ..  ]
+"63
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 63:         return 0;
+[e ) -> -> 0 `i `a ]
+[e $UE 963  ]
+"64
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 64:     }
+}
+[e :U 968 ]
+"65
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 65: }
 [e :UE 963 ]
 }
+"67
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 67: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data)
+[v _EEPROM_ByteRead `(a ~T0 @X0 1 ef2`ul`*uc ]
+"68
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 68: {
+{
+[e :U _EEPROM_ByteRead ]
+"67
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 67: _Bool EEPROM_ByteRead(uint32_t address, uint8_t *data)
+[v _address `ul ~T0 @X0 1 r1 ]
+[v _data `*uc ~T0 @X0 1 r2 ]
+"68
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 68: {
+[f ]
+"69
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 69:     eeprom_address_t readAddress = (eeprom_address_t) (address);
+[v _readAddress `us ~T0 @X0 1 a ]
+[e = _readAddress -> _address `us ]
+"70
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 70:     *data = EEPROM_Read(readAddress);
+[e = *U _data ( _EEPROM_Read (1 _readAddress ]
 "71
-[; ;mcc_generated_files/timer/src/tmr4.c: 71: void TMR4_Stop(void)
-[v _TMR4_Stop `(v ~T0 @X0 1 ef ]
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 71:     return 1;
+[e ) -> -> 1 `i `a ]
+[e $UE 969  ]
 "72
-[; ;mcc_generated_files/timer/src/tmr4.c: 72: {
-{
-[e :U _TMR4_Stop ]
-[f ]
-"74
-[; ;mcc_generated_files/timer/src/tmr4.c: 74:     T4CONbits.TMR4ON = 0;
-[e = . . _T4CONbits 0 1 -> -> 0 `i `uc ]
-"75
-[; ;mcc_generated_files/timer/src/tmr4.c: 75: }
-[e :UE 964 ]
-}
-"77
-[; ;mcc_generated_files/timer/src/tmr4.c: 77: uint8_t TMR4_Read(void)
-[v _TMR4_Read `(uc ~T0 @X0 1 ef ]
-"78
-[; ;mcc_generated_files/timer/src/tmr4.c: 78: {
-{
-[e :U _TMR4_Read ]
-[f ]
-"79
-[; ;mcc_generated_files/timer/src/tmr4.c: 79:     uint8_t readVal;
-[v _readVal `uc ~T0 @X0 1 a ]
-"80
-[; ;mcc_generated_files/timer/src/tmr4.c: 80:     readVal = TMR4;
-[e = _readVal _TMR4 ]
-"81
-[; ;mcc_generated_files/timer/src/tmr4.c: 81:     return readVal;
-[e ) _readVal ]
-[e $UE 965  ]
-"82
-[; ;mcc_generated_files/timer/src/tmr4.c: 82: }
-[e :UE 965 ]
-}
-"84
-[; ;mcc_generated_files/timer/src/tmr4.c: 84: void TMR4_Write(uint8_t timerVal)
-[v _TMR4_Write `(v ~T0 @X0 1 ef1`uc ]
-"85
-[; ;mcc_generated_files/timer/src/tmr4.c: 85: {
-{
-[e :U _TMR4_Write ]
-"84
-[; ;mcc_generated_files/timer/src/tmr4.c: 84: void TMR4_Write(uint8_t timerVal)
-[v _timerVal `uc ~T0 @X0 1 r1 ]
-"85
-[; ;mcc_generated_files/timer/src/tmr4.c: 85: {
-[f ]
-"87
-[; ;mcc_generated_files/timer/src/tmr4.c: 87:     TMR4 = timerVal;;
-[e = _TMR4 _timerVal ]
-"88
-[; ;mcc_generated_files/timer/src/tmr4.c: 88: }
-[e :UE 966 ]
-}
-"90
-[; ;mcc_generated_files/timer/src/tmr4.c: 90: void TMR4_PeriodCountSet(size_t periodVal)
-[v _TMR4_PeriodCountSet `(v ~T0 @X0 1 ef1`ui ]
-"91
-[; ;mcc_generated_files/timer/src/tmr4.c: 91: {
-{
-[e :U _TMR4_PeriodCountSet ]
-"90
-[; ;mcc_generated_files/timer/src/tmr4.c: 90: void TMR4_PeriodCountSet(size_t periodVal)
-[v _periodVal `ui ~T0 @X0 1 r1 ]
-"91
-[; ;mcc_generated_files/timer/src/tmr4.c: 91: {
-[f ]
-"92
-[; ;mcc_generated_files/timer/src/tmr4.c: 92:    PR4 = (uint8_t) periodVal;
-[e = _PR4 -> _periodVal `uc ]
-"93
-[; ;mcc_generated_files/timer/src/tmr4.c: 93: }
-[e :UE 967 ]
-}
-"95
-[; ;mcc_generated_files/timer/src/tmr4.c: 95: void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void)){
-[v _TMR4_OverflowCallbackRegister `(v ~T0 @X0 1 ef1`*F6695 ]
-{
-[e :U _TMR4_OverflowCallbackRegister ]
-[v _InterruptHandler `*F6697 ~T0 @X0 1 r1 ]
-[f ]
-"96
-[; ;mcc_generated_files/timer/src/tmr4.c: 96:     TMR4_OverflowCallback = InterruptHandler;
-[e = _TMR4_OverflowCallback _InterruptHandler ]
-"97
-[; ;mcc_generated_files/timer/src/tmr4.c: 97: }
-[e :UE 968 ]
-}
-"99
-[; ;mcc_generated_files/timer/src/tmr4.c: 99: static void TMR4_DefaultOverflowCallback(void){
-[v _TMR4_DefaultOverflowCallback `(v ~T0 @X0 1 sf ]
-{
-[e :U _TMR4_DefaultOverflowCallback ]
-[f ]
-"102
-[; ;mcc_generated_files/timer/src/tmr4.c: 102: }
+[; ;mcc_generated_files/eeprom-lib/src/eeprom.c: 72: }
 [e :UE 969 ]
-}
-"104
-[; ;mcc_generated_files/timer/src/tmr4.c: 104: void TMR4_Tasks(void)
-[v _TMR4_Tasks `(v ~T0 @X0 1 ef ]
-"105
-[; ;mcc_generated_files/timer/src/tmr4.c: 105: {
-{
-[e :U _TMR4_Tasks ]
-[f ]
-"106
-[; ;mcc_generated_files/timer/src/tmr4.c: 106:     if(PIR2bits.TMR4IF)
-[e $ ! != -> . . _PIR2bits 0 1 `i -> 0 `i 971  ]
-"107
-[; ;mcc_generated_files/timer/src/tmr4.c: 107:     {
-{
-"109
-[; ;mcc_generated_files/timer/src/tmr4.c: 109:         PIR2bits.TMR4IF = 0;
-[e = . . _PIR2bits 0 1 -> -> 0 `i `uc ]
-"110
-[; ;mcc_generated_files/timer/src/tmr4.c: 110:         TMR4_OverflowCallback();
-[e ( *U _TMR4_OverflowCallback ..  ]
-"111
-[; ;mcc_generated_files/timer/src/tmr4.c: 111:     }
-}
-[e :U 971 ]
-"112
-[; ;mcc_generated_files/timer/src/tmr4.c: 112: }
-[e :UE 970 ]
 }

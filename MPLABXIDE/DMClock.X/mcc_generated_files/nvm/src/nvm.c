@@ -203,3 +203,51 @@ uint16_t FLASH_PageOffsetGet(flash_address_t address)
 {
     return (uint16_t) (address & (PROGMEM_PAGE_SIZE - 1U));
 }
+
+eeprom_data_t EEPROM_Read(eeprom_address_t address)
+{
+    //Access EEPROM
+    NVMCON1bits.NVMREGS = 1;  
+    
+    //Load NVMADR with the EEPROM address
+    NVMADRH = (uint8_t) (address >> 8);
+    NVMADRL = (uint8_t) address;
+    
+    //Initiate Read
+    NVMCON1bits.RD = 1;
+
+    return NVMDATL;
+}
+
+void EEPROM_Write(eeprom_address_t address, eeprom_data_t data)
+{
+    //Save global interrupt enable bit value
+    uint8_t globalInterruptBitValue = INTCONbits.GIE;
+
+    //Access EEPROM
+    NVMCON1bits.NVMREGS = 1;
+    
+    //Enable write operation
+    NVMCON1bits.WREN = 1;
+
+    //Load NVMADR with the EEPROM address
+    NVMADRH = (uint8_t) (address >> 8);
+    NVMADRL = (uint8_t) address;
+
+    //Load NVMDAT with the desired value
+    NVMDATL = data;
+
+    //Disable global interrupt
+    INTCONbits.GIE = 0;
+
+    //Perform the unlock sequence
+    NVMCON2 = unlockKeyLow;
+    NVMCON2 = unlockKeyHigh;
+    NVMCON1bits.WR = 1;
+
+    //Restore global interrupt enable bit value
+    INTCONbits.GIE = globalInterruptBitValue; 
+
+    //Disable write operation
+    NVMCON1bits.WREN = 0;
+}
