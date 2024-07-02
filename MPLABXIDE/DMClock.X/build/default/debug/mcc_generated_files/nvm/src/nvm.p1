@@ -1,28 +1,52 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"9225 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9225: extern volatile unsigned char PWM6CON __attribute__((address(0x61C)));
-[v _PWM6CON `Vuc ~T0 @X0 0 e@1564 ]
-"9155
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9155: extern volatile unsigned char PWM6DCH __attribute__((address(0x61B)));
-[v _PWM6DCH `Vuc ~T0 @X0 0 e@1563 ]
-"9119
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9119: extern volatile unsigned char PWM6DCL __attribute__((address(0x61A)));
-[v _PWM6DCL `Vuc ~T0 @X0 0 e@1562 ]
-"9297
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9297:     struct {
-[s S456 :2 `uc 1 :2 `uc 1 ]
-[n S456 . P5TSEL P6TSEL ]
-"9301
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9301:     struct {
-[s S457 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S457 . P5TSEL0 P5TSEL1 P6TSEL0 P6TSEL1 ]
-"9296
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9296: typedef union {
-[u S455 `S456 1 `S457 1 ]
-[n S455 . . . ]
-"9308
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 9308: extern volatile PWMTMRSbits_t PWMTMRSbits __attribute__((address(0x61F)));
-[v _PWMTMRSbits `VS455 ~T0 @X0 0 e@1567 ]
+"114 mcc_generated_files/nvm/src/../nvm.h
+[; ;mcc_generated_files/nvm/src/../nvm.h: 114: void NVM_StatusClear(void);
+[v _NVM_StatusClear `(v ~T0 @X0 0 ef ]
+"11818 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11818:     struct {
+[s S587 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S587 . RD WR WREN WRERR FREE LWLO NVMREGS ]
+"11827
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11827:     struct {
+[s S588 :6 `uc 1 :1 `uc 1 ]
+[n S588 . . CFGS ]
+"11817
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11817: typedef union {
+[u S586 `S587 1 `S588 1 ]
+[n S586 . . . ]
+"11832
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11832: extern volatile NVMCON1bits_t NVMCON1bits __attribute__((address(0x895)));
+[v _NVMCON1bits `VS586 ~T0 @X0 0 e@2197 ]
+"53 mcc_generated_files/nvm/src/nvm.c
+[; ;mcc_generated_files/nvm/src/nvm.c: 53: nvm_status_t NVM_StatusGet(void)
+[c E6670 0 1 .. ]
+[n E6670 . NVM_OK NVM_ERROR  ]
+"11085 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11085: extern volatile unsigned char NVMADRH __attribute__((address(0x892)));
+[v _NVMADRH `Vuc ~T0 @X0 0 e@2194 ]
+"10833
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 10833: extern volatile unsigned char NVMADRL __attribute__((address(0x891)));
+[v _NVMADRL `Vuc ~T0 @X0 0 e@2193 ]
+"11587
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11587: extern volatile unsigned char NVMDATH __attribute__((address(0x894)));
+[v _NVMDATH `Vuc ~T0 @X0 0 e@2196 ]
+"11335
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11335: extern volatile unsigned char NVMDATL __attribute__((address(0x893)));
+[v _NVMDATL `Vuc ~T0 @X0 0 e@2195 ]
+"357
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 357:     struct {
+[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S31 . INTEDG . PEIE GIE ]
+"356
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 356: typedef union {
+[u S30 `S31 1 ]
+[n S30 . . ]
+"364
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 364: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
+[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
+"11992
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 11992: extern volatile unsigned char NVMCON2 __attribute__((address(0x896)));
+[v _NVMCON2 `Vuc ~T0 @X0 0 e@2198 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1082,50 +1106,420 @@ Version 4.0 HI-TECH Software Intermediate Code
 "19666
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 19666: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"45 mcc_generated_files/pwm/src/pwm6.c
-[; ;mcc_generated_files/pwm/src/pwm6.c: 45:  void PWM6_Initialize(void)
-[v _PWM6_Initialize `(v ~T0 @X0 1 ef ]
-"46
-[; ;mcc_generated_files/pwm/src/pwm6.c: 46:  {
+"40 mcc_generated_files/nvm/src/nvm.c
+[; ;mcc_generated_files/nvm/src/nvm.c: 40: __near volatile static uint8_t unlockKeyLow;
+[v _unlockKeyLow `VNuc ~T0 @X0 1 s ]
+"41
+[; ;mcc_generated_files/nvm/src/nvm.c: 41: __near volatile static uint8_t unlockKeyHigh;
+[v _unlockKeyHigh `VNuc ~T0 @X0 1 s ]
+"43
+[; ;mcc_generated_files/nvm/src/nvm.c: 43: void NVM_Initialize(void)
+[v _NVM_Initialize `(v ~T0 @X0 1 ef ]
+"44
+[; ;mcc_generated_files/nvm/src/nvm.c: 44: {
 {
-[e :U _PWM6_Initialize ]
+[e :U _NVM_Initialize ]
 [f ]
-"50
-[; ;mcc_generated_files/pwm/src/pwm6.c: 50:     PWM6CON = 0x80;
-[e = _PWM6CON -> -> 128 `i `uc ]
-"53
-[; ;mcc_generated_files/pwm/src/pwm6.c: 53:     PWM6DCH = 0x3F;
-[e = _PWM6DCH -> -> 63 `i `uc ]
-"56
-[; ;mcc_generated_files/pwm/src/pwm6.c: 56:     PWM6DCL = 0xC0;
-[e = _PWM6DCL -> -> 192 `i `uc ]
-"60
-[; ;mcc_generated_files/pwm/src/pwm6.c: 60:     PWMTMRSbits.P6TSEL = 0x2;
-[e = . . _PWMTMRSbits 0 1 -> -> 2 `i `uc ]
-"61
-[; ;mcc_generated_files/pwm/src/pwm6.c: 61:  }
+"45
+[; ;mcc_generated_files/nvm/src/nvm.c: 45:     NVM_StatusClear();
+[e ( _NVM_StatusClear ..  ]
+"46
+[; ;mcc_generated_files/nvm/src/nvm.c: 46: }
 [e :UE 962 ]
 }
-"63
-[; ;mcc_generated_files/pwm/src/pwm6.c: 63:  void PWM6_LoadDutyValue(uint16_t dutyValue)
-[v _PWM6_LoadDutyValue `(v ~T0 @X0 1 ef1`us ]
-"64
-[; ;mcc_generated_files/pwm/src/pwm6.c: 64:  {
+"48
+[; ;mcc_generated_files/nvm/src/nvm.c: 48: _Bool NVM_IsBusy(void)
+[v _NVM_IsBusy `(a ~T0 @X0 1 ef ]
+"49
+[; ;mcc_generated_files/nvm/src/nvm.c: 49: {
 {
-[e :U _PWM6_LoadDutyValue ]
-"63
-[; ;mcc_generated_files/pwm/src/pwm6.c: 63:  void PWM6_LoadDutyValue(uint16_t dutyValue)
-[v _dutyValue `us ~T0 @X0 1 r1 ]
-"64
-[; ;mcc_generated_files/pwm/src/pwm6.c: 64:  {
+[e :U _NVM_IsBusy ]
 [f ]
-"66
-[; ;mcc_generated_files/pwm/src/pwm6.c: 66:      PWM6DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
-[e = _PWM6DCH -> >> & -> _dutyValue `ui -> 1020 `ui -> 2 `i `uc ]
-"69
-[; ;mcc_generated_files/pwm/src/pwm6.c: 69:      PWM6DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
-[e = _PWM6DCL -> << & -> _dutyValue `ui -> 3 `ui -> 6 `i `uc ]
-"70
-[; ;mcc_generated_files/pwm/src/pwm6.c: 70:  }
+"50
+[; ;mcc_generated_files/nvm/src/nvm.c: 50:     return (NVMCON1bits.WR || NVMCON1bits.RD);
+[e ) -> -> || != -> . . _NVMCON1bits 0 1 `i -> 0 `i != -> . . _NVMCON1bits 0 0 `i -> 0 `i `i `a ]
+[e $UE 963  ]
+"51
+[; ;mcc_generated_files/nvm/src/nvm.c: 51: }
 [e :UE 963 ]
+}
+"53
+[; ;mcc_generated_files/nvm/src/nvm.c: 53: nvm_status_t NVM_StatusGet(void)
+[v _NVM_StatusGet `(E6670 ~T0 @X0 1 ef ]
+"54
+[; ;mcc_generated_files/nvm/src/nvm.c: 54: {
+{
+[e :U _NVM_StatusGet ]
+[f ]
+"55
+[; ;mcc_generated_files/nvm/src/nvm.c: 55:     if (NVMCON1bits.WRERR == 1)
+[e $ ! == -> . . _NVMCON1bits 0 3 `i -> 1 `i 965  ]
+"56
+[; ;mcc_generated_files/nvm/src/nvm.c: 56:     {
+{
+"57
+[; ;mcc_generated_files/nvm/src/nvm.c: 57:         return NVM_ERROR;
+[e ) . `E6670 1 ]
+[e $UE 964  ]
+"58
+[; ;mcc_generated_files/nvm/src/nvm.c: 58:     }
+}
+[e $U 966  ]
+"59
+[; ;mcc_generated_files/nvm/src/nvm.c: 59:     else
+[e :U 965 ]
+"60
+[; ;mcc_generated_files/nvm/src/nvm.c: 60:     {
+{
+"61
+[; ;mcc_generated_files/nvm/src/nvm.c: 61:         return NVM_OK;
+[e ) . `E6670 0 ]
+[e $UE 964  ]
+"62
+[; ;mcc_generated_files/nvm/src/nvm.c: 62:     }
+}
+[e :U 966 ]
+"63
+[; ;mcc_generated_files/nvm/src/nvm.c: 63: }
+[e :UE 964 ]
+}
+"65
+[; ;mcc_generated_files/nvm/src/nvm.c: 65: void NVM_StatusClear(void)
+[v _NVM_StatusClear `(v ~T0 @X0 1 ef ]
+"66
+[; ;mcc_generated_files/nvm/src/nvm.c: 66: {
+{
+[e :U _NVM_StatusClear ]
+[f ]
+"67
+[; ;mcc_generated_files/nvm/src/nvm.c: 67:     NVMCON1bits.WRERR = 0;
+[e = . . _NVMCON1bits 0 3 -> -> 0 `i `uc ]
+"68
+[; ;mcc_generated_files/nvm/src/nvm.c: 68: }
+[e :UE 967 ]
+}
+"70
+[; ;mcc_generated_files/nvm/src/nvm.c: 70: void NVM_UnlockKeySet(uint16_t unlockKey)
+[v _NVM_UnlockKeySet `(v ~T0 @X0 1 ef1`us ]
+"71
+[; ;mcc_generated_files/nvm/src/nvm.c: 71: {
+{
+[e :U _NVM_UnlockKeySet ]
+"70
+[; ;mcc_generated_files/nvm/src/nvm.c: 70: void NVM_UnlockKeySet(uint16_t unlockKey)
+[v _unlockKey `us ~T0 @X0 1 r1 ]
+"71
+[; ;mcc_generated_files/nvm/src/nvm.c: 71: {
+[f ]
+"72
+[; ;mcc_generated_files/nvm/src/nvm.c: 72:     unlockKeyHigh = (uint8_t) (unlockKey >> 8);
+[e = _unlockKeyHigh -> >> -> _unlockKey `ui -> 8 `i `uc ]
+"73
+[; ;mcc_generated_files/nvm/src/nvm.c: 73:     unlockKeyLow = (uint8_t) unlockKey;
+[e = _unlockKeyLow -> _unlockKey `uc ]
+"74
+[; ;mcc_generated_files/nvm/src/nvm.c: 74: }
+[e :UE 968 ]
+}
+"76
+[; ;mcc_generated_files/nvm/src/nvm.c: 76: void NVM_UnlockKeyClear(void)
+[v _NVM_UnlockKeyClear `(v ~T0 @X0 1 ef ]
+"77
+[; ;mcc_generated_files/nvm/src/nvm.c: 77: {
+{
+[e :U _NVM_UnlockKeyClear ]
+[f ]
+"78
+[; ;mcc_generated_files/nvm/src/nvm.c: 78:     unlockKeyHigh = 0x00;
+[e = _unlockKeyHigh -> -> 0 `i `uc ]
+"79
+[; ;mcc_generated_files/nvm/src/nvm.c: 79:     unlockKeyLow = 0x00;
+[e = _unlockKeyLow -> -> 0 `i `uc ]
+"80
+[; ;mcc_generated_files/nvm/src/nvm.c: 80: }
+[e :UE 969 ]
+}
+"82
+[; ;mcc_generated_files/nvm/src/nvm.c: 82: flash_data_t FLASH_Read(flash_address_t address)
+[v _FLASH_Read `(us ~T0 @X0 1 ef1`us ]
+"83
+[; ;mcc_generated_files/nvm/src/nvm.c: 83: {
+{
+[e :U _FLASH_Read ]
+"82
+[; ;mcc_generated_files/nvm/src/nvm.c: 82: flash_data_t FLASH_Read(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"83
+[; ;mcc_generated_files/nvm/src/nvm.c: 83: {
+[f ]
+"85
+[; ;mcc_generated_files/nvm/src/nvm.c: 85:     NVMADRH = (uint8_t) (address >> 8);
+[e = _NVMADRH -> >> -> _address `ui -> 8 `i `uc ]
+"86
+[; ;mcc_generated_files/nvm/src/nvm.c: 86:     NVMADRL = (uint8_t) address;
+[e = _NVMADRL -> _address `uc ]
+"89
+[; ;mcc_generated_files/nvm/src/nvm.c: 89:     NVMCON1bits.NVMREGS = 0;
+[e = . . _NVMCON1bits 0 6 -> -> 0 `i `uc ]
+"92
+[; ;mcc_generated_files/nvm/src/nvm.c: 92:     NVMCON1bits.RD = 1;
+[e = . . _NVMCON1bits 0 0 -> -> 1 `i `uc ]
+"94
+[; ;mcc_generated_files/nvm/src/nvm.c: 94:     return ((flash_data_t) ((NVMDATH << 8) | NVMDATL));
+[e ) -> | << -> _NVMDATH `i -> 8 `i -> _NVMDATL `i `us ]
+[e $UE 970  ]
+"95
+[; ;mcc_generated_files/nvm/src/nvm.c: 95: }
+[e :UE 970 ]
+}
+"97
+[; ;mcc_generated_files/nvm/src/nvm.c: 97: nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer)
+[v _FLASH_RowWrite `(E6670 ~T0 @X0 1 ef2`us`*us ]
+"98
+[; ;mcc_generated_files/nvm/src/nvm.c: 98: {
+{
+[e :U _FLASH_RowWrite ]
+"97
+[; ;mcc_generated_files/nvm/src/nvm.c: 97: nvm_status_t FLASH_RowWrite(flash_address_t address, flash_data_t *dataBuffer)
+[v _address `us ~T0 @X0 1 r1 ]
+[v _dataBuffer `*us ~T0 @X0 1 r2 ]
+"98
+[; ;mcc_generated_files/nvm/src/nvm.c: 98: {
+[f ]
+"99
+[; ;mcc_generated_files/nvm/src/nvm.c: 99:     uint8_t flashDataCount = (32U);
+[v _flashDataCount `uc ~T0 @X0 1 a ]
+[e = _flashDataCount -> -> 32 `ui `uc ]
+"102
+[; ;mcc_generated_files/nvm/src/nvm.c: 102:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 3 ]
+"105
+[; ;mcc_generated_files/nvm/src/nvm.c: 105:     NVMCON1bits.NVMREGS = 0;
+[e = . . _NVMCON1bits 0 6 -> -> 0 `i `uc ]
+"108
+[; ;mcc_generated_files/nvm/src/nvm.c: 108:     NVMCON1bits.WREN = 1;
+[e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
+"111
+[; ;mcc_generated_files/nvm/src/nvm.c: 111:     NVMCON1bits.LWLO = 1;
+[e = . . _NVMCON1bits 0 5 -> -> 1 `i `uc ]
+"113
+[; ;mcc_generated_files/nvm/src/nvm.c: 113:     while (flashDataCount-- > 0U)
+[e $U 972  ]
+[e :U 973 ]
+"114
+[; ;mcc_generated_files/nvm/src/nvm.c: 114:     {
+{
+"115
+[; ;mcc_generated_files/nvm/src/nvm.c: 115:         NVMADRH = (uint8_t) (address >> 8);
+[e = _NVMADRH -> >> -> _address `ui -> 8 `i `uc ]
+"116
+[; ;mcc_generated_files/nvm/src/nvm.c: 116:         NVMADRL = (uint8_t) address;
+[e = _NVMADRL -> _address `uc ]
+"117
+[; ;mcc_generated_files/nvm/src/nvm.c: 117:         address++;
+[e ++ _address -> -> 1 `i `us ]
+"119
+[; ;mcc_generated_files/nvm/src/nvm.c: 119:         NVMDATH = (uint8_t) (*dataBuffer >> 8);
+[e = _NVMDATH -> >> -> *U _dataBuffer `ui -> 8 `i `uc ]
+"120
+[; ;mcc_generated_files/nvm/src/nvm.c: 120:         NVMDATL = (uint8_t) (*dataBuffer);
+[e = _NVMDATL -> *U _dataBuffer `uc ]
+"121
+[; ;mcc_generated_files/nvm/src/nvm.c: 121:         dataBuffer++;
+[e ++ _dataBuffer * -> -> 1 `i `x -> -> # *U _dataBuffer `i `x ]
+"124
+[; ;mcc_generated_files/nvm/src/nvm.c: 124:         if (flashDataCount == 0U)
+[e $ ! == -> _flashDataCount `ui -> 0 `ui 975  ]
+"125
+[; ;mcc_generated_files/nvm/src/nvm.c: 125:         {
+{
+"127
+[; ;mcc_generated_files/nvm/src/nvm.c: 127:             NVMCON1bits.LWLO = 0;
+[e = . . _NVMCON1bits 0 5 -> -> 0 `i `uc ]
+"128
+[; ;mcc_generated_files/nvm/src/nvm.c: 128:         }
+}
+[e :U 975 ]
+"131
+[; ;mcc_generated_files/nvm/src/nvm.c: 131:         INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"134
+[; ;mcc_generated_files/nvm/src/nvm.c: 134:         NVMCON2 = unlockKeyLow;
+[e = _NVMCON2 _unlockKeyLow ]
+"135
+[; ;mcc_generated_files/nvm/src/nvm.c: 135:         NVMCON2 = unlockKeyHigh;
+[e = _NVMCON2 _unlockKeyHigh ]
+"136
+[; ;mcc_generated_files/nvm/src/nvm.c: 136:         NVMCON1bits.WR = 1;
+[e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
+"139
+[; ;mcc_generated_files/nvm/src/nvm.c: 139:         INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 3 _globalInterruptBitValue ]
+"140
+[; ;mcc_generated_files/nvm/src/nvm.c: 140:     }
+}
+[e :U 972 ]
+"113
+[; ;mcc_generated_files/nvm/src/nvm.c: 113:     while (flashDataCount-- > 0U)
+[e $ > -> -- _flashDataCount -> -> 1 `i `uc `ui -> 0 `ui 973  ]
+[e :U 974 ]
+"143
+[; ;mcc_generated_files/nvm/src/nvm.c: 143:     NVMCON1bits.WREN = 0;
+[e = . . _NVMCON1bits 0 2 -> -> 0 `i `uc ]
+"145
+[; ;mcc_generated_files/nvm/src/nvm.c: 145:     if (NVMCON1bits.WRERR == 1)
+[e $ ! == -> . . _NVMCON1bits 0 3 `i -> 1 `i 976  ]
+"146
+[; ;mcc_generated_files/nvm/src/nvm.c: 146:     {
+{
+"147
+[; ;mcc_generated_files/nvm/src/nvm.c: 147:         return NVM_ERROR;
+[e ) . `E6670 1 ]
+[e $UE 971  ]
+"148
+[; ;mcc_generated_files/nvm/src/nvm.c: 148:     }
+}
+[e $U 977  ]
+"149
+[; ;mcc_generated_files/nvm/src/nvm.c: 149:     else
+[e :U 976 ]
+"150
+[; ;mcc_generated_files/nvm/src/nvm.c: 150:     {
+{
+"151
+[; ;mcc_generated_files/nvm/src/nvm.c: 151:         return NVM_OK;
+[e ) . `E6670 0 ]
+[e $UE 971  ]
+"152
+[; ;mcc_generated_files/nvm/src/nvm.c: 152:     }
+}
+[e :U 977 ]
+"153
+[; ;mcc_generated_files/nvm/src/nvm.c: 153: }
+[e :UE 971 ]
+}
+"155
+[; ;mcc_generated_files/nvm/src/nvm.c: 155: nvm_status_t FLASH_PageErase(flash_address_t address)
+[v _FLASH_PageErase `(E6670 ~T0 @X0 1 ef1`us ]
+"156
+[; ;mcc_generated_files/nvm/src/nvm.c: 156: {
+{
+[e :U _FLASH_PageErase ]
+"155
+[; ;mcc_generated_files/nvm/src/nvm.c: 155: nvm_status_t FLASH_PageErase(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"156
+[; ;mcc_generated_files/nvm/src/nvm.c: 156: {
+[f ]
+"158
+[; ;mcc_generated_files/nvm/src/nvm.c: 158:     uint8_t globalInterruptBitValue = INTCONbits.GIE;
+[v _globalInterruptBitValue `uc ~T0 @X0 1 a ]
+[e = _globalInterruptBitValue . . _INTCONbits 0 3 ]
+"161
+[; ;mcc_generated_files/nvm/src/nvm.c: 161:     NVMADRH = (uint8_t) (address >> 8);
+[e = _NVMADRH -> >> -> _address `ui -> 8 `i `uc ]
+"162
+[; ;mcc_generated_files/nvm/src/nvm.c: 162:     NVMADRL = (uint8_t) address;
+[e = _NVMADRL -> _address `uc ]
+"165
+[; ;mcc_generated_files/nvm/src/nvm.c: 165:     NVMCON1bits.NVMREGS = 0;
+[e = . . _NVMCON1bits 0 6 -> -> 0 `i `uc ]
+"168
+[; ;mcc_generated_files/nvm/src/nvm.c: 168:     NVMCON1bits.FREE = 1;
+[e = . . _NVMCON1bits 0 4 -> -> 1 `i `uc ]
+"171
+[; ;mcc_generated_files/nvm/src/nvm.c: 171:     NVMCON1bits.WREN = 1;
+[e = . . _NVMCON1bits 0 2 -> -> 1 `i `uc ]
+"174
+[; ;mcc_generated_files/nvm/src/nvm.c: 174:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 0 3 -> -> 0 `i `uc ]
+"177
+[; ;mcc_generated_files/nvm/src/nvm.c: 177:     NVMCON2 = unlockKeyLow;
+[e = _NVMCON2 _unlockKeyLow ]
+"178
+[; ;mcc_generated_files/nvm/src/nvm.c: 178:     NVMCON2 = unlockKeyHigh;
+[e = _NVMCON2 _unlockKeyHigh ]
+"179
+[; ;mcc_generated_files/nvm/src/nvm.c: 179:     NVMCON1bits.WR = 1;
+[e = . . _NVMCON1bits 0 1 -> -> 1 `i `uc ]
+"182
+[; ;mcc_generated_files/nvm/src/nvm.c: 182:     INTCONbits.GIE = globalInterruptBitValue;
+[e = . . _INTCONbits 0 3 _globalInterruptBitValue ]
+"185
+[; ;mcc_generated_files/nvm/src/nvm.c: 185:     NVMCON1bits.WREN = 0;
+[e = . . _NVMCON1bits 0 2 -> -> 0 `i `uc ]
+"187
+[; ;mcc_generated_files/nvm/src/nvm.c: 187:     if (NVMCON1bits.WRERR == 1)
+[e $ ! == -> . . _NVMCON1bits 0 3 `i -> 1 `i 979  ]
+"188
+[; ;mcc_generated_files/nvm/src/nvm.c: 188:     {
+{
+"189
+[; ;mcc_generated_files/nvm/src/nvm.c: 189:         return NVM_ERROR;
+[e ) . `E6670 1 ]
+[e $UE 978  ]
+"190
+[; ;mcc_generated_files/nvm/src/nvm.c: 190:     }
+}
+[e $U 980  ]
+"191
+[; ;mcc_generated_files/nvm/src/nvm.c: 191:     else
+[e :U 979 ]
+"192
+[; ;mcc_generated_files/nvm/src/nvm.c: 192:     {
+{
+"193
+[; ;mcc_generated_files/nvm/src/nvm.c: 193:         return NVM_OK;
+[e ) . `E6670 0 ]
+[e $UE 978  ]
+"194
+[; ;mcc_generated_files/nvm/src/nvm.c: 194:     }
+}
+[e :U 980 ]
+"195
+[; ;mcc_generated_files/nvm/src/nvm.c: 195: }
+[e :UE 978 ]
+}
+"197
+[; ;mcc_generated_files/nvm/src/nvm.c: 197: flash_address_t FLASH_PageAddressGet(flash_address_t address)
+[v _FLASH_PageAddressGet `(us ~T0 @X0 1 ef1`us ]
+"198
+[; ;mcc_generated_files/nvm/src/nvm.c: 198: {
+{
+[e :U _FLASH_PageAddressGet ]
+"197
+[; ;mcc_generated_files/nvm/src/nvm.c: 197: flash_address_t FLASH_PageAddressGet(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"198
+[; ;mcc_generated_files/nvm/src/nvm.c: 198: {
+[f ]
+"199
+[; ;mcc_generated_files/nvm/src/nvm.c: 199:     return (flash_address_t) (address & (((0x4000U) - 1U) ^ ((32U) - 1U)));
+[e ) -> & -> _address `ui ^ - -> 16384 `ui -> 1 `ui - -> 32 `ui -> 1 `ui `us ]
+[e $UE 981  ]
+"200
+[; ;mcc_generated_files/nvm/src/nvm.c: 200: }
+[e :UE 981 ]
+}
+"202
+[; ;mcc_generated_files/nvm/src/nvm.c: 202: uint16_t FLASH_PageOffsetGet(flash_address_t address)
+[v _FLASH_PageOffsetGet `(us ~T0 @X0 1 ef1`us ]
+"203
+[; ;mcc_generated_files/nvm/src/nvm.c: 203: {
+{
+[e :U _FLASH_PageOffsetGet ]
+"202
+[; ;mcc_generated_files/nvm/src/nvm.c: 202: uint16_t FLASH_PageOffsetGet(flash_address_t address)
+[v _address `us ~T0 @X0 1 r1 ]
+"203
+[; ;mcc_generated_files/nvm/src/nvm.c: 203: {
+[f ]
+"204
+[; ;mcc_generated_files/nvm/src/nvm.c: 204:     return (uint16_t) (address & ((32U) - 1U));
+[e ) -> & -> _address `ui - -> 32 `ui -> 1 `ui `us ]
+[e $UE 982  ]
+"205
+[; ;mcc_generated_files/nvm/src/nvm.c: 205: }
+[e :UE 982 ]
 }
