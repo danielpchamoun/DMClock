@@ -11,5 +11,4 @@ mcc_generated_files/system/../i2c_host/i2c_host_interface.h  \
 mcc_generated_files/system/../pwm/pwm5.h  \
 mcc_generated_files/system/../pwm/pwm6.h  \
 mcc_generated_files/system/../timer/tmr2.h  \
-mcc_generated_files/system/../timer/tmr4.h  \
-mcc_generated_files/system/../system/interrupt.h 
+mcc_generated_files/system/../timer/tmr4.h 

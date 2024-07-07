@@ -11599,21 +11599,6 @@ void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 void TMR4_Tasks(void);
 # 48 "mcc_generated_files/system/src/../system.h" 2
-
-# 1 "mcc_generated_files/system/src/../../system/interrupt.h" 1
-# 85 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INTERRUPT_Initialize (void);
-# 139 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_ISR(void);
-# 148 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_CallBack(void);
-# 157 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-# 166 "mcc_generated_files/system/src/../../system/interrupt.h"
-extern void (*INT_InterruptHandler)(void);
-# 175 "mcc_generated_files/system/src/../../system/interrupt.h"
-void INT_DefaultInterruptHandler(void);
-# 49 "mcc_generated_files/system/src/../system.h" 2
 # 59 "mcc_generated_files/system/src/../system.h"
 void SYSTEM_Initialize(void);
 # 36 "mcc_generated_files/system/src/system.c" 2
@@ -11629,5 +11614,5 @@ void SYSTEM_Initialize(void)
     PWM6_Initialize();
     TMR2_Initialize();
     TMR4_Initialize();
-    INTERRUPT_Initialize();
+
 }

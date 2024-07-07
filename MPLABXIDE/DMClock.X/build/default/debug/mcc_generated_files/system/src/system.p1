@@ -20,9 +20,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 mcc_generated_files/system/src/../../timer/tmr4.h
 [; ;mcc_generated_files/system/src/../../timer/tmr4.h: 55:  void TMR4_Initialize(void);
 [v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
-"85 mcc_generated_files/system/src/../../system/interrupt.h
-[; ;mcc_generated_files/system/src/../../system/interrupt.h: 85: void INTERRUPT_Initialize (void);
-[v _INTERRUPT_Initialize `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1111,9 +1108,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "47
 [; ;mcc_generated_files/system/src/system.c: 47:     TMR4_Initialize();
 [e ( _TMR4_Initialize ..  ]
-"48
-[; ;mcc_generated_files/system/src/system.c: 48:     INTERRUPT_Initialize();
-[e ( _INTERRUPT_Initialize ..  ]
 "49
 [; ;mcc_generated_files/system/src/system.c: 49: }
 [e :UE 967 ]

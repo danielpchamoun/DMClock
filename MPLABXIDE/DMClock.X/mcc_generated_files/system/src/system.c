@@ -45,6 +45,6 @@ void SYSTEM_Initialize(void)
     PWM6_Initialize();
     TMR2_Initialize();
     TMR4_Initialize();
-    INTERRUPT_Initialize();
+    //INTERRUPT_Initialize(); removed because i created my own ISR and it was conflicting
 }
 

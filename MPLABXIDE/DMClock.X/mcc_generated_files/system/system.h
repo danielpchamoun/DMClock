@@ -46,7 +46,7 @@
 #include "../pwm/pwm6.h"
 #include "../timer/tmr2.h"
 #include "../timer/tmr4.h"
-#include "../system/interrupt.h"
+//#include "../system/interrupt.h" removed because it was conflicting...
 #include "../system/clock.h"
 
 /**

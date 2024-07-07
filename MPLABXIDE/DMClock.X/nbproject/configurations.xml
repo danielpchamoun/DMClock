@@ -59,7 +59,6 @@
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
             <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>

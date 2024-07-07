@@ -11604,21 +11604,6 @@ void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 void TMR4_Tasks(void);
 # 48 "./mcc_generated_files\\system\\system.h" 2
-
-# 1 "./mcc_generated_files\\system/../system/interrupt.h" 1
-# 85 "./mcc_generated_files\\system/../system/interrupt.h"
-void INTERRUPT_Initialize (void);
-# 139 "./mcc_generated_files\\system/../system/interrupt.h"
-void INT_ISR(void);
-# 148 "./mcc_generated_files\\system/../system/interrupt.h"
-void INT_CallBack(void);
-# 157 "./mcc_generated_files\\system/../system/interrupt.h"
-void INT_SetInterruptHandler(void (* InterruptHandler)(void));
-# 166 "./mcc_generated_files\\system/../system/interrupt.h"
-extern void (*INT_InterruptHandler)(void);
-# 175 "./mcc_generated_files\\system/../system/interrupt.h"
-void INT_DefaultInterruptHandler(void);
-# 49 "./mcc_generated_files\\system\\system.h" 2
 # 59 "./mcc_generated_files\\system\\system.h"
 void SYSTEM_Initialize(void);
 # 9 "main.c" 2
@@ -11628,41 +11613,161 @@ void SYSTEM_Initialize(void);
 
 
 
-__eeprom extern uint8_t time = 0xC;
-__eeprom extern uint8_t alarm1 = 0xC;
-__eeprom extern uint8_t alarm2 = 0xC;
+extern __eeprom uint8_t alarm = 0xff;
+
+
+
+
 
 void main(void) {
 
     SYSTEM_Initialize();
 
 
+    TRISAbits.TRISA0 = 1;
+    TRISAbits.TRISA1 = 1;
+    TRISAbits.TRISA2 = 1;
+    TRISBbits.TRISB5 = 1;
+    TRISBbits.TRISB7 = 1;
+    TRISCbits.TRISC4 = 1;
+    TRISCbits.TRISC6 = 1;
+    TRISCbits.TRISC7 = 1;
+
+
+    ANSELAbits.ANSA0 = 0;
+    ANSELAbits.ANSA1 = 0;
+    ANSELAbits.ANSA2 = 0;
+    ANSELBbits.ANSB5 = 0;
+    ANSELBbits.ANSB7 = 0;
+    ANSELCbits.ANSC4 = 0;
+    ANSELCbits.ANSC6 = 0;
+    ANSELCbits.ANSC7 = 0;
+
+
+
+    TRISAbits.TRISA5 = 0;
+    TRISCbits.TRISC0 = 0;
+    TRISCbits.TRISC1 = 0;
+    TRISCbits.TRISC2 = 0;
+
+
+    LATAbits.LATA5 = 0;
+    LATCbits.LATC0 = 0;
+    LATCbits.LATC1 = 0;
+    LATCbits.LATC2 = 0;
+
+
+    PIE0bits.IOCIE = 1;
+    PIR0bits.IOCIF = 0;
+
+
+
 
 
     const i2c_host_interface_t *I2C = &I2C1_Host;
-
     uint8_t dataWrite[2];
     uint8_t dataRead[2];
 
 
-
-        if (I2C->Write(0x00, dataWrite, 2))
+    if (I2C->Write(0x00, dataWrite, 2))
     {
         while(I2C->IsBusy())
         {
             I2C->Tasks();
-        }
-        if (I2C->ErrorGet() != I2C_ERROR_NONE)
-        {
-
-        }
-        else
-        {
-
         }
     }
 
 
 
     return;
+}
+
+
+void __attribute__((picinterrupt(("")))) ISR(){
+    if(PIR0bits.IOCIF){
+        if(IOCAPbits.IOCAP0){
+            PIR0bits.IOCIF = 0;
+        }
+        if(IOCAPbits.IOCAP1){
+            PIR0bits.IOCIF = 0;
+        }
+        if(IOCAPbits.IOCAP2){
+            PIR0bits.IOCIF = 0;
+        }
+
+        if(PORTAbits.RA0 == 1){
+
+            if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+                if(IOCBPbits.IOCBP5){
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+                    PIR0bits.IOCIF = 0;
+                }
+            }
+            if(PORTCbits.RC4 == 1){
+                if(IOCBPbits.IOCBP5){
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+                    PIR0bits.IOCIF = 0;
+                }
+            }
+            if(PORTCbits.RC6 == 1){
+                if(IOCBPbits.IOCBP5){
+
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+
+                    PIR0bits.IOCIF = 0;
+                }
+            }
+
+            if(IOCBPbits.IOCBP5){
+                PIR0bits.IOCIF = 0;
+            }
+            if(IOCBPbits.IOCBP7){
+                PIR0bits.IOCIF = 0;
+            }
+        }
+
+        if(PORTAbits.RA1 == 1 || PORTAbits.RA2 == 1){
+            if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+                if(IOCBPbits.IOCBP5){
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+                    PIR0bits.IOCIF = 0;
+
+                }
+            }
+            if(PORTCbits.RC4 == 1){
+                if(IOCBPbits.IOCBP5){
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+                    PIR0bits.IOCIF = 0;
+                }
+            }
+            if(PORTCbits.RC6 == 1){
+                if(IOCBPbits.IOCBP5){
+                    PIR0bits.IOCIF = 0;
+                }
+                if(IOCBPbits.IOCBP7){
+                    PIR0bits.IOCIF = 0;
+                }
+            }
+
+            if(IOCBPbits.IOCBP5){
+                PIR0bits.IOCIF = 0;
+            }
+            if(IOCBPbits.IOCBP7){
+                PIR0bits.IOCIF = 0;
+            }
+        }
+    }
+
+
+    PIR0bits.IOCIF = 0;
 }
