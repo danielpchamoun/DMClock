@@ -16,7 +16,20 @@ extern __eeprom uint8_t alarm = 0xff;
 
 
 
+//PWM Period = [ (PR2) + 1 ] x 4 x Tosc x (TMR2 Prescale Value)
+// 1/264 Hz = [ (255) + 1 ] x 4 x (1/32000000) x (TMR2 Prescale Value)
 
+// PR2 = [1/(frequency x 4 x (1/32000000) x (64))] - 1
+// A = 
+// B = 
+// C = 
+// D = 
+// E = 
+// F = 
+// G = 
+// 
+//https://www.youtube.com/watch?v=2vqa8UcFs9c
+TMR2_PeriodCountSet(0.00382225644);
 
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
