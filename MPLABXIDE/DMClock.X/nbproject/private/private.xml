@@ -7,6 +7,9 @@
             <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/system/src/system.c</file>
             <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/timer/src/tmr2.c</file>
             <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/system/clock.h</file>
+            <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/i2c_host/i2c_host_interface.h</file>
+            <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/i2c_host/i2c_host_event_types.h</file>
+            <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/i2c_host/mssp1.h</file>
             <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/mcc_generated_files/pwm/src/pwm5.c</file>
             <file>file:/C:/Users/12243/Desktop/DMClock/MPLABXIDE/DMClock.X/main.c</file>
         </group>

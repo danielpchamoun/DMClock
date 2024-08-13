@@ -100,19 +100,26 @@ void main(void) {
     // C, C#, D, D#, E, F, F#, G, G#, A, A#, B
     // 0  1   2  3   4  5  6   7  8   9  10  11
     size_t periodVal[] = {477,450,425,401,378,357,337,318,300,283,267,252};
-
-    TMR2_PeriodCountSet(periodVal[0]);
-    TMR2_Start();
-    __delay_ms(1000);
-    TMR2_Stop();
+    
+    while(1){
+        TMR2_PeriodCountSet(2000);
+        TMR2_Start();
+        __delay_ms(5000);
+        TMR2_Stop();
+        __delay_ms(5000);
+        
+        
+    }
     
     __delay_ms(1000);
     
+    /*
     TMR2_PeriodCountSet(periodVal[7]);
     TMR2_Start();
     __delay_ms(1000);
-    TMR2_Stop();
-
+    
+     * TMR2_Stop();
+    */
     
     
     return;
