@@ -3,7 +3,7 @@
 [d edition pro ]
 [d chip 16F18346 ]
 [d frameptr 6 ]
-"79 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
+"79 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [e E6989 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -22,26 +22,26 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"68 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"74 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [e E6992 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
 I2C_ERROR_DATA_NACK 2
 I2C_ERROR_BUS_COLLISION 3
 ]
-"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+"10 D:\Microchip\pic\sources\c99\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
-"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+"4 D:\Microchip\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+"6 D:\Microchip\pic\sources\c99\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"23 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"23 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"129
+"133
 [v _ISR ISR `II(v  1 e 1 0 ]
-"114 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
+"114 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 "131
 [v _I2C1_Deinitialize I2C1_Deinitialize `(v  1 e 1 0 ]
@@ -125,17 +125,17 @@ I2C_ERROR_BUS_COLLISION 3
 [v _I2C1_ErrorInterruptClear I2C1_ErrorInterruptClear `T(v  1 s 1 I2C1_ErrorInterruptClear ]
 "489
 [v _I2C1_StatusFlagsClear I2C1_StatusFlagsClear `T(v  1 s 1 I2C1_StatusFlagsClear ]
-"45 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm5.c
+"45 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm5.c
 [v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
-"45 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm6.c
+"45 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm6.c
 [v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
-"39 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/clock.c
+"39 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
-"38 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/pins.c
+"38 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"39 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/system.c
+"39 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
-"48 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
+"48 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 "65
 [v _TMR2_Start TMR2_Start `(v  1 e 1 0 ]
@@ -147,23 +147,29 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR2_OverflowCallbackRegister TMR2_OverflowCallbackRegister `(v  1 e 1 0 ]
 "99
 [v _TMR2_DefaultOverflowCallback TMR2_DefaultOverflowCallback `(v  1 s 1 TMR2_DefaultOverflowCallback ]
-"48 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
+"48 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
+"65
+[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
+"71
+[v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
+"90
+[v _TMR4_PeriodCountSet TMR4_PeriodCountSet `(v  1 e 1 0 ]
 "95
 [v _TMR4_OverflowCallbackRegister TMR4_OverflowCallbackRegister `(v  1 e 1 0 ]
 "99
 [v _TMR4_DefaultOverflowCallback TMR4_DefaultOverflowCallback `(v  1 s 1 TMR4_DefaultOverflowCallback ]
-[s S1099 . 1 `uc 1 RA0 1 0 :1:0 
+[s S1102 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
 `uc 1 RA4 1 0 :1:4 
 `uc 1 RA5 1 0 :1:5 
 ]
-"399 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
-[u S1106 . 1 `S1099 1 . 1 0 ]
-[v _PORTAbits PORTAbits `VES1106  1 e 1 @12 ]
-[s S1116 . 1 `uc 1 RC0 1 0 :1:0 
+"399 D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
+[u S1109 . 1 `S1102 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES1109  1 e 1 @12 ]
+[s S1119 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -173,16 +179,16 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 RC7 1 0 :1:7 
 ]
 "490
-[u S1125 . 1 `S1116 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1125  1 e 1 @14 ]
-[s S1001 . 1 `uc 1 INTF 1 0 :1:0 
+[u S1128 . 1 `S1119 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1128  1 e 1 @14 ]
+[s S1007 . 1 `uc 1 INTF 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIF 1 0 :1:4 
 `uc 1 TMR0IF 1 0 :1:5 
 ]
 "548
-[u S1006 . 1 `S1001 1 . 1 0 ]
-[v _PIR0bits PIR0bits `VES1006  1 e 1 @16 ]
+[u S1012 . 1 `S1007 1 . 1 0 ]
+[v _PIR0bits PIR0bits `VES1012  1 e 1 @16 ]
 [s S394 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 BCL1IF 1 0 :1:2 
@@ -230,7 +236,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _T2CONbits T2CONbits `VES716  1 e 1 @31 ]
 "1550
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
-[s S844 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S850 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -238,22 +244,22 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1565
-[u S851 . 1 `S844 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES851  1 e 1 @140 ]
+[u S857 . 1 `S850 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES857  1 e 1 @140 ]
 "1595
 [v _TRISB TRISB `VEuc  1 e 1 @141 ]
-[s S861 . 1 `uc 1 . 1 0 :4:0 
+[s S867 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TRISB4 1 0 :1:4 
 `uc 1 TRISB5 1 0 :1:5 
 `uc 1 TRISB6 1 0 :1:6 
 `uc 1 TRISB7 1 0 :1:7 
 ]
 "1609
-[u S867 . 1 `S861 1 . 1 0 ]
-[v _TRISBbits TRISBbits `VES867  1 e 1 @141 ]
+[u S873 . 1 `S867 1 . 1 0 ]
+[v _TRISBbits TRISBbits `VES873  1 e 1 @141 ]
 "1634
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
-[s S876 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S882 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -263,16 +269,16 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1651
-[u S885 . 1 `S876 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES885  1 e 1 @142 ]
-[s S988 . 1 `uc 1 INTE 1 0 :1:0 
+[u S891 . 1 `S882 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES891  1 e 1 @142 ]
+[s S994 . 1 `uc 1 INTE 1 0 :1:0 
 `uc 1 . 1 0 :3:1 
 `uc 1 IOCIE 1 0 :1:4 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
 "1709
-[u S993 . 1 `S988 1 . 1 0 ]
-[v _PIE0bits PIE0bits `VES993  1 e 1 @144 ]
+[u S999 . 1 `S994 1 . 1 0 ]
+[v _PIE0bits PIE0bits `VES999  1 e 1 @144 ]
 [s S373 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 BCL1IE 1 0 :1:2 
@@ -287,7 +293,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _PIE1bits PIE1bits `VES382  1 e 1 @145 ]
 "2293
 [v _LATA LATA `VEuc  1 e 1 @268 ]
-[s S950 . 1 `uc 1 LATA0 1 0 :1:0 
+[s S956 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
 `uc 1 LATA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -295,13 +301,13 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 LATA5 1 0 :1:5 
 ]
 "2308
-[u S957 . 1 `S950 1 . 1 0 ]
-[v _LATAbits LATAbits `VES957  1 e 1 @268 ]
+[u S963 . 1 `S956 1 . 1 0 ]
+[v _LATAbits LATAbits `VES963  1 e 1 @268 ]
 "2338
 [v _LATB LATB `VEuc  1 e 1 @269 ]
 "2377
 [v _LATC LATC `VEuc  1 e 1 @270 ]
-[s S967 . 1 `uc 1 LATC0 1 0 :1:0 
+[s S973 . 1 `uc 1 LATC0 1 0 :1:0 
 `uc 1 LATC1 1 0 :1:1 
 `uc 1 LATC2 1 0 :1:2 
 `uc 1 LATC3 1 0 :1:3 
@@ -311,11 +317,11 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 LATC7 1 0 :1:7 
 ]
 "2394
-[u S976 . 1 `S967 1 . 1 0 ]
-[v _LATCbits LATCbits `VES976  1 e 1 @270 ]
+[u S982 . 1 `S973 1 . 1 0 ]
+[v _LATCbits LATCbits `VES982  1 e 1 @270 ]
 "2932
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
-[s S897 . 1 `uc 1 ANSA0 1 0 :1:0 
+[s S903 . 1 `uc 1 ANSA0 1 0 :1:0 
 `uc 1 ANSA1 1 0 :1:1 
 `uc 1 ANSA2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -323,22 +329,22 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 ANSA5 1 0 :1:5 
 ]
 "2947
-[u S904 . 1 `S897 1 . 1 0 ]
-[v _ANSELAbits ANSELAbits `VES904  1 e 1 @396 ]
+[u S910 . 1 `S903 1 . 1 0 ]
+[v _ANSELAbits ANSELAbits `VES910  1 e 1 @396 ]
 "2977
 [v _ANSELB ANSELB `VEuc  1 e 1 @397 ]
-[s S914 . 1 `uc 1 . 1 0 :4:0 
+[s S920 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 ANSB4 1 0 :1:4 
 `uc 1 ANSB5 1 0 :1:5 
 `uc 1 ANSB6 1 0 :1:6 
 `uc 1 ANSB7 1 0 :1:7 
 ]
 "2991
-[u S920 . 1 `S914 1 . 1 0 ]
-[v _ANSELBbits ANSELBbits `VES920  1 e 1 @397 ]
+[u S926 . 1 `S920 1 . 1 0 ]
+[v _ANSELBbits ANSELBbits `VES926  1 e 1 @397 ]
 "3016
 [v _ANSELC ANSELC `VEuc  1 e 1 @398 ]
-[s S929 . 1 `uc 1 ANSC0 1 0 :1:0 
+[s S935 . 1 `uc 1 ANSC0 1 0 :1:0 
 `uc 1 ANSC1 1 0 :1:1 
 `uc 1 ANSC2 1 0 :1:2 
 `uc 1 ANSC3 1 0 :1:3 
@@ -348,8 +354,8 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 ANSC7 1 0 :1:7 
 ]
 "3033
-[u S938 . 1 `S929 1 . 1 0 ]
-[v _ANSELCbits ANSELCbits `VES938  1 e 1 @398 ]
+[u S944 . 1 `S935 1 . 1 0 ]
+[v _ANSELCbits ANSELCbits `VES944  1 e 1 @398 ]
 "3933
 [v _WPUA WPUA `VEuc  1 e 1 @524 ]
 "3983
@@ -426,7 +432,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
 "7379
 [v _IOCAP IOCAP `VEuc  1 e 1 @913 ]
-[s S1082 . 1 `uc 1 IOCAP0 1 0 :1:0 
+[s S1085 . 1 `uc 1 IOCAP0 1 0 :1:0 
 `uc 1 IOCAP1 1 0 :1:1 
 `uc 1 IOCAP2 1 0 :1:2 
 `uc 1 IOCAP3 1 0 :1:3 
@@ -434,23 +440,23 @@ I2C_ERROR_BUS_COLLISION 3
 `uc 1 IOCAP5 1 0 :1:5 
 ]
 "7394
-[u S1089 . 1 `S1082 1 . 1 0 ]
-[v _IOCAPbits IOCAPbits `VES1089  1 e 1 @913 ]
+[u S1092 . 1 `S1085 1 . 1 0 ]
+[v _IOCAPbits IOCAPbits `VES1092  1 e 1 @913 ]
 "7429
 [v _IOCAN IOCAN `VEuc  1 e 1 @914 ]
 "7479
 [v _IOCAF IOCAF `VEuc  1 e 1 @915 ]
 "7529
 [v _IOCBP IOCBP `VEuc  1 e 1 @916 ]
-[s S1137 . 1 `uc 1 . 1 0 :4:0 
+[s S1140 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 IOCBP4 1 0 :1:4 
 `uc 1 IOCBP5 1 0 :1:5 
 `uc 1 IOCBP6 1 0 :1:6 
 `uc 1 IOCBP7 1 0 :1:7 
 ]
 "7543
-[u S1143 . 1 `S1137 1 . 1 0 ]
-[v _IOCBPbits IOCBPbits `VES1143  1 e 1 @916 ]
+[u S1146 . 1 `S1140 1 . 1 0 ]
+[v _IOCBPbits IOCBPbits `VES1146  1 e 1 @916 ]
 "7568
 [v _IOCBN IOCBN `VEuc  1 e 1 @917 ]
 "7607
@@ -529,10 +535,10 @@ I2C_ERROR_BUS_COLLISION 3
 [v _RC3PPS RC3PPS `VEuc  1 e 1 @3747 ]
 "15018
 [v _RC5PPS RC5PPS `VEuc  1 e 1 @3749 ]
-"17 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"17 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _alarm alarm `VEuc  1 e 1 0 ]
 [s S40 . 20 `*.37(v 1 Initialize 2 0 `*.37(v 1 Deinitialize 2 2 `*.37(a 1 Write 2 4 `*.37(a 1 Read 2 6 `*.37(a 1 WriteRead 2 8 `*.37(a 1 TransferSetup 2 10 `*.37(E6989 1 ErrorGet 2 12 `*.37(a 1 IsBusy 2 14 `*.37(v 1 CallbackRegister 2 16 `*.37(v 1 Tasks 2 18 ]
-"79 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
+"79 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Host I2C1_Host `DCS40  1 e 20 0 ]
 "95
 [v _I2C1_Callback I2C1_Callback `*.37(v  1 s 2 I2C1_Callback ]
@@ -541,25 +547,41 @@ I2C_ERROR_BUS_COLLISION 3
 [v _i2c1Status i2c1Status `VES139  1 e 13 0 ]
 "99
 [v _i2c1_eventTable i2c1_eventTable `DC[9]*.37(E6998  1 e 18 0 ]
-"41 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
+"41 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_OverflowCallback TMR2_OverflowCallback `*.37(v  1 s 2 TMR2_OverflowCallback ]
-"41 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
+"41 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
 [v _TMR4_OverflowCallback TMR4_OverflowCallback `*.37(v  1 s 2 TMR4_OverflowCallback ]
-"23 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"23 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"102
+"108
 [v main@periodVal periodVal `[12]ui  1 a 24 0 ]
 [s S40 . 20 `*.37(v 1 Initialize 2 0 `*.37(v 1 Deinitialize 2 2 `*.37(a 1 Write 2 4 `*.37(a 1 Read 2 6 `*.37(a 1 WriteRead 2 8 `*.37(a 1 TransferSetup 2 10 `*.37(E6989 1 ErrorGet 2 12 `*.37(a 1 IsBusy 2 14 `*.37(v 1 CallbackRegister 2 16 `*.37(v 1 Tasks 2 18 ]
-"68
+"74
 [v main@I2C I2C `*.25DCS40  1 a 2 26 ]
-"69
+"75
 [v main@dataWrite dataWrite `[2]uc  1 a 2 24 ]
-"79
+"85
 [v main@F7139 F7139 `[12]ui  1 s 24 F7139 ]
-"126
+"130
 } 0
-"71 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
+"71 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
+[v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
+{
+"75
+} 0
+"65
+[v _TMR4_Start TMR4_Start `(v  1 e 1 0 ]
+{
+"69
+} 0
+"90
+[v _TMR4_PeriodCountSet TMR4_PeriodCountSet `(v  1 e 1 0 ]
+{
+[v TMR4_PeriodCountSet@periodVal periodVal `ui  1 p 2 0 ]
+"93
+} 0
+"71 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
 {
 "75
@@ -575,12 +597,12 @@ I2C_ERROR_BUS_COLLISION 3
 [v TMR2_PeriodCountSet@periodVal periodVal `ui  1 p 2 0 ]
 "93
 } 0
-"39 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/system.c
+"39 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/system.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "49
 } 0
-"48 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
+"48 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
 [v _TMR4_Initialize TMR4_Initialize `(v  1 e 1 0 ]
 {
 "63
@@ -591,7 +613,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v TMR4_OverflowCallbackRegister@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "97
 } 0
-"48 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
+"48 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_Initialize TMR2_Initialize `(v  1 e 1 0 ]
 {
 "63
@@ -602,22 +624,22 @@ I2C_ERROR_BUS_COLLISION 3
 [v TMR2_OverflowCallbackRegister@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
 "97
 } 0
-"45 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm6.c
+"45 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm6.c
 [v _PWM6_Initialize PWM6_Initialize `(v  1 e 1 0 ]
 {
 "61
 } 0
-"45 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm5.c
+"45 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/pwm/src/pwm5.c
 [v _PWM5_Initialize PWM5_Initialize `(v  1 e 1 0 ]
 {
 "61
 } 0
-"38 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/pins.c
+"38 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/pins.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "116
 } 0
-"114 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
+"114 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
 {
 "129
@@ -633,12 +655,12 @@ I2C_ERROR_BUS_COLLISION 3
 [v I2C1_CallbackRegister@callbackHandler callbackHandler `*.37(v  1 p 2 0 ]
 "217
 } 0
-"39 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/clock.c
+"39 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/system/src/clock.c
 [v _CLOCK_Initialize CLOCK_Initialize `(v  1 e 1 0 ]
 {
 "55
 } 0
-"142 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
+"142 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Write I2C1_Write `(a  1 e 1 0 ]
 {
 "144
@@ -664,8 +686,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "209
 } 0
-"129 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"133 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"216
+"220
 } 0

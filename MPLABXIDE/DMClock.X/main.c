@@ -23,7 +23,20 @@ extern __eeprom uint8_t alarm = 0xff;
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
-
+    
+    
+    // Note to Period Values
+    // C, C#, D, D#, E, F, F#, G, G#, A, A#, B
+    // 0  1   2  3   4  5  6   7  8   9  10  11
+    size_t periodVal[] = {477,450,425,401,378,357,337,318,300,283,267,252};
+    //value has to be below 255^, adjust accordingly ^^
+    TMR2_Stop();
+    TMR2_PeriodCountSet(180);
+    TMR2_Start();
+    __delay_ms(1000);
+    TMR4_Stop();
+    TMR4_PeriodCountSet(200);
+    TMR4_Start();
     //inputs
     TRISAbits.TRISA0 = 1; //input
     TRISAbits.TRISA1 = 1; //input
@@ -96,20 +109,15 @@ void main(void) {
      * @return None.
      */
     //void TMR2_PeriodCountSet(size_t periodVal);
-    // Note to Period Values
-    // C, C#, D, D#, E, F, F#, G, G#, A, A#, B
-    // 0  1   2  3   4  5  6   7  8   9  10  11
-    size_t periodVal[] = {477,450,425,401,378,357,337,318,300,283,267,252};
+
+    //TMR2_Stop();
+    //TMR2_PeriodCountSet(180);
+    //TMR2_Start();
     
-    while(1){
-        TMR2_PeriodCountSet(2000);
-        TMR2_Start();
-        __delay_ms(5000);
-        TMR2_Stop();
-        __delay_ms(5000);
-        
-        
-    }
+    //TMR4_Stop();
+    //TMR4_PeriodCountSet(200);
+    //TMR4_Start();
+
     
     __delay_ms(1000);
     

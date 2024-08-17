@@ -48,8 +48,8 @@ static void TMR4_DefaultOverflowCallback(void);
 void TMR4_Initialize(void){
 
     // Set TMR4 to the options selected in the User Interface
-    // PR 127; 
-    PR4 = 0x7F;
+    // PR 255; 
+    PR4 = 0xFF;
     // TMR 0x0; 
     TMR4 = 0x0;
 

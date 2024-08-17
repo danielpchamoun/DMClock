@@ -45,7 +45,7 @@
   * Section: Macro Declarations
  */
 
- #define PWM6_INITIALIZE_DUTY_VALUE    255
+ #define PWM6_INITIALIZE_DUTY_VALUE    511
 
 
 /**
