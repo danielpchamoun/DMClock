@@ -1,10 +1,10 @@
 (uint8_t)(((_XTAL_FREQ)/(4*(F))/(TIMER_PRESCALER))-1)
 
-
+239 x (4/32000000) x 64
 //PWM Period = [ (PR2) + 1 ] x 4 x Tosc x (TMR2 Prescale Value)
 // 1/264 Hz = [ (255) + 1 ] x 4 x (1/32000000) x (TMR2 Prescale Value)
 
-// PR2 = [1/(frequency x 4 x (1/32000000) x (64))] - 1
+1/(frequency x 4 x (1/32000000) x (64)) = PR2 + 1
 
 //C
 237.891543239
@@ -25,7 +25,7 @@
 177.965151906
 
 //F#/Gb
-167.921201638
+167.921202
 
 //G
 158.440809194
@@ -57,4 +57,14 @@ G = 783.99 Hz
 G#/Ab = 830.61 Hz
 A = 880.00 Hz
 A#/Bb = 932.33 Hz
-B = 987.77 Hz
+B = 987.77 Hz/493.883
+
+
+
+right hand:
+
+F C wait F C F G C wait G C G G# short wait G# A# G# wait 
+
+left hand:
+
+ 

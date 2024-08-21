@@ -11624,14 +11624,126 @@ extern __eeprom uint8_t alarm = 0xff;
 void main(void) {
 
     SYSTEM_Initialize();
-    TMR2_Stop();
-    TMR2_PeriodCountSet(180);
-    TMR2_Start();
 
-    TMR4_Stop();
-    TMR4_PeriodCountSet(200);
-    TMR4_Start();
 
+
+
+
+    size_t periodVal2[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+
+    size_t periodVal4[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+
+
+    while(1){
+
+        TMR2_PeriodCountSet(256);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+
+        TMR2_PeriodCountSet(255);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(200);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[0]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[1]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[2]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[3]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[4]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[5]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[6]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[7]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[8]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[9]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[10]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(periodVal2[11]);
+        TMR2_Start();
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        _delay((unsigned long)((1000)*(32000000/4000.0)));
+        TMR2_Stop();
+
+    }
+# 155 "main.c"
     TRISAbits.TRISA0 = 1;
     TRISAbits.TRISA1 = 1;
     TRISAbits.TRISA2 = 1;
@@ -11684,11 +11796,7 @@ void main(void) {
             I2C->Tasks();
         }
     }
-# 108 "main.c"
-    size_t periodVal[] = {477,450,425,401,378,357,337,318,300,283,267,252};
-# 118 "main.c"
-    _delay((unsigned long)((1000)*(32000000/4000.0)));
-# 129 "main.c"
+
     return;
 }
 
