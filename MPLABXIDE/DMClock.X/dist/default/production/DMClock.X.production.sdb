@@ -22,7 +22,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"195 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"197 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [e E6992 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -39,7 +39,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "23 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"212
+"214
 [v _ISR ISR `II(v  1 e 1 0 ]
 "114 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -548,17 +548,23 @@ I2C_ERROR_BUS_COLLISION 3
 "23 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"31
-[v main@periodVal2 periodVal2 `[12]ui  1 a 24 26 ]
+"38
+[v main@i i `i  1 a 2 74 ]
 "33
-[v main@periodVal4 periodVal4 `[12]ui  1 a 24 0 ]
-"196
-[v main@dataWrite dataWrite `[2]uc  1 a 2 24 ]
+[v main@o3 o3 `[12]ui  1 a 24 48 ]
+"32
+[v main@o2 o2 `[12]ui  1 a 24 24 ]
+"31
+[v main@o1 o1 `[12]ui  1 a 24 0 ]
+"198
+[v main@dataWrite dataWrite `[2]uc  1 a 2 72 ]
 "25
 [v main@F7120 F7120 `[12]ui  1 s 24 F7120 ]
 "31
 [v main@F7122 F7122 `[12]ui  1 s 24 F7122 ]
-"209
+"32
+[v main@F7124 F7124 `[12]ui  1 s 24 F7124 ]
+"211
 } 0
 "71 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr2.c
 [v _TMR2_Stop TMR2_Stop `(v  1 e 1 0 ]
@@ -665,8 +671,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "209
 } 0
-"212 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"214 C:\Users\Daniel\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"299
+"301
 } 0

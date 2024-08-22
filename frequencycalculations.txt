@@ -4,7 +4,7 @@
 //PWM Period = [ (PR2) + 1 ] x 4 x Tosc x (TMR2 Prescale Value)
 // 1/264 Hz = [ (255) + 1 ] x 4 x (1/32000000) x (TMR2 Prescale Value)
 
-1/(frequency x 4 x (1/32000000) x (64)) = PR2 + 1
+(1/(frequency x 4 x (1/32000000) x (64))) - 1 = PR2
 
 //C
 237.891543239
@@ -45,7 +45,7 @@
 //https://www.youtube.com/watch?v=2vqa8UcFs9c
 
 
-
+B = 493.883 Hz
 C =  523.25 Hz
 C#/Db = 554.37 Hz
 D = 587.33 Hz
@@ -57,14 +57,47 @@ G = 783.99 Hz
 G#/Ab = 830.61 Hz
 A = 880.00 Hz
 A#/Bb = 932.33 Hz
-B = 987.77 Hz/493.883
 
 
+
+B = 987.77 Hz
+C =  1046.50 Hz
+C#/Db = 1108.73 Hz
+D = 1174.66 Hz
+D#/Eb = 1244.51 Hz
+E = 1318.51 Hz
+F = 1396.91 Hz
+F#/Gb = 1479.98 Hz
+G = 1567.98 Hz
+G#/Ab = 1661.22 Hz
+A = 1760 Hz
+A#/Bb = 1864.66 Hz	
+
+
+
+B = 1975.53 Hz
+C =  2093.00 Hz
+C#/Db = 2217.46 Hz
+D = 2349.32 Hz
+D#/Eb = 2489.02 Hz
+E = 2637.02 Hz
+F = 2793.83 Hz
+F#/Gb = 2959.96 Hz
+G = 3135.96 Hz
+G#/Ab = 3322.44 Hz
+A = 3520 Hz
+A#/Bb = 3729.31 Hz
+
+// Note to Period Values
+// B, C, C#, D, D#, E, F, F#, G, G#, A, A#
+// 0  1  2   3  4   5  6  7   8  9   10 11
 
 right hand:
 
-F C wait F C F G C wait G C G G# short wait G# A# G# wait 
+C A# D# C A# G G# A# G# D# G G#
 
 left hand:
+
+C D# D# C# C D# F F D# 
 
  

@@ -1,0 +1,103 @@
+        TMR2_Stop();
+        TMR2_PeriodCountSet(o2[1]); //C.
+        TMR2_Start();
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[1]); //C
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+
+        TMR2_PeriodCountSet(o1[11]); //A#
+        TMR2_Start();
+        __delay_ms(tempo/2);
+        TMR2_Stop();
+        
+        
+        TMR2_PeriodCountSet(o2[4]); //D# 
+        TMR2_Start();
+        TMR4_Stop();
+
+        TMR4_PeriodCountSet(o1[2]);
+        TMR4_Start();
+        __delay_ms(tempo/2);
+        TMR2_Stop();
+        
+        TMR2_PeriodCountSet(o2[1]); //C.
+        TMR2_Start();
+        
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        
+        TMR2_PeriodCountSet(o1[10]); //A#
+        TMR2_Start();
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]);
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o1[8]); //G.
+        TMR2_Start();
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo/4); 
+        TMR2_Stop();
+
+
+        
+        TMR2_PeriodCountSet(o1[9]); //G#.
+        TMR2_Start();
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[2]); //C#
+        TMR4_Start();
+        __delay_ms(tempo/4); 
+        TMR2_Stop();
+
+        
+        TMR2_PeriodCountSet(o1[11]); //A#.
+        TMR2_Start();
+        
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[7]); //C
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o1[9]); //G#
+        TMR2_Start();
+        TMR4_PeriodCountSet(o1[8]); 
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o2[4]); //D#
+        TMR2_Start();
+        TMR4_PeriodCountSet(o1[9]);
+        TMR4_Start();
+        __delay_ms(tempo/2);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o1[8]); //G
+        TMR2_Start();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o1[9]); //G#
+        TMR2_Start();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        __delay_ms(2000);

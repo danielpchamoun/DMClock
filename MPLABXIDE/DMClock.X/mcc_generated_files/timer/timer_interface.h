@@ -1,16 +1,16 @@
-/**
-  * PWM5 Generated Driver File
-  *
-  * @file pwm5.c
-  *
-  * @ingroup pwm5
-  *
-  * @brief This file contains the API implementations for the PWM5 module.
-  *
-  * @version PWM5 Driver Version 2.0.4
-*/
+/** 
+ * TMR Generated Driver API Header File
+ *
+ * @file timer_interface.h
+ *  
+ * @defgroup timer_interface Timer interface
+ *
+ * @brief This header file provides interfaces to Timer APIs.
+ *
+ * @version TMR_interface Version 1.0.1
+ */
 
- /*
+/*
 © [2024] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
@@ -30,41 +30,34 @@
     EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
     THIS SOFTWARE.
 */
+
+#ifndef TMR_INTERFACE_H
+/* cppcheck-suppress misra-c2012-2.5 */
+#define TMR_INTERFACE_H
+
+/**
+ * @brief This file contains API prototypes and other data types for the Timer interface.
+ * @{
+ */
+
+#include<stddef.h>
+        
+/**
+ @ingroup timer_interface
+ @struct TMR_INTERFACE
+ @brief This structure contains the interfaces to Timer module
+ */
  
- /**
-  * Section: Included Files
-  */
-
- #include <xc.h>
- #include "../pwm5.h"
-
- /**
-  * Section: PWM Module APIs
-  */
-
- void PWM5_Initialize(void)
- {
-    // Set the PWM5 to the options selected in the User Interface
-    
-    // PWMPOL active_hi; PWMEN enabled; 
-    PWM5CON = 0x80;
-    
-    // PWMDCH 31; 
-    PWM5DCH = 0x1F;
-
-    // PWMDCL 3; 
-    PWM5DCL = 0xC0;
-    
-
-
-    PWMTMRSbits.P5TSEL = 0x1;
- }
-
- void PWM5_LoadDutyValue(uint16_t dutyValue)
- {
-     // Writing to 8 MSBs of PWM duty cycle in PWMDCH register
-     PWM5DCH = (uint8_t) ((dutyValue & 0x03FCu) >> 2);
-     
-     // Writing to 2 LSBs of PWM duty cycle in PWMDCL register
-     PWM5DCL = (uint8_t) ((dutyValue & 0x0003u) << 6);
- }
+struct TMR_INTERFACE
+{
+    void (*Initialize)(void);
+    void (*Start)(void);
+    void (*Stop)(void);
+    void (*PeriodCountSet)(size_t count);
+    void (*TimeoutCallbackRegister)(void (* CallbackHandler)(void));
+    void (*Tasks)(void);
+};
+/**
+ * @}
+ */
+#endif //TMR_INTERFACE_H

@@ -1113,8 +1113,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _TMR2_Initialize ]
 [f ]
 "52
-[; ;mcc_generated_files/timer/src/tmr2.c: 52:     PR2 = 0xFF;
-[e = _PR2 -> -> 255 `i `uc ]
+[; ;mcc_generated_files/timer/src/tmr2.c: 52:     PR2 = 0x3F;
+[e = _PR2 -> -> 63 `i `uc ]
 "54
 [; ;mcc_generated_files/timer/src/tmr2.c: 54:     TMR2 = 0x0;
 [e = _TMR2 -> -> 0 `i `uc ]

@@ -11260,7 +11260,7 @@ void TMR4_Initialize(void){
 
 
 
-    PR4 = 0xFF;
+    PR4 = 0x3F;
 
     TMR4 = 0x0;
 

@@ -28,105 +28,129 @@ void main(void) {
     // Note to Period Values
     // B, C, C#, D, D#, E, F, F#, G, G#, A, A#
     // 0  1  2   3  4   5  6  7   8  9   10 11
-    size_t periodVal2[] = {252,238,224,212,200,189,178,168,158,149,141,133};
-    
-    //size_t periodVal4[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+    size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+    size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
+    size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
-    //value has to be below 256 and above 128, to get lower, i think there might need to be some changes to timer2's prescale value? not sure 
+    const int tempo = 500;
     while(1){
         
-        TMR2_PeriodCountSet(periodVal2[0]);
+        for(int i = 255; i > 0; i--){
+            TMR2_Stop();
+            TMR2_PeriodCountSet(i); //C.
+            TMR2_Start();
+            __delay_ms(1);  
+        }
+        __delay_ms(500);  
+
+        
+        /*
+        TMR2_Stop();
+        TMR2_PeriodCountSet(o2[1]); //C.
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[1]); //C
+        TMR4_Start();
+        __delay_ms(tempo);
         TMR2_Stop();
 
-        TMR2_PeriodCountSet(periodVal2[1]);
+        TMR2_PeriodCountSet(o1[11]); //A#
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
-        TMR2_Stop();
-     
-        TMR2_PeriodCountSet(periodVal2[2]);
-        TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        __delay_ms(tempo);
         TMR2_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[3]);
+        
+        TMR2_PeriodCountSet(o2[4]); //D# 
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_Stop();
+
+        TMR4_PeriodCountSet(o1[2]);
+        TMR4_Start();
+        __delay_ms(tempo/2);
         TMR2_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[4]);
+        TMR2_PeriodCountSet(o2[1]); //C.
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
         TMR2_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[5]);
+        TMR2_PeriodCountSet(o1[11]); //A#
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]);
+        TMR4_Start();
+        __delay_ms(tempo);
         TMR2_Stop();
+        TMR4_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[6]);
+        TMR2_PeriodCountSet(o1[8]); //G.
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo/4); 
         TMR2_Stop();
+
+
         
-        TMR2_PeriodCountSet(periodVal2[7]);
+        TMR2_PeriodCountSet(o1[9]); //G#.
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[2]); //C#
+        TMR4_Start();
+        __delay_ms(tempo/4); 
         TMR2_Stop();
+
         
-        TMR2_PeriodCountSet(periodVal2[8]);
+        TMR2_PeriodCountSet(o1[11]); //A#.
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
-        TMR2_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[9]);
+        TMR4_Stop();
+        TMR4_PeriodCountSet(o1[7]); //C
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        
+        TMR2_PeriodCountSet(o1[9]); //G#
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_PeriodCountSet(o1[8]); 
+        TMR4_Start();
+        __delay_ms(tempo);
         TMR2_Stop();
+        TMR4_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[10]);
+        TMR2_PeriodCountSet(o2[4]); //D#
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_PeriodCountSet(o1[9]);
+        TMR4_Start();
+        __delay_ms(tempo/2);
         TMR2_Stop();
+        TMR4_Stop();
         
-        TMR2_PeriodCountSet(periodVal2[11]);
+        TMR2_PeriodCountSet(o1[8]); //G
         TMR2_Start();
-        __delay_ms(1000);
-        __delay_ms(1000);
-        __delay_ms(1000);
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
         TMR2_Stop();
+        TMR4_Stop();
         
+        TMR2_PeriodCountSet(o1[9]); //G#
+        TMR2_Start();
+        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_Start();
+        __delay_ms(tempo);
+        TMR2_Stop();
+        TMR4_Stop();
+        __delay_ms(2000);
+         */
     }
-    
-    
-    /*
-    TMR4_Stop();
-    TMR4_PeriodCountSet(periodVal[0]);
-    TMR4_Start();
-     */
+
      
     
     //inputs

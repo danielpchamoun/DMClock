@@ -1,4 +1,4 @@
- /**
+/**
  * TMR2 Generated Driver File
  *
  * @file tmr2.c
@@ -48,8 +48,8 @@ static void TMR2_DefaultOverflowCallback(void);
 void TMR2_Initialize(void){
 
     // Set TMR2 to the options selected in the User Interface
-    // PR 255; 
-    PR2 = 0xFF;
+    // PR 63; 
+    PR2 = 0x3F;
     // TMR 0x0; 
     TMR2 = 0x0;
 
