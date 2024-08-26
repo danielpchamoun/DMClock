@@ -16,7 +16,23 @@
 //saved in non volatile eeprom
 extern __eeprom uint8_t alarm = 0xff;
 
+void playLDrum(void){ //low drum 128 ticks of delay
+    for(int i = 0; i < 256; i+=2){ //-
+        TMR6_Stop();
+        TMR6_PeriodCountSet(i);
+        TMR6_Start();
+        __delay_ms(1);
+    }
+}
 
+void playHH(void){ //hihat 128 ticks of delay
+    for(int i = 255; i >= 0 ; i-=2){
+        TMR6_Stop();
+        TMR6_PeriodCountSet(i);
+        TMR6_Start();
+        __delay_ms(1);
+    }
+}
 
 
 
@@ -32,27 +48,19 @@ void main(void) {
     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
-    const int tempo = 500;
+    const int tempo = 610;
+    const int test = 3;
     while(1){
-        
-        for(int i = 255; i > 0; i--){
-            TMR2_Stop();
-            TMR2_PeriodCountSet(i); //C.
-            TMR2_Start();
-            __delay_ms(1);  
-        }
-        __delay_ms(500);  
-
-        
-        /*
-        TMR2_Stop();
+        TMR2_Stop();        
         TMR2_PeriodCountSet(o2[1]); //C.
         TMR2_Start();
+        
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C
+        TMR4_PeriodCountSet(o1[1]); //C L
         TMR4_Start();
         __delay_ms(tempo);
         TMR2_Stop();
+        
 
         TMR2_PeriodCountSet(o1[11]); //A#
         TMR2_Start();
@@ -62,10 +70,6 @@ void main(void) {
         
         TMR2_PeriodCountSet(o2[4]); //D# 
         TMR2_Start();
-        TMR4_Stop();
-
-        TMR4_PeriodCountSet(o1[2]);
-        TMR4_Start();
         __delay_ms(tempo/2);
         TMR2_Stop();
         
@@ -73,24 +77,24 @@ void main(void) {
         TMR2_Start();
         
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_PeriodCountSet(o1[4]); //D# L
         TMR4_Start();
         __delay_ms(tempo);
         TMR2_Stop();
         
         TMR2_PeriodCountSet(o1[11]); //A#
         TMR2_Start();
+        __delay_ms(tempo-50);
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]);
-        TMR4_Start();
-        __delay_ms(tempo);
+        __delay_ms(50);
         TMR2_Stop();
-        TMR4_Stop();
+
         
         TMR2_PeriodCountSet(o1[8]); //G.
         TMR2_Start();
+        
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_PeriodCountSet(o1[4]); //D# L
         TMR4_Start();
         __delay_ms(tempo/4); 
         TMR2_Stop();
@@ -100,7 +104,7 @@ void main(void) {
         TMR2_PeriodCountSet(o1[9]); //G#.
         TMR2_Start();
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[2]); //C#
+        TMR4_PeriodCountSet(o1[2]); //C# L
         TMR4_Start();
         __delay_ms(tempo/4); 
         TMR2_Stop();
@@ -110,7 +114,7 @@ void main(void) {
         TMR2_Start();
         
         TMR4_Stop();
-        TMR4_PeriodCountSet(o1[7]); //C
+        TMR4_PeriodCountSet(o1[1]); //C  L
         TMR4_Start();
         __delay_ms(tempo);
         TMR2_Stop();
@@ -118,7 +122,7 @@ void main(void) {
         
         TMR2_PeriodCountSet(o1[9]); //G#
         TMR2_Start();
-        TMR4_PeriodCountSet(o1[8]); 
+        TMR4_PeriodCountSet(o1[4]);  //D# L
         TMR4_Start();
         __delay_ms(tempo);
         TMR2_Stop();
@@ -126,15 +130,17 @@ void main(void) {
         
         TMR2_PeriodCountSet(o2[4]); //D#
         TMR2_Start();
-        TMR4_PeriodCountSet(o1[9]);
+        TMR4_PeriodCountSet(o1[6]); // F L 
         TMR4_Start();
-        __delay_ms(tempo/2);
-        TMR2_Stop();
+        __delay_ms((tempo/2) - 50);
         TMR4_Stop();
+        __delay_ms(50);
+        TMR2_Stop();
+        
         
         TMR2_PeriodCountSet(o1[8]); //G
         TMR2_Start();
-        TMR4_PeriodCountSet(o1[4]); //D#
+        TMR4_PeriodCountSet(o1[6]); //F
         TMR4_Start();
         __delay_ms(tempo);
         TMR2_Stop();
@@ -148,7 +154,7 @@ void main(void) {
         TMR2_Stop();
         TMR4_Stop();
         __delay_ms(2000);
-         */
+
     }
 
      
