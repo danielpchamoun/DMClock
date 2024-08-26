@@ -16,6 +16,7 @@
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm5.h</itemPath>
           <itemPath>mcc_generated_files/pwm/pwm6.h</itemPath>
+          <itemPath>mcc_generated_files/pwm/ccp1.h</itemPath>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
           <itemPath>mcc_generated_files/system/system.h</itemPath>
@@ -27,6 +28,7 @@
         <logicalFolder name="timer" displayName="timer" projectFiles="true">
           <itemPath>mcc_generated_files/timer/tmr2.h</itemPath>
           <itemPath>mcc_generated_files/timer/tmr4.h</itemPath>
+          <itemPath>mcc_generated_files/timer/tmr6.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
@@ -55,6 +57,7 @@
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/pwm/src/pwm6.c</itemPath>
             <itemPath>mcc_generated_files/pwm/src/pwm5.c</itemPath>
+            <itemPath>mcc_generated_files/pwm/src/ccp1.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -70,6 +73,7 @@
           <logicalFolder name="src" displayName="src" projectFiles="true">
             <itemPath>mcc_generated_files/timer/src/tmr2.c</itemPath>
             <itemPath>mcc_generated_files/timer/src/tmr4.c</itemPath>
+            <itemPath>mcc_generated_files/timer/src/tmr6.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>

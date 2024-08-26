@@ -1,17 +1,14 @@
 /**
- * System Driver Header File
+ * PWM1 Generated Driver API Header File.
  * 
- * @file system.h
+ * @file ccp1.h
  * 
- * @defgroup systemdriver System Driver
+ * @defgroup pwm1 PWM1
  * 
- * @brief This file contains the API prototype for the System driver.
+ * @brief This file contains the API prototypes for the PWM1 module.
  *
- * @version Driver Version 1.0.1
- *
- * @version Package Version 1.0.1
+ * @version PWM1 Driver Version 2.0.2
 */
-
 /*
 © [2024] Microchip Technology Inc. and its subsidiaries.
 
@@ -33,34 +30,46 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
+#ifndef PWM1_H
+#define PWM1_H
+
+ /**
+   Section: Included Files
+ */
 
 #include <xc.h>
 #include <stdint.h>
 #include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../i2c_host/mssp1.h"
-#include "../pwm/ccp1.h"
-#include "../pwm/pwm5.h"
-#include "../pwm/pwm6.h"
-#include "../timer/tmr2.h"
-#include "../timer/tmr4.h"
-#include "../timer/tmr6.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
 
-/**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
+#define PWM1_Initialize CCP1_Initialize
+#define PWM1_LoadDutyValue CCP1_LoadDutyValue
+#define PWM1_OutputStatusGet  CCP1_OutputStatusGet
+
+ /**
+ * @ingroup pwm1
+ * @brief Initializes the CCP1 module. This is called only once before calling other CCP1 APIs.
  * @param None.
  * @return None.
-*/
-void SYSTEM_Initialize(void);
-
-#endif	/* SYSTEM_H */
+ */
+void CCP1_Initialize(void);
+/**
+ * @ingroup pwm1
+ * @brief Loads the 16-bit duty cycle value.
+ * @pre CCP1_Initialize() is already called.
+ * @param dutyValue - 16-bit duty cycle value.
+ * @return None.
+ */
+void CCP1_LoadDutyValue(uint16_t dutyValue);
+/**
+ * @ingroup pwm1
+ * @brief Returns the PWM output status.
+ * @pre CCP1_Initialize() is already called.
+ * @param None.
+ * @retval True - CCP1 PWM output is high
+ * @retval False - CCP1 PWM output is low
+ */
+bool CCP1_OutputStatusGet(void);
+#endif //PWM1_H
 /**
  End of File
 */

@@ -1,17 +1,14 @@
 /**
- * System Driver Header File
+ * PWM1 Generated Driver File.
  * 
- * @file system.h
+ * @file ccp1.c
  * 
- * @defgroup systemdriver System Driver
+ * @ingroup pwm1
  * 
- * @brief This file contains the API prototype for the System driver.
+ * @brief This file contains the API implementations for the PWM1 driver.
  *
- * @version Driver Version 1.0.1
- *
- * @version Package Version 1.0.1
+ * @version PWM1 Driver Version 2.0.2
 */
-
 /*
 © [2024] Microchip Technology Inc. and its subsidiaries.
 
@@ -33,34 +30,62 @@
     THIS SOFTWARE.
 */
 
-#ifndef SYSTEM_H
-#define	SYSTEM_H
+ /**
+   Section: Included Files
+ */
 
 #include <xc.h>
-#include <stdint.h>
-#include <stdbool.h>
-#include "config_bits.h"
-#include "../system/pins.h"
-#include "../i2c_host/mssp1.h"
-#include "../pwm/ccp1.h"
-#include "../pwm/pwm5.h"
-#include "../pwm/pwm6.h"
-#include "../timer/tmr2.h"
-#include "../timer/tmr4.h"
-#include "../timer/tmr6.h"
-#include "../system/interrupt.h"
-#include "../system/clock.h"
+#include "../ccp1.h"
 
 /**
- * @ingroup systemdriver
- * @brief Initializes the system module.
- * This routine is called only once during system initialization, before calling other APIs.
- * @param None.
- * @return None.
+  Section: Macro Declarations
 */
-void SYSTEM_Initialize(void);
 
-#endif	/* SYSTEM_H */
+#define PWM1_INITIALIZE_DUTY_VALUE    511
+
+/**
+  Section: PWM1 Module APIs
+*/
+
+void CCP1_Initialize(void)
+{
+    // Set the PWM1 to the options selected in the User Interface
+    
+    // CCPM PWM; EN enabled; FMT right_aligned; 
+    CCP1CON = 0x8F;
+    
+    // CCPRH 1; 
+    CCPR1H = 0x1;
+    
+    // CCPRL 255; 
+    CCPR1L = 0xFF;
+    
+    // Selecting Timer 6
+    CCPTMRSbits.C1TSEL = 0x3;
+}
+
+void CCP1_LoadDutyValue(uint16_t dutyValue)
+{
+	  dutyValue &= 0x03FF;
+    
+    // Load duty cycle value
+    if(CCP1CONbits.CCP1FMT)
+    {
+        dutyValue <<= 6;
+        CCPR1H = (uint8_t)(dutyValue >> 8);
+        CCPR1L = (uint8_t)dutyValue;
+    }
+    else
+    {
+        CCPR1H = (uint8_t)(dutyValue >> 8);
+        CCPR1L = (uint8_t)dutyValue;
+    }
+}
+bool CCP1_OutputStatusGet(void)
+{
+    // Returns the output status
+    return(CCP1CONbits.CCP1OUT);
+}
 /**
  End of File
 */
