@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/pins.c"
+# 1 "mcc_generated_files/timer/src/tmr6.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/pins.c" 2
-# 35 "mcc_generated_files/system/src/pins.c"
-# 1 "mcc_generated_files/system/src/../pins.h" 1
-# 38 "mcc_generated_files/system/src/../pins.h"
+# 1 "mcc_generated_files/timer/src/tmr6.c" 2
+# 38 "mcc_generated_files/timer/src/tmr6.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11214,9 +11212,24 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 38 "mcc_generated_files/system/src/../pins.h" 2
-# 362 "mcc_generated_files/system/src/../pins.h"
-void PIN_MANAGER_Initialize (void);
+# 38 "mcc_generated_files/timer/src/tmr6.c" 2
+
+# 1 "mcc_generated_files/timer/src/../tmr6.h" 1
+# 39 "mcc_generated_files/timer/src/../tmr6.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 39 "mcc_generated_files/timer/src/../tmr6.h" 2
+# 55 "mcc_generated_files/timer/src/../tmr6.h"
+ void TMR6_Initialize(void);
+# 64 "mcc_generated_files/timer/src/../tmr6.h"
+void TMR6_Start(void);
+# 73 "mcc_generated_files/timer/src/../tmr6.h"
+void TMR6_Stop(void);
+# 82 "mcc_generated_files/timer/src/../tmr6.h"
+uint8_t TMR6_Read(void);
+# 91 "mcc_generated_files/timer/src/../tmr6.h"
+void TMR6_Write(uint8_t timerVal);
+# 100 "mcc_generated_files/timer/src/../tmr6.h"
+void TMR6_PeriodCountSet(size_t periodVal);
 
 
 
@@ -11224,86 +11237,87 @@ void PIN_MANAGER_Initialize (void);
 
 
 
-void PIN_MANAGER_IOC(void);
-# 35 "mcc_generated_files/system/src/pins.c" 2
+void TMR6_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 
 
-void PIN_MANAGER_Initialize(void)
+
+
+
+
+void TMR6_Tasks(void);
+# 39 "mcc_generated_files/timer/src/tmr6.c" 2
+
+
+static void (*TMR6_OverflowCallback)(void);
+static void TMR6_DefaultOverflowCallback(void);
+
+
+
+
+
+void TMR6_Initialize(void){
+
+
+
+    PR6 = 0x3F;
+
+    TMR6 = 0x0;
+
+
+     PIR2bits.TMR6IF = 0;
+
+    T6CON = 0x7;
+
+
+    TMR6_OverflowCallbackRegister(TMR6_DefaultOverflowCallback);
+}
+
+void TMR6_Start(void)
 {
 
+    T6CONbits.TMR6ON = 1;
+}
 
+void TMR6_Stop(void)
+{
 
-    LATA = 0x0;
-    LATB = 0x50;
-    LATC = 0x0;
+    T6CONbits.TMR6ON = 0;
+}
 
+uint8_t TMR6_Read(void)
+{
+    uint8_t readVal;
+    readVal = TMR6;
+    return readVal;
+}
 
+void TMR6_Write(uint8_t timerVal)
+{
 
+    TMR6 = timerVal;;
+}
 
-    TRISA = 0x1F;
-    TRISB = 0xF0;
-    TRISC = 0xC0;
+void TMR6_PeriodCountSet(size_t periodVal)
+{
+   PR6 = (uint8_t) periodVal;
+}
 
+void TMR6_OverflowCallbackRegister(void (* InterruptHandler)(void)){
+    TMR6_OverflowCallback = InterruptHandler;
+}
 
-
-
-    ANSELA = 0x10;
-    ANSELB = 0x0;
-    ANSELC = 0x38;
-
-
-
-
-    WPUA = 0x0;
-    WPUB = 0x0;
-    WPUC = 0x0;
-
-
-
-
-
-    ODCONA = 0x0;
-    ODCONB = 0x0;
-    ODCONC = 0x0;
-
-
-
-    SLRCONA = 0x37;
-    SLRCONB = 0xF0;
-    SLRCONC = 0xFF;
-
-
-
-    INLVLA = 0x3F;
-    INLVLB = 0xF0;
-    INLVLC = 0xFF;
-
-
-
-
-    RC5PPS = 2;
-    RC3PPS = 3;
-    SSP1CLKPPS = 0xE;
-    RB6PPS = 24;
-    SSP1DATPPS = 0xC;
-    RB4PPS = 25;
-    CCP1PPS = 0x14;
-    RC4PPS = 12;
-# 107 "mcc_generated_files/system/src/pins.c"
-    IOCAP = 0x0;
-    IOCAN = 0x0;
-    IOCAF = 0x0;
-    IOCBP = 0x0;
-    IOCBN = 0x0;
-    IOCBF = 0x0;
-    IOCCP = 0x0;
-    IOCCN = 0x0;
-    IOCCF = 0x0;
+static void TMR6_DefaultOverflowCallback(void){
 
 
 }
 
-void PIN_MANAGER_IOC(void)
+void TMR6_Tasks(void)
 {
+    if(PIR2bits.TMR6IF)
+    {
+
+        PIR2bits.TMR6IF = 0;
+        TMR6_OverflowCallback();
+    }
 }

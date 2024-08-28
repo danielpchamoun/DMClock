@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/system/src/pins.c"
+# 1 "mcc_generated_files/pwm/src/ccp1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/system/src/pins.c" 2
-# 35 "mcc_generated_files/system/src/pins.c"
-# 1 "mcc_generated_files/system/src/../pins.h" 1
-# 38 "mcc_generated_files/system/src/../pins.h"
+# 1 "mcc_generated_files/pwm/src/ccp1.c" 2
+# 37 "mcc_generated_files/pwm/src/ccp1.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -11214,9 +11212,14 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 38 "mcc_generated_files/system/src/../pins.h" 2
-# 362 "mcc_generated_files/system/src/../pins.h"
-void PIN_MANAGER_Initialize (void);
+# 37 "mcc_generated_files/pwm/src/ccp1.c" 2
+
+# 1 "mcc_generated_files/pwm/src/../ccp1.h" 1
+# 42 "mcc_generated_files/pwm/src/../ccp1.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 42 "mcc_generated_files/pwm/src/../ccp1.h" 2
+# 54 "mcc_generated_files/pwm/src/../ccp1.h"
+void CCP1_Initialize(void);
 
 
 
@@ -11224,86 +11227,47 @@ void PIN_MANAGER_Initialize (void);
 
 
 
-void PIN_MANAGER_IOC(void);
-# 35 "mcc_generated_files/system/src/pins.c" 2
-
-
-
-void PIN_MANAGER_Initialize(void)
+void CCP1_LoadDutyValue(uint16_t dutyValue);
+# 71 "mcc_generated_files/pwm/src/../ccp1.h"
+_Bool CCP1_OutputStatusGet(void);
+# 38 "mcc_generated_files/pwm/src/ccp1.c" 2
+# 50 "mcc_generated_files/pwm/src/ccp1.c"
+void CCP1_Initialize(void)
 {
 
 
 
-    LATA = 0x0;
-    LATB = 0x50;
-    LATC = 0x0;
+    CCP1CON = 0x8F;
 
 
+    CCPR1H = 0x0;
 
 
-    TRISA = 0x1F;
-    TRISB = 0xF0;
-    TRISC = 0xC0;
+    CCPR1L = 0x7F;
 
 
-
-
-    ANSELA = 0x10;
-    ANSELB = 0x0;
-    ANSELC = 0x38;
-
-
-
-
-    WPUA = 0x0;
-    WPUB = 0x0;
-    WPUC = 0x0;
-
-
-
-
-
-    ODCONA = 0x0;
-    ODCONB = 0x0;
-    ODCONC = 0x0;
-
-
-
-    SLRCONA = 0x37;
-    SLRCONB = 0xF0;
-    SLRCONC = 0xFF;
-
-
-
-    INLVLA = 0x3F;
-    INLVLB = 0xF0;
-    INLVLC = 0xFF;
-
-
-
-
-    RC5PPS = 2;
-    RC3PPS = 3;
-    SSP1CLKPPS = 0xE;
-    RB6PPS = 24;
-    SSP1DATPPS = 0xC;
-    RB4PPS = 25;
-    CCP1PPS = 0x14;
-    RC4PPS = 12;
-# 107 "mcc_generated_files/system/src/pins.c"
-    IOCAP = 0x0;
-    IOCAN = 0x0;
-    IOCAF = 0x0;
-    IOCBP = 0x0;
-    IOCBN = 0x0;
-    IOCBF = 0x0;
-    IOCCP = 0x0;
-    IOCCN = 0x0;
-    IOCCF = 0x0;
-
-
+    CCPTMRSbits.C1TSEL = 0x3;
 }
 
-void PIN_MANAGER_IOC(void)
+void CCP1_LoadDutyValue(uint16_t dutyValue)
 {
+   dutyValue &= 0x03FF;
+
+
+    if(CCP1CONbits.CCP1FMT)
+    {
+        dutyValue <<= 6;
+        CCPR1H = (uint8_t)(dutyValue >> 8);
+        CCPR1L = (uint8_t)dutyValue;
+    }
+    else
+    {
+        CCPR1H = (uint8_t)(dutyValue >> 8);
+        CCPR1L = (uint8_t)dutyValue;
+    }
+}
+_Bool CCP1_OutputStatusGet(void)
+{
+
+    return(CCP1CONbits.CCP1OUT);
 }

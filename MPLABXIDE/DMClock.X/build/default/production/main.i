@@ -11517,6 +11517,21 @@ void I2C1_ISR(void);
 void I2C1_ERROR_ISR(void);
 # 44 "./mcc_generated_files\\system\\system.h" 2
 
+# 1 "./mcc_generated_files\\system/../pwm/ccp1.h" 1
+# 54 "./mcc_generated_files\\system/../pwm/ccp1.h"
+void CCP1_Initialize(void);
+
+
+
+
+
+
+
+void CCP1_LoadDutyValue(uint16_t dutyValue);
+# 71 "./mcc_generated_files\\system/../pwm/ccp1.h"
+_Bool CCP1_OutputStatusGet(void);
+# 45 "./mcc_generated_files\\system\\system.h" 2
+
 # 1 "./mcc_generated_files\\system/../pwm/pwm5.h" 1
 # 57 "./mcc_generated_files\\system/../pwm/pwm5.h"
  void PWM5_Initialize(void);
@@ -11528,7 +11543,7 @@ void I2C1_ERROR_ISR(void);
 
 
  void PWM5_LoadDutyValue(uint16_t dutyValue);
-# 45 "./mcc_generated_files\\system\\system.h" 2
+# 46 "./mcc_generated_files\\system\\system.h" 2
 
 # 1 "./mcc_generated_files\\system/../pwm/pwm6.h" 1
 # 57 "./mcc_generated_files\\system/../pwm/pwm6.h"
@@ -11541,7 +11556,7 @@ void I2C1_ERROR_ISR(void);
 
 
  void PWM6_LoadDutyValue(uint16_t dutyValue);
-# 46 "./mcc_generated_files\\system\\system.h" 2
+# 47 "./mcc_generated_files\\system\\system.h" 2
 
 # 1 "./mcc_generated_files\\system/../timer/tmr2.h" 1
 # 55 "./mcc_generated_files\\system/../timer/tmr2.h"
@@ -11572,7 +11587,7 @@ void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 
 void TMR2_Tasks(void);
-# 47 "./mcc_generated_files\\system\\system.h" 2
+# 48 "./mcc_generated_files\\system\\system.h" 2
 
 # 1 "./mcc_generated_files\\system/../timer/tmr4.h" 1
 # 55 "./mcc_generated_files\\system/../timer/tmr4.h"
@@ -11603,8 +11618,54 @@ void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 
 void TMR4_Tasks(void);
-# 48 "./mcc_generated_files\\system\\system.h" 2
-# 59 "./mcc_generated_files\\system\\system.h"
+# 49 "./mcc_generated_files\\system\\system.h" 2
+
+# 1 "./mcc_generated_files\\system/../timer/tmr6.h" 1
+# 55 "./mcc_generated_files\\system/../timer/tmr6.h"
+ void TMR6_Initialize(void);
+# 64 "./mcc_generated_files\\system/../timer/tmr6.h"
+void TMR6_Start(void);
+# 73 "./mcc_generated_files\\system/../timer/tmr6.h"
+void TMR6_Stop(void);
+# 82 "./mcc_generated_files\\system/../timer/tmr6.h"
+uint8_t TMR6_Read(void);
+# 91 "./mcc_generated_files\\system/../timer/tmr6.h"
+void TMR6_Write(uint8_t timerVal);
+# 100 "./mcc_generated_files\\system/../timer/tmr6.h"
+void TMR6_PeriodCountSet(size_t periodVal);
+
+
+
+
+
+
+
+void TMR6_OverflowCallbackRegister(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void TMR6_Tasks(void);
+# 50 "./mcc_generated_files\\system\\system.h" 2
+
+# 1 "./mcc_generated_files\\system/../system/interrupt.h" 1
+# 85 "./mcc_generated_files\\system/../system/interrupt.h"
+void INTERRUPT_Initialize (void);
+# 139 "./mcc_generated_files\\system/../system/interrupt.h"
+void INT_ISR(void);
+# 148 "./mcc_generated_files\\system/../system/interrupt.h"
+void INT_CallBack(void);
+# 157 "./mcc_generated_files\\system/../system/interrupt.h"
+void INT_SetInterruptHandler(void (* InterruptHandler)(void));
+# 166 "./mcc_generated_files\\system/../system/interrupt.h"
+extern void (*INT_InterruptHandler)(void);
+# 175 "./mcc_generated_files\\system/../system/interrupt.h"
+void INT_DefaultInterruptHandler(void);
+# 51 "./mcc_generated_files\\system\\system.h" 2
+# 61 "./mcc_generated_files\\system\\system.h"
 void SYSTEM_Initialize(void);
 # 9 "main.c" 2
 
@@ -11618,12 +11679,38 @@ void SYSTEM_Initialize(void);
 extern __eeprom uint8_t alarm = 0xff;
 
 void playLDrum(void){
-    for(int i = 0; i < 256; i+=2){
+    TMR6_Stop();
+    TMR6_PeriodCountSet(128);
+    TMR6_Start();
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+    TMR6_Stop();
+    TMR6_PeriodCountSet(100);
+    TMR6_Start();
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+    TMR6_Stop();
+    TMR6_PeriodCountSet(80);
+    TMR6_Start();
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+    TMR6_Stop();
+    TMR6_PeriodCountSet(50);
+    TMR6_Start();
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+
+    TMR6_Stop();
+    TMR6_PeriodCountSet(30);
+    TMR6_Start();
+    _delay((unsigned long)((1)*(32000000/4000.0)));
+    for(int i = 0; i < 256; i+=1){
         TMR6_Stop();
         TMR6_PeriodCountSet(i);
         TMR6_Start();
         _delay((unsigned long)((1)*(32000000/4000.0)));
     }
+    TMR6_Stop();
+    TMR6_PeriodCountSet(255);
+    TMR6_Start();
+    _delay((unsigned long)((22)*(32000000/4000.0)));
+    TMR6_Stop();
 }
 
 void playHH(void){
@@ -11650,37 +11737,56 @@ void main(void) {
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
     const int tempo = 610;
-    const int test = 3;
+    const int drumdelay = 40;
+
     while(1){
+
         TMR2_Stop();
         TMR2_PeriodCountSet(o2[1]);
         TMR2_Start();
+
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[1]);
         TMR4_Start();
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
-        TMR2_Stop();
 
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+
+        _delay((unsigned long)((tempo - (2*(128)) - (1*(150)) - (2*drumdelay))*(32000000/4000.0)));
+        TMR2_Stop();
 
         TMR2_PeriodCountSet(o1[11]);
         TMR2_Start();
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((tempo - 128 - 150 - drumdelay)*(32000000/4000.0)));
         TMR2_Stop();
+
+
 
 
         TMR2_PeriodCountSet(o2[4]);
         TMR2_Start();
-        _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+        playHH();
+
+        _delay((unsigned long)(((tempo/2) - 128)*(32000000/4000.0)));
         TMR2_Stop();
 
         TMR2_PeriodCountSet(o2[1]);
         TMR2_Start();
+        playHH();
+
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[4]);
         TMR4_Start();
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo - 128)*(32000000/4000.0)));
         TMR2_Stop();
 
         TMR2_PeriodCountSet(o1[11]);
@@ -11693,11 +11799,12 @@ void main(void) {
 
         TMR2_PeriodCountSet(o1[8]);
         TMR2_Start();
+        playHH();
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[4]);
         TMR4_Start();
-        _delay((unsigned long)((tempo/4)*(32000000/4000.0)));
+        _delay((unsigned long)(((tempo/4) - 128)*(32000000/4000.0)));
         TMR2_Stop();
 
 

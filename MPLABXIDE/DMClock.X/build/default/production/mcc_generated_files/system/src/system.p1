@@ -8,6 +8,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "76 mcc_generated_files/system/src/../../i2c_host/mssp1.h
 [; ;mcc_generated_files/system/src/../../i2c_host/mssp1.h: 76: void I2C1_Initialize(void);
 [v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
+"54 mcc_generated_files/system/src/../../pwm/ccp1.h
+[; ;mcc_generated_files/system/src/../../pwm/ccp1.h: 54: void CCP1_Initialize(void);
+[v _CCP1_Initialize `(v ~T0 @X0 0 ef ]
 "57 mcc_generated_files/system/src/../../pwm/pwm5.h
 [; ;mcc_generated_files/system/src/../../pwm/pwm5.h: 57:  void PWM5_Initialize(void);
 [v _PWM5_Initialize `(v ~T0 @X0 0 ef ]
@@ -20,6 +23,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "55 mcc_generated_files/system/src/../../timer/tmr4.h
 [; ;mcc_generated_files/system/src/../../timer/tmr4.h: 55:  void TMR4_Initialize(void);
 [v _TMR4_Initialize `(v ~T0 @X0 0 ef ]
+"55 mcc_generated_files/system/src/../../timer/tmr6.h
+[; ;mcc_generated_files/system/src/../../timer/tmr6.h: 55:  void TMR6_Initialize(void);
+[v _TMR6_Initialize `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\include\proc\pic16f18346.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1097,18 +1103,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mcc_generated_files/system/src/system.c: 43:     I2C1_Initialize();
 [e ( _I2C1_Initialize ..  ]
 "44
-[; ;mcc_generated_files/system/src/system.c: 44:     PWM5_Initialize();
-[e ( _PWM5_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 44:     CCP1_Initialize();
+[e ( _CCP1_Initialize ..  ]
 "45
-[; ;mcc_generated_files/system/src/system.c: 45:     PWM6_Initialize();
-[e ( _PWM6_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 45:     PWM5_Initialize();
+[e ( _PWM5_Initialize ..  ]
 "46
-[; ;mcc_generated_files/system/src/system.c: 46:     TMR2_Initialize();
-[e ( _TMR2_Initialize ..  ]
+[; ;mcc_generated_files/system/src/system.c: 46:     PWM6_Initialize();
+[e ( _PWM6_Initialize ..  ]
 "47
-[; ;mcc_generated_files/system/src/system.c: 47:     TMR4_Initialize();
+[; ;mcc_generated_files/system/src/system.c: 47:     TMR2_Initialize();
+[e ( _TMR2_Initialize ..  ]
+"48
+[; ;mcc_generated_files/system/src/system.c: 48:     TMR4_Initialize();
 [e ( _TMR4_Initialize ..  ]
 "49
-[; ;mcc_generated_files/system/src/system.c: 49: }
+[; ;mcc_generated_files/system/src/system.c: 49:     TMR6_Initialize();
+[e ( _TMR6_Initialize ..  ]
+"51
+[; ;mcc_generated_files/system/src/system.c: 51: }
 [e :UE 967 ]
 }

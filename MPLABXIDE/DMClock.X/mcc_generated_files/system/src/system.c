@@ -47,6 +47,6 @@ void SYSTEM_Initialize(void)
     TMR2_Initialize();
     TMR4_Initialize();
     TMR6_Initialize();
-    INTERRUPT_Initialize();
+    //INTERRUPT_Initialize();
 }
 

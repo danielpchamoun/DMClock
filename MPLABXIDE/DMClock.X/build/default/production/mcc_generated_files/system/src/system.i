@@ -11512,6 +11512,21 @@ void I2C1_ISR(void);
 void I2C1_ERROR_ISR(void);
 # 44 "mcc_generated_files/system/src/../system.h" 2
 
+# 1 "mcc_generated_files/system/src/../../pwm/ccp1.h" 1
+# 54 "mcc_generated_files/system/src/../../pwm/ccp1.h"
+void CCP1_Initialize(void);
+
+
+
+
+
+
+
+void CCP1_LoadDutyValue(uint16_t dutyValue);
+# 71 "mcc_generated_files/system/src/../../pwm/ccp1.h"
+_Bool CCP1_OutputStatusGet(void);
+# 45 "mcc_generated_files/system/src/../system.h" 2
+
 # 1 "mcc_generated_files/system/src/../../pwm/pwm5.h" 1
 # 57 "mcc_generated_files/system/src/../../pwm/pwm5.h"
  void PWM5_Initialize(void);
@@ -11523,7 +11538,7 @@ void I2C1_ERROR_ISR(void);
 
 
  void PWM5_LoadDutyValue(uint16_t dutyValue);
-# 45 "mcc_generated_files/system/src/../system.h" 2
+# 46 "mcc_generated_files/system/src/../system.h" 2
 
 # 1 "mcc_generated_files/system/src/../../pwm/pwm6.h" 1
 # 57 "mcc_generated_files/system/src/../../pwm/pwm6.h"
@@ -11536,7 +11551,7 @@ void I2C1_ERROR_ISR(void);
 
 
  void PWM6_LoadDutyValue(uint16_t dutyValue);
-# 46 "mcc_generated_files/system/src/../system.h" 2
+# 47 "mcc_generated_files/system/src/../system.h" 2
 
 # 1 "mcc_generated_files/system/src/../../timer/tmr2.h" 1
 # 55 "mcc_generated_files/system/src/../../timer/tmr2.h"
@@ -11567,7 +11582,7 @@ void TMR2_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 
 void TMR2_Tasks(void);
-# 47 "mcc_generated_files/system/src/../system.h" 2
+# 48 "mcc_generated_files/system/src/../system.h" 2
 
 # 1 "mcc_generated_files/system/src/../../timer/tmr4.h" 1
 # 55 "mcc_generated_files/system/src/../../timer/tmr4.h"
@@ -11598,8 +11613,54 @@ void TMR4_OverflowCallbackRegister(void (* InterruptHandler)(void));
 
 
 void TMR4_Tasks(void);
-# 48 "mcc_generated_files/system/src/../system.h" 2
-# 59 "mcc_generated_files/system/src/../system.h"
+# 49 "mcc_generated_files/system/src/../system.h" 2
+
+# 1 "mcc_generated_files/system/src/../../timer/tmr6.h" 1
+# 55 "mcc_generated_files/system/src/../../timer/tmr6.h"
+ void TMR6_Initialize(void);
+# 64 "mcc_generated_files/system/src/../../timer/tmr6.h"
+void TMR6_Start(void);
+# 73 "mcc_generated_files/system/src/../../timer/tmr6.h"
+void TMR6_Stop(void);
+# 82 "mcc_generated_files/system/src/../../timer/tmr6.h"
+uint8_t TMR6_Read(void);
+# 91 "mcc_generated_files/system/src/../../timer/tmr6.h"
+void TMR6_Write(uint8_t timerVal);
+# 100 "mcc_generated_files/system/src/../../timer/tmr6.h"
+void TMR6_PeriodCountSet(size_t periodVal);
+
+
+
+
+
+
+
+void TMR6_OverflowCallbackRegister(void (* InterruptHandler)(void));
+
+
+
+
+
+
+
+void TMR6_Tasks(void);
+# 50 "mcc_generated_files/system/src/../system.h" 2
+
+# 1 "mcc_generated_files/system/src/../../system/interrupt.h" 1
+# 85 "mcc_generated_files/system/src/../../system/interrupt.h"
+void INTERRUPT_Initialize (void);
+# 139 "mcc_generated_files/system/src/../../system/interrupt.h"
+void INT_ISR(void);
+# 148 "mcc_generated_files/system/src/../../system/interrupt.h"
+void INT_CallBack(void);
+# 157 "mcc_generated_files/system/src/../../system/interrupt.h"
+void INT_SetInterruptHandler(void (* InterruptHandler)(void));
+# 166 "mcc_generated_files/system/src/../../system/interrupt.h"
+extern void (*INT_InterruptHandler)(void);
+# 175 "mcc_generated_files/system/src/../../system/interrupt.h"
+void INT_DefaultInterruptHandler(void);
+# 51 "mcc_generated_files/system/src/../system.h" 2
+# 61 "mcc_generated_files/system/src/../system.h"
 void SYSTEM_Initialize(void);
 # 36 "mcc_generated_files/system/src/system.c" 2
 
@@ -11610,9 +11671,11 @@ void SYSTEM_Initialize(void)
     CLOCK_Initialize();
     PIN_MANAGER_Initialize();
     I2C1_Initialize();
+    CCP1_Initialize();
     PWM5_Initialize();
     PWM6_Initialize();
     TMR2_Initialize();
     TMR4_Initialize();
+    TMR6_Initialize();
 
 }

@@ -48,15 +48,15 @@ static void TMR6_DefaultOverflowCallback(void);
 void TMR6_Initialize(void){
 
     // Set TMR6 to the options selected in the User Interface
-    // PR 255; 
-    PR6 = 0xFF;
+    // PR 63; 
+    PR6 = 0x3F;
     // TMR 0x0; 
     TMR6 = 0x0;
 
     // Clearing IF flag.
      PIR2bits.TMR6IF = 0;
-    // TCKPS 1:1; TMRON on; TOUTPS 1:1; 
-    T6CON = 0x4;
+    // TCKPS 1:64; TMRON on; TOUTPS 1:1; 
+    T6CON = 0x7;
 
     // Set default overflow callback
     TMR6_OverflowCallbackRegister(TMR6_DefaultOverflowCallback);
