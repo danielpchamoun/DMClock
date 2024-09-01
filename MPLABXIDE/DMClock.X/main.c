@@ -60,7 +60,15 @@ void playHH(void){
     }
 }
 
-
+//fast hihat 32 ticks of delay
+void fastHH(void){
+    for(int i = 255; i >= 0 ; i-=8){
+        TMR6_Stop();
+        TMR6_PeriodCountSet(i);
+        TMR6_Start();
+        __delay_ms(1);
+    }
+}
 
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
@@ -140,7 +148,7 @@ void main(void) {
         playHH();
         __delay_ms(drumdelay);
         playLDrum();
-        __delay_ms(tempo - 200 - (2*128) - 2*drumdelay);
+        __delay_ms(tempo - 220 - (2*128) - 2*drumdelay);
         TMR4_Stop();
         TMR2_Stop();        
         TMR2_PeriodCountSet(o1[8]); //G.
@@ -166,15 +174,21 @@ void main(void) {
         __delay_ms(tempo - 350 - 128);
 
         TMR2_Stop();
-
-        
         TMR2_PeriodCountSet(o1[11]); //A#.
         TMR2_Start();
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[1]); //C  L
         TMR4_Start();
-        __delay_ms(tempo);
+        
+        playLDrum();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+
+        
+        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
         TMR2_Stop();
         TMR4_Stop();
         
@@ -182,7 +196,13 @@ void main(void) {
         TMR2_Start();
         TMR4_PeriodCountSet(o1[4]);  //D# L
         TMR4_Start();
-        __delay_ms(tempo);
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(drumdelay);
+        playLDrum();
+        
+        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
         TMR2_Stop();
         TMR4_Stop();
         
@@ -190,7 +210,10 @@ void main(void) {
         TMR2_Start();
         TMR4_PeriodCountSet(o1[6]); // F L 
         TMR4_Start();
-        __delay_ms(tempo-200);
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(tempo-200 - 128*2 - drumdelay );
         TMR4_Stop();
         TMR2_Stop();
         
@@ -199,7 +222,14 @@ void main(void) {
         TMR2_Start();
         TMR4_PeriodCountSet(o1[6]); //F
         TMR4_Start();
-        __delay_ms(tempo);
+        
+        playLDrum();
+        __delay_ms(drumdelay);
+        playLDrum();
+        __delay_ms(drumdelay);
+        playHH();
+        
+        __delay_ms(tempo - 2*drumdelay - 2*141 - 128);
         TMR2_Stop();
         TMR4_Stop();
         
@@ -207,11 +237,28 @@ void main(void) {
         TMR2_Start();
         TMR4_PeriodCountSet(o1[4]); //D#
         TMR4_Start();
-        __delay_ms(tempo);
+        
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(drumdelay);
+        playLDrum();        
+        __delay_ms(drumdelay);
+
+        //finisher goes here
+        fastHH();
+        __delay_ms(33);
+        fastHH();
+        __delay_ms(33);
+        fastHH();
+        
+        __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
         TMR2_Stop();
         TMR4_Stop();
         __delay_ms(2000);
 
+        
+        //begin here 2nd part
     }
 
      
