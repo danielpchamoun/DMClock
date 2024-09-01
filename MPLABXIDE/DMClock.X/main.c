@@ -140,7 +140,7 @@ void main(void) {
         playHH();
         __delay_ms(drumdelay);
         playLDrum();
-        __delay_ms(tempo - 200 - (2*128) - drumdelay);
+        __delay_ms(tempo - 200 - (2*128) - 2*drumdelay);
         TMR4_Stop();
         TMR2_Stop();        
         TMR2_PeriodCountSet(o1[8]); //G.
@@ -149,7 +149,7 @@ void main(void) {
         TMR4_Start();
         
         playHH();
-        __delay_ms(tempo - 300 - 128);
+        __delay_ms(tempo - 350 - 128);
         
 
         TMR2_Stop();
@@ -163,7 +163,8 @@ void main(void) {
         TMR4_Start();
         playHH();
 
-        __delay_ms(80); 
+        __delay_ms(tempo - 350 - 128);
+
         TMR2_Stop();
 
         
@@ -189,7 +190,7 @@ void main(void) {
         TMR2_Start();
         TMR4_PeriodCountSet(o1[6]); // F L 
         TMR4_Start();
-        __delay_ms(tempo);
+        __delay_ms(tempo-200);
         TMR4_Stop();
         TMR2_Stop();
         
