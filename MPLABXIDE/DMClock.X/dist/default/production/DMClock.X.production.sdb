@@ -22,7 +22,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"306 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"654 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [e E6992 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -45,7 +45,7 @@ I2C_ERROR_BUS_COLLISION 3
 [v _fastHH fastHH `(v  1 e 1 0 ]
 "73
 [v _main main `(v  1 e 1 0 ]
-"323
+"671
 [v _ISR ISR `II(v  1 e 1 0 ]
 "114 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -638,21 +638,21 @@ I2C_ERROR_BUS_COLLISION 3
 "73 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"81
-[v main@o1 o1 `[12]ui  1 a 24 50 ]
 "82
-[v main@o2 o2 `[12]ui  1 a 24 24 ]
+[v main@o2 o2 `[12]ui  1 a 24 50 ]
+"81
+[v main@o1 o1 `[12]ui  1 a 24 26 ]
 "83
 [v main@o3 o3 `[12]ui  1 a 24 0 ]
-"307
-[v main@dataWrite dataWrite `[2]uc  1 a 2 48 ]
+"655
+[v main@dataWrite dataWrite `[2]uc  1 a 2 24 ]
 "75
 [v main@F7153 F7153 `[12]ui  1 s 24 F7153 ]
 "81
 [v main@F7155 F7155 `[12]ui  1 s 24 F7155 ]
 "82
 [v main@F7157 F7157 `[12]ui  1 s 24 F7157 ]
-"320
+"668
 } 0
 "19
 [v _playLDrum playLDrum `(v  1 e 1 0 ]
@@ -828,8 +828,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "209
 } 0
-"323 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"671 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"410
+"758
 } 0
