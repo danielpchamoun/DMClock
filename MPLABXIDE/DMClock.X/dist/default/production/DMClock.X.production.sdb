@@ -22,7 +22,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"654 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"768 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [e E6992 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -37,15 +37,9 @@ I2C_ERROR_BUS_COLLISION 3
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"19 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
-[v _playLDrum playLDrum `(v  1 e 1 0 ]
-"54
-[v _playHH playHH `(v  1 e 1 0 ]
-"64
-[v _fastHH fastHH `(v  1 e 1 0 ]
-"73
+"74 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"671
+"785
 [v _ISR ISR `II(v  1 e 1 0 ]
 "114 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -635,61 +629,29 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR4_OverflowCallback TMR4_OverflowCallback `*.37(v  1 s 2 TMR4_OverflowCallback ]
 "41 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_OverflowCallback TMR6_OverflowCallback `*.37(v  1 s 2 TMR6_OverflowCallback ]
-"73 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"74 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"82
-[v main@o2 o2 `[12]ui  1 a 24 50 ]
-"81
-[v main@o1 o1 `[12]ui  1 a 24 26 ]
+"84
+[v main@o3 o3 `[12]ui  1 a 24 48 ]
 "83
-[v main@o3 o3 `[12]ui  1 a 24 0 ]
-"655
-[v main@dataWrite dataWrite `[2]uc  1 a 2 24 ]
-"75
-[v main@F7153 F7153 `[12]ui  1 s 24 F7153 ]
-"81
-[v main@F7155 F7155 `[12]ui  1 s 24 F7155 ]
+[v main@o2 o2 `[12]ui  1 a 24 24 ]
 "82
+[v main@o1 o1 `[12]ui  1 a 24 0 ]
+"769
+[v main@dataWrite dataWrite `[2]uc  1 a 2 72 ]
+"76
+[v main@F7153 F7153 `[12]ui  1 s 24 F7153 ]
+"82
+[v main@F7155 F7155 `[12]ui  1 s 24 F7155 ]
+"83
 [v main@F7157 F7157 `[12]ui  1 s 24 F7157 ]
-"668
-} 0
-"19
-[v _playLDrum playLDrum `(v  1 e 1 0 ]
-{
-"41
-[v playLDrum@i i `i  1 a 2 3 ]
-"52
-} 0
-"54
-[v _playHH playHH `(v  1 e 1 0 ]
-{
-"55
-[v playHH@i i `i  1 a 2 3 ]
-"61
-} 0
-"64
-[v _fastHH fastHH `(v  1 e 1 0 ]
-{
-"65
-[v fastHH@i i `i  1 a 2 3 ]
-"71
+"782
 } 0
 "71 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_Stop TMR6_Stop `(v  1 e 1 0 ]
 {
 "75
-} 0
-"65
-[v _TMR6_Start TMR6_Start `(v  1 e 1 0 ]
-{
-"69
-} 0
-"90
-[v _TMR6_PeriodCountSet TMR6_PeriodCountSet `(v  1 e 1 0 ]
-{
-[v TMR6_PeriodCountSet@periodVal periodVal `ui  1 p 2 0 ]
-"93
 } 0
 "71 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr4.c
 [v _TMR4_Stop TMR4_Stop `(v  1 e 1 0 ]
@@ -828,8 +790,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "209
 } 0
-"671 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"785 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"758
+"872
 } 0
