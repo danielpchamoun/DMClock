@@ -644,36 +644,36 @@ void main(void) {
         
         //F# A# C C# D# F# F C F (C instead of F because no space)x
 
-        __delay_ms(200);
+        __delay_ms(175);
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[11]); //A#
         TMR4_Start();
         
-        __delay_ms(tempo-150);
+        __delay_ms(tempo-155);
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]); //C
         TMR4_Start();        
 
-        __delay_ms(tempo-450);
+        __delay_ms(tempo-455);
         TMR2_Stop();        
-        __delay_ms(100);  
+        __delay_ms(95);  
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[2]); //C#
         TMR4_Start();
-        __delay_ms(200);
+        __delay_ms(195);
         TMR2_PeriodCountSet(o3[6]); //F
         TMR2_Start();
-        __delay_ms(tempo-350);
+        __delay_ms(tempo-355);
         
   
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[4]); //D#
         TMR4_Start();    
         
-        __delay_ms(200);
+        __delay_ms(150);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[11]); //A#
@@ -691,19 +691,18 @@ void main(void) {
         TMR2_PeriodCountSet(o3[11]); //A#
         TMR2_Start();
         
-        __delay_ms(tempo-450);
+        __delay_ms(tempo-500); 
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[6]); //F
         TMR4_Start();    
         
-        __delay_ms(tempo-425);
-        __delay_ms(tempo);
+        __delay_ms(tempo-80);
         __delay_ms(tempo);
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]); //C
         TMR4_Start(); 
-        __delay_ms(tempo-300);
+        __delay_ms(tempo - 150);
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[10]); //A
