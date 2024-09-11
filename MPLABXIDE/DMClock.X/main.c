@@ -656,7 +656,7 @@ void main(void) {
         TMR4_PeriodCountSet(o2[1]); //C
         TMR4_Start();        
 
-        __delay_ms(tempo-455);
+        __delay_ms(tempo-450);
         TMR2_Stop();        
         __delay_ms(95);  
         
@@ -666,20 +666,20 @@ void main(void) {
         __delay_ms(195);
         TMR2_PeriodCountSet(o3[6]); //F
         TMR2_Start();
-        __delay_ms(tempo-355);
+        __delay_ms(tempo-350);
         
   
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[4]); //D#
         TMR4_Start();    
         
-        __delay_ms(150);
+        __delay_ms(160);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[11]); //A#
         TMR2_Start();
 
-        __delay_ms(tempo-350);
+        __delay_ms(tempo-370);
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[7]); //F#
@@ -687,11 +687,11 @@ void main(void) {
         
         __delay_ms(100);
         TMR2_Stop();
-        __delay_ms(100);
+        __delay_ms(120);
         TMR2_PeriodCountSet(o3[11]); //A#
         TMR2_Start();
         
-        __delay_ms(tempo-500); 
+        __delay_ms(tempo-520); 
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[6]); //F

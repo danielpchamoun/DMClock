@@ -1651,8 +1651,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 657:         TMR4_Start();
 [e ( _TMR4_Start ..  ]
 "659
-[; ;main.c: 659:         _delay((unsigned long)((tempo-455)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7159 -> 455 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 659:         _delay((unsigned long)((tempo-450)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7159 -> 450 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "660
 [; ;main.c: 660:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
@@ -1678,8 +1678,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 668:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
 "669
-[; ;main.c: 669:         _delay((unsigned long)((tempo-355)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7159 -> 355 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 669:         _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7159 -> 350 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "672
 [; ;main.c: 672:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
@@ -1690,8 +1690,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 674:         TMR4_Start();
 [e ( _TMR4_Start ..  ]
 "676
-[; ;main.c: 676:         _delay((unsigned long)((150)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 676:         _delay((unsigned long)((160)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 160 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "678
 [; ;main.c: 678:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
@@ -1702,8 +1702,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 680:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
 "682
-[; ;main.c: 682:         _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7159 -> 350 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 682:         _delay((unsigned long)((tempo-370)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7159 -> 370 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "684
 [; ;main.c: 684:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
@@ -1720,8 +1720,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 689:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
 "690
-[; ;main.c: 690:         _delay((unsigned long)((100)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 690:         _delay((unsigned long)((120)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 120 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "691
 [; ;main.c: 691:         TMR2_PeriodCountSet(o3[11]);
 [e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
@@ -1729,8 +1729,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 692:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
 "694
-[; ;main.c: 694:         _delay((unsigned long)((tempo-500)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7159 -> 500 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 694:         _delay((unsigned long)((tempo-520)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7159 -> 520 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "696
 [; ;main.c: 696:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]

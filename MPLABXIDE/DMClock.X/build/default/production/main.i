@@ -11799,7 +11799,7 @@ void main(void) {
         TMR4_PeriodCountSet(o2[1]);
         TMR4_Start();
 
-        _delay((unsigned long)((tempo-455)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-450)*(32000000/4000.0)));
         TMR2_Stop();
         _delay((unsigned long)((95)*(32000000/4000.0)));
 
@@ -11809,20 +11809,20 @@ void main(void) {
         _delay((unsigned long)((195)*(32000000/4000.0)));
         TMR2_PeriodCountSet(o3[6]);
         TMR2_Start();
-        _delay((unsigned long)((tempo-355)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
 
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[4]);
         TMR4_Start();
 
-        _delay((unsigned long)((150)*(32000000/4000.0)));
+        _delay((unsigned long)((160)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[11]);
         TMR2_Start();
 
-        _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-370)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[7]);
@@ -11830,11 +11830,11 @@ void main(void) {
 
         _delay((unsigned long)((100)*(32000000/4000.0)));
         TMR2_Stop();
-        _delay((unsigned long)((100)*(32000000/4000.0)));
+        _delay((unsigned long)((120)*(32000000/4000.0)));
         TMR2_PeriodCountSet(o3[11]);
         TMR2_Start();
 
-        _delay((unsigned long)((tempo-500)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-520)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[6]);
