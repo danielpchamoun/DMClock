@@ -11760,92 +11760,128 @@ void main(void) {
         TMR4_PeriodCountSet(o1[7]);
         TMR4_Start();
 
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
 
-        _delay((unsigned long)((tempo-150)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-150 - 128 - 141 - drumdelay)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[1]);
         TMR2_Start();
+        playHH();
 
-        _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-350 - 128)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[2]);
         TMR2_Start();
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
 
-        _delay((unsigned long)((tempo-200)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-200 - 2*128 - drumdelay)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[4]);
         TMR2_Start();
 
-        _delay((unsigned long)((tempo-200)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((tempo-200 - 141 - drumdelay - 128)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[6]);
         TMR2_Start();
+        playHH();
 
 
-
-        _delay((unsigned long)((175)*(32000000/4000.0)));
+        _delay((unsigned long)((175 - 128)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[11]);
         TMR4_Start();
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playLDrum();
 
-        _delay((unsigned long)((tempo-155)*(32000000/4000.0)));
+
+        _delay((unsigned long)((tempo-155 - 2*141 - drumdelay)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]);
         TMR4_Start();
-
-        _delay((unsigned long)((tempo-450)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((tempo-432-128)*(32000000/4000.0)));
         TMR2_Stop();
+
         _delay((unsigned long)((95)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[2]);
         TMR4_Start();
-        _delay((unsigned long)((195)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((195-128)*(32000000/4000.0)));
         TMR2_PeriodCountSet(o3[6]);
         TMR2_Start();
-        _delay((unsigned long)((tempo-350)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((tempo-350-128-20)*(32000000/4000.0)));
 
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[4]);
         TMR4_Start();
-
-        _delay((unsigned long)((160)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((160-141)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[11]);
         TMR2_Start();
-
-        _delay((unsigned long)((tempo-370)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((tempo-370-128)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[7]);
         TMR4_Start();
+        playHH();
 
-        _delay((unsigned long)((100)*(32000000/4000.0)));
         TMR2_Stop();
-        _delay((unsigned long)((120)*(32000000/4000.0)));
+        _delay((unsigned long)((120-28)*(32000000/4000.0)));
         TMR2_PeriodCountSet(o3[11]);
         TMR2_Start();
-
-        _delay((unsigned long)((tempo-520)*(32000000/4000.0)));
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[6]);
         TMR4_Start();
 
-        _delay((unsigned long)((tempo-80)*(32000000/4000.0)));
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+
+        playHH();
+        _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+
+        playHH();
+        _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+
+        playHH();
+        _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+
+        playHH();
+
+        _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+
+        playLDrum();
+
+
+        _delay((unsigned long)((tempo-274 - 128 - drumdelay-80)*(32000000/4000.0)));
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]);
         TMR4_Start();
-        _delay((unsigned long)((tempo - 150)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((tempo - 150 - 2*128 - drumdelay)*(32000000/4000.0)));
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[10]);
@@ -11856,7 +11892,7 @@ void main(void) {
         TMR4_Start();
 
 
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
+        _delay((unsigned long)((tempo-128)*(32000000/4000.0)));
         _delay((unsigned long)((tempo)*(32000000/4000.0)));
         _delay((unsigned long)((tempo-425)*(32000000/4000.0)));
         TMR4_Stop();

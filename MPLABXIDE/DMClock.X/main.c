@@ -617,92 +617,128 @@ void main(void) {
         TMR4_PeriodCountSet(o1[7]); //F#
         TMR4_Start();
          
-        
-        __delay_ms(tempo-150);
+        playLDrum();
+        __delay_ms(drumdelay);
+        playHH();
+
+        __delay_ms(tempo-150 - 128 - 141 - drumdelay);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[1]); //C
         TMR2_Start();
+        playHH();
 
-        __delay_ms(tempo-350);
+        __delay_ms(tempo-350 - 128);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[2]); //C#
         TMR2_Start();
-        
-        __delay_ms(tempo-200);
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+
+        __delay_ms(tempo-200 - 2*128 - drumdelay);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[4]); //D#
         TMR2_Start();
         
-        __delay_ms(tempo-200);
+        playLDrum();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(tempo-200 - 141 - drumdelay - 128);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[6]); //F
         TMR2_Start();
-        
+        playHH();
         //F# A# C C# D# F# F C F (C instead of F because no space)x
 
-        __delay_ms(175);
+        __delay_ms(175 - 128);
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[11]); //A#
         TMR4_Start();
+        playLDrum();
+        __delay_ms(drumdelay);
+        playLDrum();
+
         
-        __delay_ms(tempo-155);
+        __delay_ms(tempo-155 - 2*141 - drumdelay);
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]); //C
-        TMR4_Start();        
-
-        __delay_ms(tempo-450);
-        TMR2_Stop();        
+        TMR4_Start();  
+        playHH();
+        __delay_ms(tempo-432-128);
+        TMR2_Stop(); 
+        
         __delay_ms(95);  
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[2]); //C#
         TMR4_Start();
-        __delay_ms(195);
+        playHH();
+        __delay_ms(195-128);
         TMR2_PeriodCountSet(o3[6]); //F
         TMR2_Start();
-        __delay_ms(tempo-350);
+        playHH();
+        __delay_ms(tempo-350-128-20);
         
   
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[4]); //D#
         TMR4_Start();    
-        
-        __delay_ms(160);
+        playLDrum();
+        __delay_ms(160-141);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[11]); //A#
         TMR2_Start();
-
-        __delay_ms(tempo-370);
+        playHH();
+        __delay_ms(tempo-370-128);
 
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[7]); //F#
-        TMR4_Start();    
-        
-        __delay_ms(100);
+        TMR4_Start(); 
+        playHH();
+        //__delay_ms(100);
         TMR2_Stop();
-        __delay_ms(120);
+        __delay_ms(120-28);
         TMR2_PeriodCountSet(o3[11]); //A#
-        TMR2_Start();
-        
-        __delay_ms(tempo-520); 
+        TMR2_Start(); 
         
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[6]); //F
         TMR4_Start();    
         
-        __delay_ms(tempo-80);
-        __delay_ms(tempo);
+        playLDrum();
+        __delay_ms(drumdelay);
+
+        playHH();
+        __delay_ms(drumdelay+20);
+
+        playHH();
+        __delay_ms(drumdelay+20);
+
+        playHH();
+        __delay_ms(drumdelay+20);
+
+        playHH();
+
+        __delay_ms(drumdelay+20);
+
+        playLDrum();
+        //560 - 2*141 - 3*128 - 4 *(42) 
+        //-274
+        __delay_ms(tempo-274 - 128 - drumdelay-80);
         TMR4_Stop();
         TMR4_PeriodCountSet(o2[1]); //C
         TMR4_Start(); 
-        __delay_ms(tempo - 150);
+        playHH();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(tempo - 150 - 2*128 - drumdelay);
 
         TMR2_Stop();
         TMR2_PeriodCountSet(o3[10]); //A
@@ -711,9 +747,9 @@ void main(void) {
         TMR4_Stop();
         TMR4_PeriodCountSet(o1[6]); //F
         TMR4_Start(); 
-        
+
         //end verse 4
-        __delay_ms(tempo);
+        __delay_ms(tempo-128);
         __delay_ms(tempo);
         __delay_ms(tempo-425);
         TMR4_Stop();
