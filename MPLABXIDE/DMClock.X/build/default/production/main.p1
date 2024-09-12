@@ -153,8 +153,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S964 `ul 1 ]
 [n S964 . clkSpeed ]
 [v F7046 `(a ~T0 @X0 0 tf2`*S964`ul ]
-"837 main.c
-[; ;main.c: 837:     const i2c_host_interface_t *I2C = &I2C1_Host;
+"836 main.c
+[; ;main.c: 836:     const i2c_host_interface_t *I2C = &I2C1_Host;
 [c E6992 0 1 2 3 .. ]
 [n E6992 . I2C_ERROR_NONE I2C_ERROR_ADDR_NACK I2C_ERROR_DATA_NACK I2C_ERROR_BUS_COLLISION  ]
 [v F7050 `(E6992 ~T0 @X0 0 tf ]
@@ -1580,10 +1580,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _o3 `ui ~T0 @X0 -> 12 `i a ]
 [e = _o3 F7159 ]
 "98
-[; ;main.c: 98:     const int tempo = 560;
+[; ;main.c: 98:     const int tempo = 565;
 [v F7161 `Ci ~T0 @X0 1 s tempo ]
 [i F7161
--> 560 `i
+-> 565 `i
 ]
 "99
 [; ;main.c: 99:     const int drumdelay = 42;
@@ -1595,817 +1595,1981 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 101:     while(1){
 [e :U 985 ]
 {
-"622
-[; ;main.c: 622:         TMR6_Stop();
-[e ( _TMR6_Stop ..  ]
-"624
-[; ;main.c: 624:         TMR2_Stop();
+"104
+[; ;main.c: 104:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"625
-[; ;main.c: 625:         TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"626
-[; ;main.c: 626:         TMR2_Start();
+"105
+[; ;main.c: 105:         TMR2_PeriodCountSet(o2[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"106
+[; ;main.c: 106:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"628
-[; ;main.c: 628:         TMR4_Stop();
+"109
+[; ;main.c: 109:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"629
-[; ;main.c: 629:         TMR4_PeriodCountSet(o1[7]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"630
-[; ;main.c: 630:         TMR4_Start();
+"110
+[; ;main.c: 110:         TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"111
+[; ;main.c: 111:         TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"632
-[; ;main.c: 632:         playLDrum();
+"113
+[; ;main.c: 113:         playLDrum();
 [e ( _playLDrum ..  ]
-"633
-[; ;main.c: 633:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"114
+[; ;main.c: 114:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"634
-[; ;main.c: 634:         playHH();
+"115
+[; ;main.c: 115:         playHH();
 [e ( _playHH ..  ]
-"636
-[; ;main.c: 636:         _delay((unsigned long)((tempo-150 - 128 - 141 - drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - - F7161 -> 150 `i -> 128 `i -> 141 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"638
-[; ;main.c: 638:         TMR2_Stop();
+"116
+[; ;main.c: 116:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"117
+[; ;main.c: 117:         playHH();
+[e ( _playHH ..  ]
+"119
+[; ;main.c: 119:         _delay((unsigned long)((tempo - (2*(128)) - (1*(143)) - (2*drumdelay))*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i * -> 1 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"120
+[; ;main.c: 120:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"639
-[; ;main.c: 639:         TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"640
-[; ;main.c: 640:         TMR2_Start();
+"122
+[; ;main.c: 122:         TMR2_PeriodCountSet(o1[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"123
+[; ;main.c: 123:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"641
-[; ;main.c: 641:         playHH();
+"124
+[; ;main.c: 124:         playHH();
 [e ( _playHH ..  ]
-"643
-[; ;main.c: 643:         _delay((unsigned long)((tempo-350 - 128)*(32000000/4000.0)));
+"125
+[; ;main.c: 125:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"126
+[; ;main.c: 126:         playHH();
+[e ( _playHH ..  ]
+"127
+[; ;main.c: 127:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"128
+[; ;main.c: 128:         _delay((unsigned long)((70)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"129
+[; ;main.c: 129:         playLDrum();
+[e ( _playLDrum ..  ]
+"131
+[; ;main.c: 131:         _delay((unsigned long)((tempo - 2*(128) - 143 - 2*drumdelay - 70)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 2 `i -> 128 `i -> 143 `i * -> 2 `i F7162 -> 70 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"132
+[; ;main.c: 132:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"134
+[; ;main.c: 134:         TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"135
+[; ;main.c: 135:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"137
+[; ;main.c: 137:         playHH();
+[e ( _playHH ..  ]
+"138
+[; ;main.c: 138:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"139
+[; ;main.c: 139:         playHH();
+[e ( _playHH ..  ]
+"141
+[; ;main.c: 141:         _delay((unsigned long)((tempo - 2*(128) - drumdelay - 200)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i F7162 -> 200 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"142
+[; ;main.c: 142:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"144
+[; ;main.c: 144:         TMR2_PeriodCountSet(o2[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"145
+[; ;main.c: 145:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"147
+[; ;main.c: 147:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"148
+[; ;main.c: 148:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"149
+[; ;main.c: 149:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"150
+[; ;main.c: 150:         playLDrum();
+[e ( _playLDrum ..  ]
+"151
+[; ;main.c: 151:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"152
+[; ;main.c: 152:         playLDrum();
+[e ( _playLDrum ..  ]
+"153
+[; ;main.c: 153:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"154
+[; ;main.c: 154:         playHH();
+[e ( _playHH ..  ]
+"155
+[; ;main.c: 155:         _delay((unsigned long)((tempo - 128 - 2*(143) - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 128 `i * -> 2 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"157
+[; ;main.c: 157:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"158
+[; ;main.c: 158:         TMR2_PeriodCountSet(o1[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"159
+[; ;main.c: 159:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"160
+[; ;main.c: 160:         playHH();
+[e ( _playHH ..  ]
+"161
+[; ;main.c: 161:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"162
+[; ;main.c: 162:         playHH();
+[e ( _playHH ..  ]
+"163
+[; ;main.c: 163:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"164
+[; ;main.c: 164:         playLDrum();
+[e ( _playLDrum ..  ]
+"165
+[; ;main.c: 165:         _delay((unsigned long)((tempo - 220 - (2*128) - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 220 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"166
+[; ;main.c: 166:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"167
+[; ;main.c: 167:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"168
+[; ;main.c: 168:         TMR2_PeriodCountSet(o1[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"169
+[; ;main.c: 169:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"170
+[; ;main.c: 170:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"171
+[; ;main.c: 171:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"173
+[; ;main.c: 173:         playHH();
+[e ( _playHH ..  ]
+"174
+[; ;main.c: 174:         _delay((unsigned long)((tempo - 350 - 128)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> - - F7161 -> 350 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"645
-[; ;main.c: 645:         TMR2_Stop();
+"177
+[; ;main.c: 177:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"646
-[; ;main.c: 646:         TMR2_PeriodCountSet(o3[2]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"647
-[; ;main.c: 647:         TMR2_Start();
+"181
+[; ;main.c: 181:         TMR2_PeriodCountSet(o1[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"182
+[; ;main.c: 182:         TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"648
-[; ;main.c: 648:         playHH();
+"183
+[; ;main.c: 183:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"184
+[; ;main.c: 184:         TMR4_PeriodCountSet(o1[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"185
+[; ;main.c: 185:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"186
+[; ;main.c: 186:         playHH();
 [e ( _playHH ..  ]
-"649
-[; ;main.c: 649:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"188
+[; ;main.c: 188:         _delay((unsigned long)((tempo - 350 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 350 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"190
+[; ;main.c: 190:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"191
+[; ;main.c: 191:         TMR2_PeriodCountSet(o1[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"192
+[; ;main.c: 192:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"194
+[; ;main.c: 194:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"195
+[; ;main.c: 195:         TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"196
+[; ;main.c: 196:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"198
+[; ;main.c: 198:         playLDrum();
+[e ( _playLDrum ..  ]
+"199
+[; ;main.c: 199:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"650
-[; ;main.c: 650:         playHH();
+"200
+[; ;main.c: 200:         playHH();
 [e ( _playHH ..  ]
-"652
-[; ;main.c: 652:         _delay((unsigned long)((tempo-200 - 2*128 - drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - F7161 -> 200 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"654
-[; ;main.c: 654:         TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"655
-[; ;main.c: 655:         TMR2_PeriodCountSet(o3[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"656
-[; ;main.c: 656:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"658
-[; ;main.c: 658:         playLDrum();
-[e ( _playLDrum ..  ]
-"659
-[; ;main.c: 659:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"201
+[; ;main.c: 201:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"660
-[; ;main.c: 660:         playHH();
+"202
+[; ;main.c: 202:         playHH();
 [e ( _playHH ..  ]
-"661
-[; ;main.c: 661:         _delay((unsigned long)((tempo-200 - 141 - drumdelay - 128)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - - F7161 -> 200 `i -> 141 `i F7162 -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"663
-[; ;main.c: 663:         TMR2_Stop();
+"205
+[; ;main.c: 205:         _delay((unsigned long)((tempo - 142 - 2*128 - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 142 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"206
+[; ;main.c: 206:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"664
-[; ;main.c: 664:         TMR2_PeriodCountSet(o3[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"665
-[; ;main.c: 665:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"666
-[; ;main.c: 666:         playHH();
-[e ( _playHH ..  ]
-"669
-[; ;main.c: 669:         _delay((unsigned long)((175 - 128)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - -> 175 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"671
-[; ;main.c: 671:         TMR4_Stop();
+"207
+[; ;main.c: 207:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"672
-[; ;main.c: 672:         TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"673
-[; ;main.c: 673:         TMR4_Start();
+"209
+[; ;main.c: 209:         TMR2_PeriodCountSet(o1[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"210
+[; ;main.c: 210:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"211
+[; ;main.c: 211:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"212
+[; ;main.c: 212:         TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"674
-[; ;main.c: 674:         playLDrum();
-[e ( _playLDrum ..  ]
-"675
-[; ;main.c: 675:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"213
+[; ;main.c: 213:         playHH();
+[e ( _playHH ..  ]
+"214
+[; ;main.c: 214:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"676
-[; ;main.c: 676:         playLDrum();
-[e ( _playLDrum ..  ]
-"679
-[; ;main.c: 679:         _delay((unsigned long)((tempo-155 - 2*141 - drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - F7161 -> 155 `i * -> 2 `i -> 141 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"681
-[; ;main.c: 681:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"682
-[; ;main.c: 682:         TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"683
-[; ;main.c: 683:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"684
-[; ;main.c: 684:         playHH();
+"215
+[; ;main.c: 215:         playHH();
 [e ( _playHH ..  ]
-"685
-[; ;main.c: 685:         _delay((unsigned long)((tempo-432-128)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - F7161 -> 432 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"686
-[; ;main.c: 686:         TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"688
-[; ;main.c: 688:         _delay((unsigned long)((95)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 95 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"690
-[; ;main.c: 690:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"691
-[; ;main.c: 691:         TMR4_PeriodCountSet(o2[2]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"692
-[; ;main.c: 692:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"693
-[; ;main.c: 693:         playHH();
-[e ( _playHH ..  ]
-"694
-[; ;main.c: 694:         _delay((unsigned long)((195-128)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - -> 195 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"695
-[; ;main.c: 695:         TMR2_PeriodCountSet(o3[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"696
-[; ;main.c: 696:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"697
-[; ;main.c: 697:         playHH();
-[e ( _playHH ..  ]
-"698
-[; ;main.c: 698:         _delay((unsigned long)((tempo-350-128-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - F7161 -> 350 `i -> 128 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"701
-[; ;main.c: 701:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"702
-[; ;main.c: 702:         TMR4_PeriodCountSet(o2[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"703
-[; ;main.c: 703:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"704
-[; ;main.c: 704:         playLDrum();
-[e ( _playLDrum ..  ]
-"705
-[; ;main.c: 705:         _delay((unsigned long)((160-141)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - -> 160 `i -> 141 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"707
-[; ;main.c: 707:         TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"708
-[; ;main.c: 708:         TMR2_PeriodCountSet(o3[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"709
-[; ;main.c: 709:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"710
-[; ;main.c: 710:         playHH();
-[e ( _playHH ..  ]
-"711
-[; ;main.c: 711:         _delay((unsigned long)((tempo-370-128)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - F7161 -> 370 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"713
-[; ;main.c: 713:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"714
-[; ;main.c: 714:         TMR4_PeriodCountSet(o2[7]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"715
-[; ;main.c: 715:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"716
-[; ;main.c: 716:         playHH();
-[e ( _playHH ..  ]
-"718
-[; ;main.c: 718:         TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"719
-[; ;main.c: 719:         _delay((unsigned long)((120-28)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - -> 120 `i -> 28 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"720
-[; ;main.c: 720:         TMR2_PeriodCountSet(o3[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"721
-[; ;main.c: 721:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"723
-[; ;main.c: 723:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"724
-[; ;main.c: 724:         TMR4_PeriodCountSet(o2[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"725
-[; ;main.c: 725:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"727
-[; ;main.c: 727:         playLDrum();
-[e ( _playLDrum ..  ]
-"728
-[; ;main.c: 728:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"216
+[; ;main.c: 216:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"730
-[; ;main.c: 730:         playHH();
-[e ( _playHH ..  ]
-"731
-[; ;main.c: 731:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"733
-[; ;main.c: 733:         playHH();
-[e ( _playHH ..  ]
-"734
-[; ;main.c: 734:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"736
-[; ;main.c: 736:         playHH();
-[e ( _playHH ..  ]
-"737
-[; ;main.c: 737:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"739
-[; ;main.c: 739:         playHH();
-[e ( _playHH ..  ]
-"741
-[; ;main.c: 741:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"743
-[; ;main.c: 743:         playLDrum();
+"217
+[; ;main.c: 217:         playLDrum();
 [e ( _playLDrum ..  ]
-"746
-[; ;main.c: 746:         _delay((unsigned long)((tempo-274 - 128 - drumdelay-80)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - - F7161 -> 274 `i -> 128 `i F7162 -> 80 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"747
-[; ;main.c: 747:         TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"748
-[; ;main.c: 748:         TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"749
-[; ;main.c: 749:         TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"750
-[; ;main.c: 750:         playHH();
-[e ( _playHH ..  ]
-"751
-[; ;main.c: 751:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"752
-[; ;main.c: 752:         playHH();
-[e ( _playHH ..  ]
-"754
-[; ;main.c: 754:         _delay((unsigned long)((tempo - 150 - 2*128 - drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - - - F7161 -> 150 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"756
-[; ;main.c: 756:         TMR2_Stop();
+"219
+[; ;main.c: 219:         _delay((unsigned long)((tempo - 142 - 2*128 - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 142 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"220
+[; ;main.c: 220:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"757
-[; ;main.c: 757:         TMR2_PeriodCountSet(o3[10]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 10 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"758
-[; ;main.c: 758:         TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"760
-[; ;main.c: 760:         TMR4_Stop();
+"221
+[; ;main.c: 221:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"761
-[; ;main.c: 761:         TMR4_PeriodCountSet(o1[6]);
+"223
+[; ;main.c: 223:         TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"224
+[; ;main.c: 224:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"225
+[; ;main.c: 225:         TMR4_PeriodCountSet(o1[6]);
 [e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"762
-[; ;main.c: 762:         TMR4_Start();
+"226
+[; ;main.c: 226:         TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"764
-[; ;main.c: 764:         playHH();
+"227
+[; ;main.c: 227:         playHH();
 [e ( _playHH ..  ]
-"765
-[; ;main.c: 765:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+"228
+[; ;main.c: 228:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"766
-[; ;main.c: 766:         playLDrum();
-[e ( _playLDrum ..  ]
-"767
-[; ;main.c: 767:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"768
-[; ;main.c: 768:         playHH();
+"229
+[; ;main.c: 229:         playHH();
 [e ( _playHH ..  ]
-"769
-[; ;main.c: 769:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"770
-[; ;main.c: 770:         playLDrum();
-[e ( _playLDrum ..  ]
-"771
-[; ;main.c: 771:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"773
-[; ;main.c: 773:         playHH();
-[e ( _playHH ..  ]
-"774
-[; ;main.c: 774:         _delay((unsigned long)((33)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"775
-[; ;main.c: 775:         fastHH();
-[e ( _fastHH ..  ]
-"776
-[; ;main.c: 776:         _delay((unsigned long)((33)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"777
-[; ;main.c: 777:         fastLH();
-[e ( _fastLH ..  ]
-"778
-[; ;main.c: 778:         _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"779
-[; ;main.c: 779:         fastLH();
-[e ( _fastLH ..  ]
-"780
-[; ;main.c: 780:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"781
-[; ;main.c: 781:         playHH();
-[e ( _playHH ..  ]
-"782
-[; ;main.c: 782:         _delay((unsigned long)((33)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"783
-[; ;main.c: 783:         fastHH();
-[e ( _fastHH ..  ]
-"784
-[; ;main.c: 784:         _delay((unsigned long)((33)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"785
-[; ;main.c: 785:         fastHH();
-[e ( _fastHH ..  ]
-"786
-[; ;main.c: 786:         _delay((unsigned long)((33)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"787
-[; ;main.c: 787:         fastHH();
-[e ( _fastHH ..  ]
-"789
-[; ;main.c: 789:         TMR4_Stop();
+"230
+[; ;main.c: 230:         _delay((unsigned long)((tempo-200 - 128*2 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 200 `i * -> 128 `i -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"231
+[; ;main.c: 231:         TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"790
-[; ;main.c: 790:         TMR2_Stop();
+"232
+[; ;main.c: 232:         TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
+"235
+[; ;main.c: 235:         TMR2_PeriodCountSet(o1[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"236
+[; ;main.c: 236:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"237
+[; ;main.c: 237:         TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"238
+[; ;main.c: 238:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"240
+[; ;main.c: 240:         playLDrum();
+[e ( _playLDrum ..  ]
+"241
+[; ;main.c: 241:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"242
+[; ;main.c: 242:         playLDrum();
+[e ( _playLDrum ..  ]
+"243
+[; ;main.c: 243:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"244
+[; ;main.c: 244:         playHH();
+[e ( _playHH ..  ]
+"246
+[; ;main.c: 246:         _delay((unsigned long)((tempo - 2*drumdelay - 2*141 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i F7162 * -> 2 `i -> 141 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"247
+[; ;main.c: 247:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"248
+[; ;main.c: 248:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"250
+[; ;main.c: 250:         TMR2_PeriodCountSet(o1[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"251
+[; ;main.c: 251:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"252
+[; ;main.c: 252:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"253
+[; ;main.c: 253:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"255
+[; ;main.c: 255:         playHH();
+[e ( _playHH ..  ]
+"256
+[; ;main.c: 256:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"257
+[; ;main.c: 257:         playHH();
+[e ( _playHH ..  ]
+"258
+[; ;main.c: 258:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"259
+[; ;main.c: 259:         playLDrum();
+[e ( _playLDrum ..  ]
+"260
+[; ;main.c: 260:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"263
+[; ;main.c: 263:         fastHH();
+[e ( _fastHH ..  ]
+"264
+[; ;main.c: 264:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"265
+[; ;main.c: 265:         fastHH();
+[e ( _fastHH ..  ]
+"266
+[; ;main.c: 266:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"267
+[; ;main.c: 267:         fastHH();
+[e ( _fastHH ..  ]
+"269
+[; ;main.c: 269:         _delay((unsigned long)((tempo - 2*128 - 141 - 32*3 - 66)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 2 `i -> 128 `i -> 141 `i * -> 32 `i -> 3 `i -> 66 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"270
+[; ;main.c: 270:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"272
+[; ;main.c: 272:         _delay((unsigned long)((tempo-400)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7161 -> 400 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"276
+[; ;main.c: 276:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"277
+[; ;main.c: 277:         TMR2_PeriodCountSet(o2[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"278
+[; ;main.c: 278:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"281
+[; ;main.c: 281:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"282
+[; ;main.c: 282:         TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"283
+[; ;main.c: 283:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"285
+[; ;main.c: 285:         playLDrum();
+[e ( _playLDrum ..  ]
+"286
+[; ;main.c: 286:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"287
+[; ;main.c: 287:         playHH();
+[e ( _playHH ..  ]
+"288
+[; ;main.c: 288:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"289
+[; ;main.c: 289:         playHH();
+[e ( _playHH ..  ]
+"291
+[; ;main.c: 291:         _delay((unsigned long)((tempo - (2*(128)) - (1*(143)) - (2*drumdelay))*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i * -> 1 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"292
+[; ;main.c: 292:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"294
+[; ;main.c: 294:         TMR2_PeriodCountSet(o1[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"295
+[; ;main.c: 295:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"296
+[; ;main.c: 296:         playHH();
+[e ( _playHH ..  ]
+"297
+[; ;main.c: 297:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"298
+[; ;main.c: 298:         playHH();
+[e ( _playHH ..  ]
+"299
+[; ;main.c: 299:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"300
+[; ;main.c: 300:         _delay((unsigned long)((35)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"301
+[; ;main.c: 301:         playLDrum();
+[e ( _playLDrum ..  ]
+"302
+[; ;main.c: 302:         _delay((unsigned long)((35)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"303
+[; ;main.c: 303:         _delay((unsigned long)((tempo - 2*(128) - 143 - 2*drumdelay - 70)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 2 `i -> 128 `i -> 143 `i * -> 2 `i F7162 -> 70 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"304
+[; ;main.c: 304:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"306
+[; ;main.c: 306:         TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"307
+[; ;main.c: 307:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"309
+[; ;main.c: 309:         playHH();
+[e ( _playHH ..  ]
+"310
+[; ;main.c: 310:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"311
+[; ;main.c: 311:         playHH();
+[e ( _playHH ..  ]
+"313
+[; ;main.c: 313:         _delay((unsigned long)((tempo - 150 - drumdelay - 2*128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 150 `i F7162 * -> 2 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"315
+[; ;main.c: 315:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"316
+[; ;main.c: 316:         TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"317
+[; ;main.c: 317:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"319
+[; ;main.c: 319:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"320
+[; ;main.c: 320:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"321
+[; ;main.c: 321:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"323
+[; ;main.c: 323:         playLDrum();
+[e ( _playLDrum ..  ]
+"324
+[; ;main.c: 324:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"325
+[; ;main.c: 325:         playLDrum();
+[e ( _playLDrum ..  ]
+"326
+[; ;main.c: 326:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"327
+[; ;main.c: 327:         playHH();
+[e ( _playHH ..  ]
+"333
+[; ;main.c: 333:         _delay((unsigned long)((tempo - 2*128 - 1*143 - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i * -> 1 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"335
+[; ;main.c: 335:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"336
+[; ;main.c: 336:         TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"337
+[; ;main.c: 337:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"339
+[; ;main.c: 339:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"340
+[; ;main.c: 340:         TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"341
+[; ;main.c: 341:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"343
+[; ;main.c: 343:         playHH();
+[e ( _playHH ..  ]
+"344
+[; ;main.c: 344:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"345
+[; ;main.c: 345:         playHH();
+[e ( _playHH ..  ]
+"347
+[; ;main.c: 347:         _delay((unsigned long)((tempo-200 - 2*128 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 200 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"349
+[; ;main.c: 349:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"350
+[; ;main.c: 350:         TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"351
+[; ;main.c: 351:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"353
+[; ;main.c: 353:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"354
+[; ;main.c: 354:         TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"355
+[; ;main.c: 355:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"357
+[; ;main.c: 357:         playLDrum();
+[e ( _playLDrum ..  ]
+"358
+[; ;main.c: 358:         _delay((unsigned long)((tempo-375 - 143)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 375 `i -> 143 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"360
+[; ;main.c: 360:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"361
+[; ;main.c: 361:         TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"362
+[; ;main.c: 362:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"364
+[; ;main.c: 364:         playHH();
+[e ( _playHH ..  ]
+"365
+[; ;main.c: 365:         _delay((unsigned long)((tempo- 400 - 64)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 400 `i -> 64 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"367
+[; ;main.c: 367:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"368
+[; ;main.c: 368:         TMR2_PeriodCountSet(o2[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"369
+[; ;main.c: 369:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"370
+[; ;main.c: 370:         playHH();
+[e ( _playHH ..  ]
+"374
+[; ;main.c: 374:         _delay((unsigned long)((150-128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - -> 150 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"376
+[; ;main.c: 376:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"377
+[; ;main.c: 377:         TMR4_PeriodCountSet(o2[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"378
+[; ;main.c: 378:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"379
+[; ;main.c: 379:         playLDrum();
+[e ( _playLDrum ..  ]
+"380
+[; ;main.c: 380:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"381
+[; ;main.c: 381:         playHH();
+[e ( _playHH ..  ]
+"382
+[; ;main.c: 382:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"383
+[; ;main.c: 383:         playHH();
+[e ( _playHH ..  ]
+"384
+[; ;main.c: 384:         _delay((unsigned long)((tempo - 143 - 2*drumdelay - 2*128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 143 `i * -> 2 `i F7162 * -> 2 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"387
+[; ;main.c: 387:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"388
+[; ;main.c: 388:         TMR4_PeriodCountSet(o3[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"389
+[; ;main.c: 389:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"391
+[; ;main.c: 391:         playHH();
+[e ( _playHH ..  ]
+"392
+[; ;main.c: 392:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"393
+[; ;main.c: 393:         playHH();
+[e ( _playHH ..  ]
+"394
+[; ;main.c: 394:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"395
+[; ;main.c: 395:         playLDrum();
+[e ( _playLDrum ..  ]
+"397
+[; ;main.c: 397:         _delay((unsigned long)((tempo - 143 - 2*drumdelay - 2*128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 143 `i * -> 2 `i F7162 * -> 2 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"399
+[; ;main.c: 399:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"400
+[; ;main.c: 400:         TMR4_PeriodCountSet(o2[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"401
+[; ;main.c: 401:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"402
+[; ;main.c: 402:         playHH();
+[e ( _playHH ..  ]
+"403
+[; ;main.c: 403:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"404
+[; ;main.c: 404:         playHH();
+[e ( _playHH ..  ]
+"405
+[; ;main.c: 405:         _delay((unsigned long)((tempo-250 -2*128 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 250 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"407
+[; ;main.c: 407:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"408
+[; ;main.c: 408:         _delay((unsigned long)((100)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"409
+[; ;main.c: 409:         TMR4_PeriodCountSet(o2[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"410
+[; ;main.c: 410:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"411
+[; ;main.c: 411:         playLDrum();
+[e ( _playLDrum ..  ]
+"412
+[; ;main.c: 412:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"413
+[; ;main.c: 413:         playLDrum();
+[e ( _playLDrum ..  ]
+"414
+[; ;main.c: 414:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"415
+[; ;main.c: 415:         playHH();
+[e ( _playHH ..  ]
+"416
+[; ;main.c: 416:         _delay((unsigned long)((tempo-128 - 2*drumdelay - 2*141)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 128 `i * -> 2 `i F7162 * -> 2 `i -> 141 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"418
+[; ;main.c: 418:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"419
+[; ;main.c: 419:         TMR4_PeriodCountSet(o2[10]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 10 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"420
+[; ;main.c: 420:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"422
+[; ;main.c: 422:         playHH();
+[e ( _playHH ..  ]
+"423
+[; ;main.c: 423:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"425
+[; ;main.c: 425:         playHH();
+[e ( _playHH ..  ]
+"426
+[; ;main.c: 426:         _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"427
+[; ;main.c: 427:         fastHH();
+[e ( _fastHH ..  ]
+"428
+[; ;main.c: 428:         _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"429
+[; ;main.c: 429:         fastHH();
+[e ( _fastHH ..  ]
+"432
+[; ;main.c: 432:         _delay((unsigned long)((tempo - 128*2 - 20*2 - 2*32 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 128 `i -> 2 `i * -> 20 `i -> 2 `i * -> 2 `i -> 32 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"434
+[; ;main.c: 434:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"435
+[; ;main.c: 435:         TMR4_PeriodCountSet(o2[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"436
+[; ;main.c: 436:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"437
+[; ;main.c: 437:         playHH();
+[e ( _playHH ..  ]
+"438
+[; ;main.c: 438:         _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"439
+[; ;main.c: 439:         fastHH();
+[e ( _fastHH ..  ]
+"440
+[; ;main.c: 440:         _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"441
+[; ;main.c: 441:         fastHH();
+[e ( _fastHH ..  ]
+"442
+[; ;main.c: 442:         _delay((unsigned long)((tempo - 200 - 128 - 32*2 - 20*2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 -> 200 `i -> 128 `i * -> 32 `i -> 2 `i * -> 20 `i -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"449
+[; ;main.c: 449:                 TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"450
+[; ;main.c: 450:         TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"451
+[; ;main.c: 451:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"454
+[; ;main.c: 454:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"455
+[; ;main.c: 455:         TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"456
+[; ;main.c: 456:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"458
+[; ;main.c: 458:         playLDrum();
+[e ( _playLDrum ..  ]
+"459
+[; ;main.c: 459:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"460
+[; ;main.c: 460:         playHH();
+[e ( _playHH ..  ]
+"461
+[; ;main.c: 461:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"462
+[; ;main.c: 462:         playHH();
+[e ( _playHH ..  ]
+"464
+[; ;main.c: 464:         _delay((unsigned long)((tempo - (2*(128)) - (1*(143)) - (2*drumdelay))*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i * -> 1 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"465
+[; ;main.c: 465:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"467
+[; ;main.c: 467:         TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"468
+[; ;main.c: 468:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"469
+[; ;main.c: 469:         playHH();
+[e ( _playHH ..  ]
+"470
+[; ;main.c: 470:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"471
+[; ;main.c: 471:         playHH();
+[e ( _playHH ..  ]
+"472
+[; ;main.c: 472:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"473
+[; ;main.c: 473:         _delay((unsigned long)((70)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 70 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"474
+[; ;main.c: 474:         playLDrum();
+[e ( _playLDrum ..  ]
+"476
+[; ;main.c: 476:         _delay((unsigned long)((tempo - 2*(128) - 143 - 2*drumdelay - 70)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 2 `i -> 128 `i -> 143 `i * -> 2 `i F7162 -> 70 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"477
+[; ;main.c: 477:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"479
+[; ;main.c: 479:         TMR2_PeriodCountSet(o3[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"480
+[; ;main.c: 480:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"482
+[; ;main.c: 482:         playHH();
+[e ( _playHH ..  ]
+"483
+[; ;main.c: 483:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"484
+[; ;main.c: 484:         playHH();
+[e ( _playHH ..  ]
+"486
+[; ;main.c: 486:         _delay((unsigned long)((tempo - 2*(128) - drumdelay - 200)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i -> 128 `i F7162 -> 200 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"487
+[; ;main.c: 487:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"489
+[; ;main.c: 489:         TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"490
+[; ;main.c: 490:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"492
+[; ;main.c: 492:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"493
+[; ;main.c: 493:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"494
+[; ;main.c: 494:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"495
+[; ;main.c: 495:         playLDrum();
+[e ( _playLDrum ..  ]
+"496
+[; ;main.c: 496:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"497
+[; ;main.c: 497:         playLDrum();
+[e ( _playLDrum ..  ]
+"498
+[; ;main.c: 498:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"499
+[; ;main.c: 499:         playHH();
+[e ( _playHH ..  ]
+"500
+[; ;main.c: 500:         _delay((unsigned long)((tempo - 128 - 2*(143) - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 128 `i * -> 2 `i -> 143 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"502
+[; ;main.c: 502:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"503
+[; ;main.c: 503:         TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"504
+[; ;main.c: 504:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"505
+[; ;main.c: 505:         playHH();
+[e ( _playHH ..  ]
+"506
+[; ;main.c: 506:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"507
+[; ;main.c: 507:         playHH();
+[e ( _playHH ..  ]
+"508
+[; ;main.c: 508:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"509
+[; ;main.c: 509:         playLDrum();
+[e ( _playLDrum ..  ]
+"510
+[; ;main.c: 510:         _delay((unsigned long)((tempo - 220 - (2*128) - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 220 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"511
+[; ;main.c: 511:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"512
+[; ;main.c: 512:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"513
+[; ;main.c: 513:         TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"514
+[; ;main.c: 514:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"515
+[; ;main.c: 515:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"516
+[; ;main.c: 516:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"518
+[; ;main.c: 518:         playHH();
+[e ( _playHH ..  ]
+"519
+[; ;main.c: 519:         _delay((unsigned long)((tempo - 350 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 350 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"522
+[; ;main.c: 522:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"526
+[; ;main.c: 526:         TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"527
+[; ;main.c: 527:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"528
+[; ;main.c: 528:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"529
+[; ;main.c: 529:         TMR4_PeriodCountSet(o1[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"530
+[; ;main.c: 530:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"531
+[; ;main.c: 531:         playHH();
+[e ( _playHH ..  ]
+"533
+[; ;main.c: 533:         _delay((unsigned long)((tempo - 350 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 350 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"535
+[; ;main.c: 535:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"536
+[; ;main.c: 536:         TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"537
+[; ;main.c: 537:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"539
+[; ;main.c: 539:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"540
+[; ;main.c: 540:         TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"541
+[; ;main.c: 541:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"543
+[; ;main.c: 543:         playLDrum();
+[e ( _playLDrum ..  ]
+"544
+[; ;main.c: 544:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"545
+[; ;main.c: 545:         playHH();
+[e ( _playHH ..  ]
+"546
+[; ;main.c: 546:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"547
+[; ;main.c: 547:         playHH();
+[e ( _playHH ..  ]
+"550
+[; ;main.c: 550:         _delay((unsigned long)((tempo - 142 - 2*128 - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 142 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"551
+[; ;main.c: 551:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"552
+[; ;main.c: 552:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"554
+[; ;main.c: 554:         TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"555
+[; ;main.c: 555:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"556
+[; ;main.c: 556:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"557
+[; ;main.c: 557:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"558
+[; ;main.c: 558:         playHH();
+[e ( _playHH ..  ]
+"559
+[; ;main.c: 559:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"560
+[; ;main.c: 560:         playHH();
+[e ( _playHH ..  ]
+"561
+[; ;main.c: 561:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"562
+[; ;main.c: 562:         playLDrum();
+[e ( _playLDrum ..  ]
+"564
+[; ;main.c: 564:         _delay((unsigned long)((tempo - 142 - 2*128 - 2*drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 142 `i * -> 2 `i -> 128 `i * -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"565
+[; ;main.c: 565:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"566
+[; ;main.c: 566:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"568
+[; ;main.c: 568:         TMR2_PeriodCountSet(o3[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"569
+[; ;main.c: 569:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"570
+[; ;main.c: 570:         TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"571
+[; ;main.c: 571:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"572
+[; ;main.c: 572:         playHH();
+[e ( _playHH ..  ]
+"573
+[; ;main.c: 573:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"574
+[; ;main.c: 574:         playHH();
+[e ( _playHH ..  ]
+"575
+[; ;main.c: 575:         _delay((unsigned long)((tempo-200 - 128*2 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 200 `i * -> 128 `i -> 2 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"576
+[; ;main.c: 576:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"577
+[; ;main.c: 577:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"580
+[; ;main.c: 580:         TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"581
+[; ;main.c: 581:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"582
+[; ;main.c: 582:         TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"583
+[; ;main.c: 583:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"585
+[; ;main.c: 585:         playLDrum();
+[e ( _playLDrum ..  ]
+"586
+[; ;main.c: 586:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"587
+[; ;main.c: 587:         playLDrum();
+[e ( _playLDrum ..  ]
+"588
+[; ;main.c: 588:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"589
+[; ;main.c: 589:         playHH();
+[e ( _playHH ..  ]
+"591
+[; ;main.c: 591:         _delay((unsigned long)((tempo - 2*drumdelay - 2*141 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 * -> 2 `i F7162 * -> 2 `i -> 141 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"592
+[; ;main.c: 592:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"593
+[; ;main.c: 593:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"595
+[; ;main.c: 595:         TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"596
+[; ;main.c: 596:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"597
+[; ;main.c: 597:         TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"598
+[; ;main.c: 598:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"600
+[; ;main.c: 600:         playHH();
+[e ( _playHH ..  ]
+"601
+[; ;main.c: 601:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"602
+[; ;main.c: 602:         playHH();
+[e ( _playHH ..  ]
+"603
+[; ;main.c: 603:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"604
+[; ;main.c: 604:         playLDrum();
+[e ( _playLDrum ..  ]
+"605
+[; ;main.c: 605:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"608
+[; ;main.c: 608:         fastHH();
+[e ( _fastHH ..  ]
+"609
+[; ;main.c: 609:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"610
+[; ;main.c: 610:         fastHH();
+[e ( _fastHH ..  ]
+"611
+[; ;main.c: 611:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"612
+[; ;main.c: 612:         fastHH();
+[e ( _fastHH ..  ]
+"614
+[; ;main.c: 614:         _delay((unsigned long)((tempo - 2*128 - 141 - 32*3 - 66)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 * -> 2 `i -> 128 `i -> 141 `i * -> 32 `i -> 3 `i -> 66 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"615
+[; ;main.c: 615:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"617
+[; ;main.c: 617:         _delay((unsigned long)((150)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"623
+[; ;main.c: 623:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"624
+[; ;main.c: 624:         TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"625
+[; ;main.c: 625:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"627
+[; ;main.c: 627:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"628
+[; ;main.c: 628:         TMR4_PeriodCountSet(o1[7]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"629
+[; ;main.c: 629:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"631
+[; ;main.c: 631:         playLDrum();
+[e ( _playLDrum ..  ]
+"632
+[; ;main.c: 632:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"633
+[; ;main.c: 633:         playHH();
+[e ( _playHH ..  ]
+"635
+[; ;main.c: 635:         _delay((unsigned long)((tempo-150 - 128 - 141 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 -> 150 `i -> 128 `i -> 141 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"637
+[; ;main.c: 637:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"638
+[; ;main.c: 638:         TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"639
+[; ;main.c: 639:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"640
+[; ;main.c: 640:         playHH();
+[e ( _playHH ..  ]
+"642
+[; ;main.c: 642:         _delay((unsigned long)((tempo-350 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 350 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"644
+[; ;main.c: 644:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"645
+[; ;main.c: 645:         TMR2_PeriodCountSet(o3[2]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"646
+[; ;main.c: 646:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"647
+[; ;main.c: 647:         playHH();
+[e ( _playHH ..  ]
+"648
+[; ;main.c: 648:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"649
+[; ;main.c: 649:         playHH();
+[e ( _playHH ..  ]
+"651
+[; ;main.c: 651:         _delay((unsigned long)((tempo-200 - 2*128 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 200 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"653
+[; ;main.c: 653:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"654
+[; ;main.c: 654:         TMR2_PeriodCountSet(o3[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"655
+[; ;main.c: 655:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"657
+[; ;main.c: 657:         playLDrum();
+[e ( _playLDrum ..  ]
+"658
+[; ;main.c: 658:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"659
+[; ;main.c: 659:         playHH();
+[e ( _playHH ..  ]
+"660
+[; ;main.c: 660:         _delay((unsigned long)((tempo-200 - 141 - drumdelay - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 -> 200 `i -> 141 `i F7162 -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"662
+[; ;main.c: 662:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"663
+[; ;main.c: 663:         TMR2_PeriodCountSet(o3[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"664
+[; ;main.c: 664:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"665
+[; ;main.c: 665:         playHH();
+[e ( _playHH ..  ]
+"668
+[; ;main.c: 668:         _delay((unsigned long)((175 - 128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - -> 175 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"670
+[; ;main.c: 670:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"671
+[; ;main.c: 671:         TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"672
+[; ;main.c: 672:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"673
+[; ;main.c: 673:         playLDrum();
+[e ( _playLDrum ..  ]
+"674
+[; ;main.c: 674:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"675
+[; ;main.c: 675:         playLDrum();
+[e ( _playLDrum ..  ]
+"678
+[; ;main.c: 678:         _delay((unsigned long)((tempo-155 - 2*141 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 155 `i * -> 2 `i -> 141 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"680
+[; ;main.c: 680:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"681
+[; ;main.c: 681:         TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"682
+[; ;main.c: 682:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"683
+[; ;main.c: 683:         playHH();
+[e ( _playHH ..  ]
+"684
+[; ;main.c: 684:         _delay((unsigned long)((tempo-432-128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 432 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"685
+[; ;main.c: 685:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"687
+[; ;main.c: 687:         _delay((unsigned long)((95)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 95 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"689
+[; ;main.c: 689:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"690
+[; ;main.c: 690:         TMR4_PeriodCountSet(o2[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"691
+[; ;main.c: 691:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"692
+[; ;main.c: 692:         playHH();
+[e ( _playHH ..  ]
+"693
+[; ;main.c: 693:         _delay((unsigned long)((195-128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - -> 195 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"694
+[; ;main.c: 694:         TMR2_PeriodCountSet(o3[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"695
+[; ;main.c: 695:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"696
+[; ;main.c: 696:         playHH();
+[e ( _playHH ..  ]
+"697
+[; ;main.c: 697:         _delay((unsigned long)((tempo-350-128-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 350 `i -> 128 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"700
+[; ;main.c: 700:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"701
+[; ;main.c: 701:         TMR4_PeriodCountSet(o2[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"702
+[; ;main.c: 702:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"703
+[; ;main.c: 703:         playLDrum();
+[e ( _playLDrum ..  ]
+"704
+[; ;main.c: 704:         _delay((unsigned long)((160-141)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - -> 160 `i -> 141 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"706
+[; ;main.c: 706:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"707
+[; ;main.c: 707:         TMR2_PeriodCountSet(o3[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"708
+[; ;main.c: 708:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"709
+[; ;main.c: 709:         playHH();
+[e ( _playHH ..  ]
+"710
+[; ;main.c: 710:         _delay((unsigned long)((tempo-370-128)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - F7161 -> 370 `i -> 128 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"712
+[; ;main.c: 712:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"713
+[; ;main.c: 713:         TMR4_PeriodCountSet(o2[7]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"714
+[; ;main.c: 714:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"715
+[; ;main.c: 715:         playHH();
+[e ( _playHH ..  ]
+"717
+[; ;main.c: 717:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"718
+[; ;main.c: 718:         _delay((unsigned long)((120-28)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - -> 120 `i -> 28 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"719
+[; ;main.c: 719:         TMR2_PeriodCountSet(o3[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"720
+[; ;main.c: 720:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"722
+[; ;main.c: 722:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"723
+[; ;main.c: 723:         TMR4_PeriodCountSet(o2[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"724
+[; ;main.c: 724:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"726
+[; ;main.c: 726:         playLDrum();
+[e ( _playLDrum ..  ]
+"727
+[; ;main.c: 727:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"729
+[; ;main.c: 729:         playHH();
+[e ( _playHH ..  ]
+"730
+[; ;main.c: 730:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"732
+[; ;main.c: 732:         playHH();
+[e ( _playHH ..  ]
+"733
+[; ;main.c: 733:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"735
+[; ;main.c: 735:         playHH();
+[e ( _playHH ..  ]
+"736
+[; ;main.c: 736:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"738
+[; ;main.c: 738:         playHH();
+[e ( _playHH ..  ]
+"740
+[; ;main.c: 740:         _delay((unsigned long)((drumdelay+20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> + F7162 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"742
+[; ;main.c: 742:         playLDrum();
+[e ( _playLDrum ..  ]
+"745
+[; ;main.c: 745:         _delay((unsigned long)((tempo-274 - 128 - drumdelay-80)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - - F7161 -> 274 `i -> 128 `i F7162 -> 80 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"746
+[; ;main.c: 746:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"747
+[; ;main.c: 747:         TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"748
+[; ;main.c: 748:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"749
+[; ;main.c: 749:         playHH();
+[e ( _playHH ..  ]
+"750
+[; ;main.c: 750:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"751
+[; ;main.c: 751:         playHH();
+[e ( _playHH ..  ]
+"753
+[; ;main.c: 753:         _delay((unsigned long)((tempo - 150 - 2*128 - drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - - - F7161 -> 150 `i * -> 2 `i -> 128 `i F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"755
+[; ;main.c: 755:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"756
+[; ;main.c: 756:         TMR2_PeriodCountSet(o3[10]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 10 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"757
+[; ;main.c: 757:         TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"759
+[; ;main.c: 759:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"760
+[; ;main.c: 760:         TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"761
+[; ;main.c: 761:         TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"763
+[; ;main.c: 763:         playHH();
+[e ( _playHH ..  ]
+"764
+[; ;main.c: 764:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"765
+[; ;main.c: 765:         playLDrum();
+[e ( _playLDrum ..  ]
+"766
+[; ;main.c: 766:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"767
+[; ;main.c: 767:         playHH();
+[e ( _playHH ..  ]
+"768
+[; ;main.c: 768:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"769
+[; ;main.c: 769:         playLDrum();
+[e ( _playLDrum ..  ]
+"770
+[; ;main.c: 770:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"772
+[; ;main.c: 772:         playHH();
+[e ( _playHH ..  ]
+"773
+[; ;main.c: 773:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"774
+[; ;main.c: 774:         fastHH();
+[e ( _fastHH ..  ]
+"775
+[; ;main.c: 775:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"776
+[; ;main.c: 776:         fastLH();
+[e ( _fastLH ..  ]
+"777
+[; ;main.c: 777:         _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"778
+[; ;main.c: 778:         fastLH();
+[e ( _fastLH ..  ]
+"779
+[; ;main.c: 779:         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7162 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"780
+[; ;main.c: 780:         playHH();
+[e ( _playHH ..  ]
+"781
+[; ;main.c: 781:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"782
+[; ;main.c: 782:         fastHH();
+[e ( _fastHH ..  ]
+"783
+[; ;main.c: 783:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"784
+[; ;main.c: 784:         fastHH();
+[e ( _fastHH ..  ]
+"785
+[; ;main.c: 785:         _delay((unsigned long)((33)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 33 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"786
+[; ;main.c: 786:         fastHH();
+[e ( _fastHH ..  ]
+"788
+[; ;main.c: 788:         TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"789
+[; ;main.c: 789:         TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"790
+[; ;main.c: 790:         _delay((unsigned long)((100)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "791
-[; ;main.c: 791:         _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7161 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"792
-[; ;main.c: 792:     }
+[; ;main.c: 791:     }
 }
 [e :U 984 ]
 [e $U 985  ]
 [e :U 986 ]
-"797
-[; ;main.c: 797:     TRISAbits.TRISA0 = 1;
+"796
+[; ;main.c: 796:     TRISAbits.TRISA0 = 1;
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"798
-[; ;main.c: 798:     TRISAbits.TRISA1 = 1;
+"797
+[; ;main.c: 797:     TRISAbits.TRISA1 = 1;
 [e = . . _TRISAbits 0 1 -> -> 1 `i `uc ]
-"799
-[; ;main.c: 799:     TRISAbits.TRISA2 = 1;
+"798
+[; ;main.c: 798:     TRISAbits.TRISA2 = 1;
 [e = . . _TRISAbits 0 2 -> -> 1 `i `uc ]
-"800
-[; ;main.c: 800:     TRISBbits.TRISB5 = 1;
+"799
+[; ;main.c: 799:     TRISBbits.TRISB5 = 1;
 [e = . . _TRISBbits 0 2 -> -> 1 `i `uc ]
-"801
-[; ;main.c: 801:     TRISBbits.TRISB7 = 1;
+"800
+[; ;main.c: 800:     TRISBbits.TRISB7 = 1;
 [e = . . _TRISBbits 0 4 -> -> 1 `i `uc ]
-"802
-[; ;main.c: 802:     TRISCbits.TRISC4 = 1;
+"801
+[; ;main.c: 801:     TRISCbits.TRISC4 = 1;
 [e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
-"803
-[; ;main.c: 803:     TRISCbits.TRISC6 = 1;
+"802
+[; ;main.c: 802:     TRISCbits.TRISC6 = 1;
 [e = . . _TRISCbits 0 6 -> -> 1 `i `uc ]
-"804
-[; ;main.c: 804:     TRISCbits.TRISC7 = 1;
+"803
+[; ;main.c: 803:     TRISCbits.TRISC7 = 1;
 [e = . . _TRISCbits 0 7 -> -> 1 `i `uc ]
-"807
-[; ;main.c: 807:     ANSELAbits.ANSA0 = 0;
+"806
+[; ;main.c: 806:     ANSELAbits.ANSA0 = 0;
 [e = . . _ANSELAbits 0 0 -> -> 0 `i `uc ]
-"808
-[; ;main.c: 808:     ANSELAbits.ANSA1 = 0;
+"807
+[; ;main.c: 807:     ANSELAbits.ANSA1 = 0;
 [e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
-"809
-[; ;main.c: 809:     ANSELAbits.ANSA2 = 0;
+"808
+[; ;main.c: 808:     ANSELAbits.ANSA2 = 0;
 [e = . . _ANSELAbits 0 2 -> -> 0 `i `uc ]
-"810
-[; ;main.c: 810:     ANSELBbits.ANSB5 = 0;
+"809
+[; ;main.c: 809:     ANSELBbits.ANSB5 = 0;
 [e = . . _ANSELBbits 0 2 -> -> 0 `i `uc ]
-"811
-[; ;main.c: 811:     ANSELBbits.ANSB7 = 0;
+"810
+[; ;main.c: 810:     ANSELBbits.ANSB7 = 0;
 [e = . . _ANSELBbits 0 4 -> -> 0 `i `uc ]
-"812
-[; ;main.c: 812:     ANSELCbits.ANSC4 = 0;
+"811
+[; ;main.c: 811:     ANSELCbits.ANSC4 = 0;
 [e = . . _ANSELCbits 0 4 -> -> 0 `i `uc ]
-"813
-[; ;main.c: 813:     ANSELCbits.ANSC6 = 0;
+"812
+[; ;main.c: 812:     ANSELCbits.ANSC6 = 0;
 [e = . . _ANSELCbits 0 6 -> -> 0 `i `uc ]
-"814
-[; ;main.c: 814:     ANSELCbits.ANSC7 = 0;
+"813
+[; ;main.c: 813:     ANSELCbits.ANSC7 = 0;
 [e = . . _ANSELCbits 0 7 -> -> 0 `i `uc ]
-"818
-[; ;main.c: 818:     TRISAbits.TRISA5 = 0;
+"817
+[; ;main.c: 817:     TRISAbits.TRISA5 = 0;
 [e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
-"819
-[; ;main.c: 819:     TRISCbits.TRISC0 = 0;
+"818
+[; ;main.c: 818:     TRISCbits.TRISC0 = 0;
 [e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
-"820
-[; ;main.c: 820:     TRISCbits.TRISC1 = 0;
+"819
+[; ;main.c: 819:     TRISCbits.TRISC1 = 0;
 [e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
-"821
-[; ;main.c: 821:     TRISCbits.TRISC2 = 0;
+"820
+[; ;main.c: 820:     TRISCbits.TRISC2 = 0;
 [e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
-"824
-[; ;main.c: 824:     LATAbits.LATA5 = 0;
+"823
+[; ;main.c: 823:     LATAbits.LATA5 = 0;
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-"825
-[; ;main.c: 825:     LATCbits.LATC0 = 0;
+"824
+[; ;main.c: 824:     LATCbits.LATC0 = 0;
 [e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-"826
-[; ;main.c: 826:     LATCbits.LATC1 = 0;
+"825
+[; ;main.c: 825:     LATCbits.LATC1 = 0;
 [e = . . _LATCbits 0 1 -> -> 0 `i `uc ]
-"827
-[; ;main.c: 827:     LATCbits.LATC2 = 0;
+"826
+[; ;main.c: 826:     LATCbits.LATC2 = 0;
 [e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-"830
-[; ;main.c: 830:     PIE0bits.IOCIE = 1;
+"829
+[; ;main.c: 829:     PIE0bits.IOCIE = 1;
 [e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
-"831
-[; ;main.c: 831:     PIR0bits.IOCIF = 0;
+"830
+[; ;main.c: 830:     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"837
-[; ;main.c: 837:     const i2c_host_interface_t *I2C = &I2C1_Host;
+"836
+[; ;main.c: 836:     const i2c_host_interface_t *I2C = &I2C1_Host;
 [v _I2C `*CS966 ~T0 @X0 1 a ]
 [e = _I2C &U _I2C1_Host ]
-"838
-[; ;main.c: 838:     uint8_t dataWrite[2];
+"837
+[; ;main.c: 837:     uint8_t dataWrite[2];
 [v _dataWrite `uc ~T0 @X0 -> 2 `i a ]
-"839
-[; ;main.c: 839:     uint8_t dataRead[2];
+"838
+[; ;main.c: 838:     uint8_t dataRead[2];
 [v _dataRead `uc ~T0 @X0 -> 2 `i a ]
-"842
-[; ;main.c: 842:     if (I2C->Write(0x00, dataWrite, 2))
+"841
+[; ;main.c: 841:     if (I2C->Write(0x00, dataWrite, 2))
 [e $ ! != -> ( *U . *U _I2C 2 (3 , , -> -> 0 `i `us &U _dataWrite -> -> 2 `i `ui `i -> 0 `i 987  ]
-"843
-[; ;main.c: 843:     {
+"842
+[; ;main.c: 842:     {
 {
-"844
-[; ;main.c: 844:         while(I2C->IsBusy())
+"843
+[; ;main.c: 843:         while(I2C->IsBusy())
 [e $U 988  ]
 [e :U 989 ]
-"845
-[; ;main.c: 845:         {
+"844
+[; ;main.c: 844:         {
 {
-"846
-[; ;main.c: 846:             I2C->Tasks();
+"845
+[; ;main.c: 845:             I2C->Tasks();
 [e ( *U . *U _I2C 9 ..  ]
-"847
-[; ;main.c: 847:         }
+"846
+[; ;main.c: 846:         }
 }
 [e :U 988 ]
-"844
-[; ;main.c: 844:         while(I2C->IsBusy())
+"843
+[; ;main.c: 843:         while(I2C->IsBusy())
 [e $ != -> ( *U . *U _I2C 7 ..  `i -> 0 `i 989  ]
 [e :U 990 ]
-"848
-[; ;main.c: 848:     }
+"847
+[; ;main.c: 847:     }
 }
 [e :U 987 ]
-"850
-[; ;main.c: 850:     return;
+"849
+[; ;main.c: 849:     return;
 [e $UE 983  ]
-"851
-[; ;main.c: 851: }
+"850
+[; ;main.c: 850: }
 [e :UE 983 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"854
-[; ;main.c: 854: void __attribute__((picinterrupt(("")))) ISR(){
+"853
+[; ;main.c: 853: void __attribute__((picinterrupt(("")))) ISR(){
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"855
-[; ;main.c: 855:     if(PIR0bits.IOCIF){
+"854
+[; ;main.c: 854:     if(PIR0bits.IOCIF){
 [e $ ! != -> . . _PIR0bits 0 2 `i -> 0 `i 992  ]
 {
-"856
-[; ;main.c: 856:         if(IOCAPbits.IOCAP0){
+"855
+[; ;main.c: 855:         if(IOCAPbits.IOCAP0){
 [e $ ! != -> . . _IOCAPbits 0 0 `i -> 0 `i 993  ]
 {
-"857
-[; ;main.c: 857:             PIR0bits.IOCIF = 0;
+"856
+[; ;main.c: 856:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"858
-[; ;main.c: 858:         }
+"857
+[; ;main.c: 857:         }
 }
 [e :U 993 ]
-"859
-[; ;main.c: 859:         if(IOCAPbits.IOCAP1){
+"858
+[; ;main.c: 858:         if(IOCAPbits.IOCAP1){
 [e $ ! != -> . . _IOCAPbits 0 1 `i -> 0 `i 994  ]
 {
-"860
-[; ;main.c: 860:             PIR0bits.IOCIF = 0;
+"859
+[; ;main.c: 859:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"861
-[; ;main.c: 861:         }
+"860
+[; ;main.c: 860:         }
 }
 [e :U 994 ]
-"862
-[; ;main.c: 862:         if(IOCAPbits.IOCAP2){
+"861
+[; ;main.c: 861:         if(IOCAPbits.IOCAP2){
 [e $ ! != -> . . _IOCAPbits 0 2 `i -> 0 `i 995  ]
 {
-"863
-[; ;main.c: 863:             PIR0bits.IOCIF = 0;
+"862
+[; ;main.c: 862:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"864
-[; ;main.c: 864:         }
+"863
+[; ;main.c: 863:         }
 }
 [e :U 995 ]
-"866
-[; ;main.c: 866:         if(PORTAbits.RA0 == 1){
+"865
+[; ;main.c: 865:         if(PORTAbits.RA0 == 1){
 [e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 996  ]
 {
-"868
-[; ;main.c: 868:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+"867
+[; ;main.c: 867:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
 [e $ ! && == -> . . _PORTCbits 0 4 `i -> 1 `i == -> . . _PORTCbits 0 6 `i -> 1 `i 997  ]
 {
-"869
-[; ;main.c: 869:                 if(IOCBPbits.IOCBP5){
+"868
+[; ;main.c: 868:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 998  ]
 {
-"870
-[; ;main.c: 870:                     PIR0bits.IOCIF = 0;
+"869
+[; ;main.c: 869:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"871
-[; ;main.c: 871:                 }
+"870
+[; ;main.c: 870:                 }
 }
 [e :U 998 ]
-"872
-[; ;main.c: 872:                 if(IOCBPbits.IOCBP7){
+"871
+[; ;main.c: 871:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 999  ]
 {
-"873
-[; ;main.c: 873:                     PIR0bits.IOCIF = 0;
+"872
+[; ;main.c: 872:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"874
-[; ;main.c: 874:                 }
+"873
+[; ;main.c: 873:                 }
 }
 [e :U 999 ]
-"875
-[; ;main.c: 875:             }
+"874
+[; ;main.c: 874:             }
 }
 [e :U 997 ]
-"876
-[; ;main.c: 876:             if(PORTCbits.RC4 == 1){
+"875
+[; ;main.c: 875:             if(PORTCbits.RC4 == 1){
 [e $ ! == -> . . _PORTCbits 0 4 `i -> 1 `i 1000  ]
 {
-"877
-[; ;main.c: 877:                 if(IOCBPbits.IOCBP5){
+"876
+[; ;main.c: 876:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1001  ]
 {
-"878
-[; ;main.c: 878:                     PIR0bits.IOCIF = 0;
+"877
+[; ;main.c: 877:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"879
-[; ;main.c: 879:                 }
+"878
+[; ;main.c: 878:                 }
 }
 [e :U 1001 ]
-"880
-[; ;main.c: 880:                 if(IOCBPbits.IOCBP7){
+"879
+[; ;main.c: 879:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1002  ]
 {
-"881
-[; ;main.c: 881:                     PIR0bits.IOCIF = 0;
+"880
+[; ;main.c: 880:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"882
-[; ;main.c: 882:                 }
+"881
+[; ;main.c: 881:                 }
 }
 [e :U 1002 ]
-"883
-[; ;main.c: 883:             }
+"882
+[; ;main.c: 882:             }
 }
 [e :U 1000 ]
-"884
-[; ;main.c: 884:             if(PORTCbits.RC6 == 1){
+"883
+[; ;main.c: 883:             if(PORTCbits.RC6 == 1){
 [e $ ! == -> . . _PORTCbits 0 6 `i -> 1 `i 1003  ]
 {
-"885
-[; ;main.c: 885:                 if(IOCBPbits.IOCBP5){
+"884
+[; ;main.c: 884:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1004  ]
 {
-"887
-[; ;main.c: 887:                     PIR0bits.IOCIF = 0;
+"886
+[; ;main.c: 886:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"888
-[; ;main.c: 888:                 }
+"887
+[; ;main.c: 887:                 }
 }
 [e :U 1004 ]
-"889
-[; ;main.c: 889:                 if(IOCBPbits.IOCBP7){
+"888
+[; ;main.c: 888:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1005  ]
 {
-"891
-[; ;main.c: 891:                     PIR0bits.IOCIF = 0;
+"890
+[; ;main.c: 890:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"892
-[; ;main.c: 892:                 }
+"891
+[; ;main.c: 891:                 }
 }
 [e :U 1005 ]
-"893
-[; ;main.c: 893:             }
+"892
+[; ;main.c: 892:             }
 }
 [e :U 1003 ]
-"895
-[; ;main.c: 895:             if(IOCBPbits.IOCBP5){
+"894
+[; ;main.c: 894:             if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1006  ]
 {
-"896
-[; ;main.c: 896:                 PIR0bits.IOCIF = 0;
+"895
+[; ;main.c: 895:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"897
-[; ;main.c: 897:             }
+"896
+[; ;main.c: 896:             }
 }
 [e :U 1006 ]
-"898
-[; ;main.c: 898:             if(IOCBPbits.IOCBP7){
+"897
+[; ;main.c: 897:             if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1007  ]
 {
-"899
-[; ;main.c: 899:                 PIR0bits.IOCIF = 0;
+"898
+[; ;main.c: 898:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"900
-[; ;main.c: 900:             }
+"899
+[; ;main.c: 899:             }
 }
 [e :U 1007 ]
-"901
-[; ;main.c: 901:         }
+"900
+[; ;main.c: 900:         }
 }
 [e :U 996 ]
-"903
-[; ;main.c: 903:         if(PORTAbits.RA1 == 1 || PORTAbits.RA2 == 1){
+"902
+[; ;main.c: 902:         if(PORTAbits.RA1 == 1 || PORTAbits.RA2 == 1){
 [e $ ! || == -> . . _PORTAbits 0 1 `i -> 1 `i == -> . . _PORTAbits 0 2 `i -> 1 `i 1008  ]
 {
-"904
-[; ;main.c: 904:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+"903
+[; ;main.c: 903:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
 [e $ ! && == -> . . _PORTCbits 0 4 `i -> 1 `i == -> . . _PORTCbits 0 6 `i -> 1 `i 1009  ]
 {
-"905
-[; ;main.c: 905:                 if(IOCBPbits.IOCBP5){
+"904
+[; ;main.c: 904:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1010  ]
 {
-"906
-[; ;main.c: 906:                     PIR0bits.IOCIF = 0;
+"905
+[; ;main.c: 905:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"907
-[; ;main.c: 907:                 }
+"906
+[; ;main.c: 906:                 }
 }
 [e :U 1010 ]
-"908
-[; ;main.c: 908:                 if(IOCBPbits.IOCBP7){
+"907
+[; ;main.c: 907:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1011  ]
 {
-"909
-[; ;main.c: 909:                     PIR0bits.IOCIF = 0;
+"908
+[; ;main.c: 908:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"911
-[; ;main.c: 911:                 }
+"910
+[; ;main.c: 910:                 }
 }
 [e :U 1011 ]
-"912
-[; ;main.c: 912:             }
+"911
+[; ;main.c: 911:             }
 }
 [e :U 1009 ]
-"913
-[; ;main.c: 913:             if(PORTCbits.RC4 == 1){
+"912
+[; ;main.c: 912:             if(PORTCbits.RC4 == 1){
 [e $ ! == -> . . _PORTCbits 0 4 `i -> 1 `i 1012  ]
 {
-"914
-[; ;main.c: 914:                 if(IOCBPbits.IOCBP5){
+"913
+[; ;main.c: 913:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1013  ]
 {
-"915
-[; ;main.c: 915:                     PIR0bits.IOCIF = 0;
+"914
+[; ;main.c: 914:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"916
-[; ;main.c: 916:                 }
+"915
+[; ;main.c: 915:                 }
 }
 [e :U 1013 ]
-"917
-[; ;main.c: 917:                 if(IOCBPbits.IOCBP7){
+"916
+[; ;main.c: 916:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1014  ]
 {
-"918
-[; ;main.c: 918:                     PIR0bits.IOCIF = 0;
+"917
+[; ;main.c: 917:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"919
-[; ;main.c: 919:                 }
+"918
+[; ;main.c: 918:                 }
 }
 [e :U 1014 ]
-"920
-[; ;main.c: 920:             }
+"919
+[; ;main.c: 919:             }
 }
 [e :U 1012 ]
-"921
-[; ;main.c: 921:             if(PORTCbits.RC6 == 1){
+"920
+[; ;main.c: 920:             if(PORTCbits.RC6 == 1){
 [e $ ! == -> . . _PORTCbits 0 6 `i -> 1 `i 1015  ]
 {
-"922
-[; ;main.c: 922:                 if(IOCBPbits.IOCBP5){
+"921
+[; ;main.c: 921:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1016  ]
 {
-"923
-[; ;main.c: 923:                     PIR0bits.IOCIF = 0;
+"922
+[; ;main.c: 922:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"924
-[; ;main.c: 924:                 }
+"923
+[; ;main.c: 923:                 }
 }
 [e :U 1016 ]
-"925
-[; ;main.c: 925:                 if(IOCBPbits.IOCBP7){
+"924
+[; ;main.c: 924:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1017  ]
 {
-"926
-[; ;main.c: 926:                     PIR0bits.IOCIF = 0;
+"925
+[; ;main.c: 925:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"927
-[; ;main.c: 927:                 }
+"926
+[; ;main.c: 926:                 }
 }
 [e :U 1017 ]
-"928
-[; ;main.c: 928:             }
+"927
+[; ;main.c: 927:             }
 }
 [e :U 1015 ]
-"930
-[; ;main.c: 930:             if(IOCBPbits.IOCBP5){
+"929
+[; ;main.c: 929:             if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1018  ]
 {
-"931
-[; ;main.c: 931:                 PIR0bits.IOCIF = 0;
+"930
+[; ;main.c: 930:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"932
-[; ;main.c: 932:             }
+"931
+[; ;main.c: 931:             }
 }
 [e :U 1018 ]
-"933
-[; ;main.c: 933:             if(IOCBPbits.IOCBP7){
+"932
+[; ;main.c: 932:             if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1019  ]
 {
-"934
-[; ;main.c: 934:                 PIR0bits.IOCIF = 0;
+"933
+[; ;main.c: 933:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"935
-[; ;main.c: 935:             }
+"934
+[; ;main.c: 934:             }
 }
 [e :U 1019 ]
-"936
-[; ;main.c: 936:         }
+"935
+[; ;main.c: 935:         }
 }
 [e :U 1008 ]
-"937
-[; ;main.c: 937:     }
+"936
+[; ;main.c: 936:     }
 }
 [e :U 992 ]
-"940
-[; ;main.c: 940:     PIR0bits.IOCIF = 0;
+"939
+[; ;main.c: 939:     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"941
-[; ;main.c: 941: }
+"940
+[; ;main.c: 940: }
 [e :UE 991 ]
 }

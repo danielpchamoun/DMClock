@@ -95,13 +95,12 @@ void main(void) {
     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
-    const int tempo = 560;
+    const int tempo = 565;
     const int drumdelay = 42;
     
     while(1){
         //start verse 1
         
-        /*
         TMR2_Stop();        
         TMR2_PeriodCountSet(o2[1]); //C.
         TMR2_Start();
@@ -269,9 +268,10 @@ void main(void) {
         
         __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
         TMR2_Stop();
-        TMR4_Stop();
         //end verse 1
-        
+        __delay_ms(tempo-400);
+
+
         //start verse 2 ------------------------------------------
         TMR2_Stop();        
         TMR2_PeriodCountSet(o2[1]); //C.
@@ -362,7 +362,7 @@ void main(void) {
         TMR2_Start();        
         
         playHH();
-        __delay_ms(tempo- 400 - 128);
+        __delay_ms(tempo- 400 - 64);
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o2[1]);      //C
@@ -612,14 +612,13 @@ void main(void) {
         fastHH();
         
         __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
-        TMR2_Stop();
         TMR4_Stop();
-        __delay_ms(2000);
         //end verse 3
-        */
+        __delay_ms(150);
+
+
         //start verse 4
         
-        TMR6_Stop();
         
         TMR2_Stop();
         TMR2_PeriodCountSet(o2[11]); //A#
@@ -788,7 +787,7 @@ void main(void) {
         //end verse 4
         TMR4_Stop();
         TMR2_Stop();
-        __delay_ms(tempo);
+        __delay_ms(100);
     }
 
      
