@@ -71,6 +71,18 @@ void fastHH(void){
     
 }
 
+//fast hihat 32 ticks of delay
+void fastLH(void){
+    for(int i = 128; i <= 256 ; i+=4){
+        TMR6_Stop();
+        TMR6_PeriodCountSet(i);
+        TMR6_Start();
+        __delay_ms(1);
+    }
+    
+}
+
+
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
@@ -738,6 +750,7 @@ void main(void) {
         playHH();
         __delay_ms(drumdelay);
         playHH();
+        
         __delay_ms(tempo - 150 - 2*128 - drumdelay);
 
         TMR2_Stop();
@@ -748,10 +761,31 @@ void main(void) {
         TMR4_PeriodCountSet(o1[6]); //F
         TMR4_Start(); 
 
+        playHH();
+        __delay_ms(drumdelay);
+        playLDrum();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(drumdelay);
+        playLDrum();
+        __delay_ms(drumdelay);
+
+        playHH();
+        __delay_ms(33);
+        fastHH();
+        __delay_ms(33);
+        fastLH();
+        __delay_ms(20);
+        fastLH();
+        __delay_ms(drumdelay);
+        playHH();
+        __delay_ms(33);
+        fastHH();
+        __delay_ms(33);
+        fastHH();
+        __delay_ms(33);
+        fastHH();
         //end verse 4
-        __delay_ms(tempo-128);
-        __delay_ms(tempo);
-        __delay_ms(tempo-425);
         TMR4_Stop();
         TMR2_Stop();
         __delay_ms(tempo);

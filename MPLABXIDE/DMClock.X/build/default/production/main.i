@@ -11733,6 +11733,18 @@ void fastHH(void){
 
 }
 
+
+void fastLH(void){
+    for(int i = 128; i <= 256 ; i+=4){
+        TMR6_Stop();
+        TMR6_PeriodCountSet(i);
+        TMR6_Start();
+        _delay((unsigned long)((1)*(32000000/4000.0)));
+    }
+
+}
+
+
 void main(void) {
 
     SYSTEM_Initialize();
@@ -11749,7 +11761,7 @@ void main(void) {
     const int drumdelay = 42;
 
     while(1){
-# 610 "main.c"
+# 622 "main.c"
         TMR6_Stop();
 
         TMR2_Stop();
@@ -11881,6 +11893,7 @@ void main(void) {
         playHH();
         _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
         playHH();
+
         _delay((unsigned long)((tempo - 150 - 2*128 - drumdelay)*(32000000/4000.0)));
 
         TMR2_Stop();
@@ -11891,10 +11904,31 @@ void main(void) {
         TMR4_PeriodCountSet(o1[6]);
         TMR4_Start();
 
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playLDrum();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
 
-        _delay((unsigned long)((tempo-128)*(32000000/4000.0)));
-        _delay((unsigned long)((tempo)*(32000000/4000.0)));
-        _delay((unsigned long)((tempo-425)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((33)*(32000000/4000.0)));
+        fastHH();
+        _delay((unsigned long)((33)*(32000000/4000.0)));
+        fastLH();
+        _delay((unsigned long)((20)*(32000000/4000.0)));
+        fastLH();
+        _delay((unsigned long)((drumdelay)*(32000000/4000.0)));
+        playHH();
+        _delay((unsigned long)((33)*(32000000/4000.0)));
+        fastHH();
+        _delay((unsigned long)((33)*(32000000/4000.0)));
+        fastHH();
+        _delay((unsigned long)((33)*(32000000/4000.0)));
+        fastHH();
+
         TMR4_Stop();
         TMR2_Stop();
         _delay((unsigned long)((tempo)*(32000000/4000.0)));

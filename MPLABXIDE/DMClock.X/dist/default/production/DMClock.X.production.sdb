@@ -22,7 +22,7 @@ I2C_STATE_ERROR 6
 I2C_STATE_STOP 7
 I2C_STATE_RESET 8
 ]
-"803 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"837 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [e E6992 . `uc
 I2C_ERROR_NONE 0
 I2C_ERROR_ADDR_NACK 1
@@ -41,9 +41,13 @@ I2C_ERROR_BUS_COLLISION 3
 [v _playLDrum playLDrum `(v  1 e 1 0 ]
 "54
 [v _playHH playHH `(v  1 e 1 0 ]
-"74
+"64
+[v _fastHH fastHH `(v  1 e 1 0 ]
+"75
+[v _fastLH fastLH `(v  1 e 1 0 ]
+"86
 [v _main main `(v  1 e 1 0 ]
-"820
+"854
 [v _ISR ISR `II(v  1 e 1 0 ]
 "114 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/i2c_host/src/mssp1.c
 [v _I2C1_Initialize I2C1_Initialize `(v  1 e 1 0 ]
@@ -633,24 +637,24 @@ I2C_ERROR_BUS_COLLISION 3
 [v _TMR4_OverflowCallback TMR4_OverflowCallback `*.37(v  1 s 2 TMR4_OverflowCallback ]
 "41 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_OverflowCallback TMR6_OverflowCallback `*.37(v  1 s 2 TMR6_OverflowCallback ]
-"74 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"86 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"84
+"96
 [v main@o3 o3 `[12]ui  1 a 24 48 ]
-"83
+"95
 [v main@o2 o2 `[12]ui  1 a 24 24 ]
-"82
+"94
 [v main@o1 o1 `[12]ui  1 a 24 0 ]
-"804
+"838
 [v main@dataWrite dataWrite `[2]uc  1 a 2 72 ]
-"76
-[v main@F7153 F7153 `[12]ui  1 s 24 F7153 ]
-"82
+"88
 [v main@F7155 F7155 `[12]ui  1 s 24 F7155 ]
-"83
+"94
 [v main@F7157 F7157 `[12]ui  1 s 24 F7157 ]
-"817
+"95
+[v main@F7159 F7159 `[12]ui  1 s 24 F7159 ]
+"851
 } 0
 "19
 [v _playLDrum playLDrum `(v  1 e 1 0 ]
@@ -665,6 +669,20 @@ I2C_ERROR_BUS_COLLISION 3
 "55
 [v playHH@i i `i  1 a 2 3 ]
 "61
+} 0
+"75
+[v _fastLH fastLH `(v  1 e 1 0 ]
+{
+"76
+[v fastLH@i i `i  1 a 2 3 ]
+"83
+} 0
+"64
+[v _fastHH fastHH `(v  1 e 1 0 ]
+{
+"65
+[v fastHH@i i `i  1 a 2 3 ]
+"72
 } 0
 "71 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\mcc_generated_files/timer/src/tmr6.c
 [v _TMR6_Stop TMR6_Stop `(v  1 e 1 0 ]
@@ -819,8 +837,8 @@ I2C_ERROR_BUS_COLLISION 3
 {
 "209
 } 0
-"820 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
+"854 C:\Users\12243\Desktop\DMClock\MPLABXIDE\DMClock.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"907
+"941
 } 0
