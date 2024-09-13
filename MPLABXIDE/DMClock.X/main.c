@@ -82,12 +82,8 @@ void fastLH(void){
     
 }
 
-
-void main(void) {
-    // Initialize PWM, I/O pins, and I2C modules
-    SYSTEM_Initialize();
-    
-    
+//plays gate of steiner alarm
+void playTheme1(void){
     // Note to Period Values
     // B, C, C#, D, D#, E, F, F#, G, G#, A, A#
     // 0  1  2   3  4   5  6  7   8  9   10 11
@@ -98,697 +94,701 @@ void main(void) {
     const int tempo = 565;
     const int drumdelay = 42;
     
-    while(1){
-        //start verse 1
-        
-        TMR2_Stop();        
-        TMR2_PeriodCountSet(o2[1]); //C.
-        TMR2_Start();
-        
+    //start verse 1
 
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-
-        __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
-        TMR2_Stop();
-                
-        TMR2_PeriodCountSet(o1[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();     
-        __delay_ms(drumdelay);
-        __delay_ms(70);
-        playLDrum();
-
-        __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
-        TMR2_Stop();
-        
-        TMR2_PeriodCountSet(o2[4]); //D# 
-        TMR2_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo  - 2*(128) - drumdelay - 200);
-        TMR2_Stop();
-        
-        TMR2_PeriodCountSet(o2[1]); //C.
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]); //D# L
-        TMR4_Start();
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo - 128 - 2*(143) - 2*drumdelay);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o1[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(tempo - 220 - (2*128) - 2*drumdelay);
-        TMR4_Stop();
-        TMR2_Stop();        
-        TMR2_PeriodCountSet(o1[8]); //G.
-        TMR2_Start(); 
-        TMR4_PeriodCountSet(o1[4]); //D# L
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(tempo - 350 - 128);
-        
-
-        TMR2_Stop();
+    TMR2_Stop();        
+    TMR2_PeriodCountSet(o2[1]); //C.
+    TMR2_Start();
 
 
-        
-        TMR2_PeriodCountSet(o1[9]); //G#.
-        TMR2_Start();
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[2]); //C# L
-        TMR4_Start();
-        playHH();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]); //C L
+    TMR4_Start();
 
-        __delay_ms(tempo - 350 - 128);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
 
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o1[11]); //A#.
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C  L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
+    __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
+    TMR2_Stop();
 
-        
-        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o1[9]); //G#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[4]);  //D# L
-        TMR4_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        
-        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o2[4]); //D#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[6]); // F L 
-        TMR4_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo-200 - 128*2 - drumdelay );
-        TMR4_Stop();
-        TMR2_Stop();
-        
-        
-        TMR2_PeriodCountSet(o1[8]); //G
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[6]); //F
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo - 2*drumdelay - 2*141 - 128);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o1[9]); //G#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[4]); //D#
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();        
-        __delay_ms(drumdelay);
+    TMR2_PeriodCountSet(o1[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();     
+    __delay_ms(drumdelay);
+    __delay_ms(70);
+    playLDrum();
 
-        //finisher goes here
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        
-        __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
-        TMR2_Stop();
-        //end verse 1
-        __delay_ms(tempo-400);
+    __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
+    TMR2_Stop();
+
+    TMR2_PeriodCountSet(o2[4]); //D# 
+    TMR2_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo  - 2*(128) - drumdelay - 200);
+    TMR2_Stop();
+
+    TMR2_PeriodCountSet(o2[1]); //C.
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]); //D# L
+    TMR4_Start();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo - 128 - 2*(143) - 2*drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o1[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(tempo - 220 - (2*128) - 2*drumdelay);
+    TMR4_Stop();
+    TMR2_Stop();        
+    TMR2_PeriodCountSet(o1[8]); //G.
+    TMR2_Start(); 
+    TMR4_PeriodCountSet(o1[4]); //D# L
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(tempo - 350 - 128);
 
 
-        //start verse 2 ------------------------------------------
-        TMR2_Stop();        
-        TMR2_PeriodCountSet(o2[1]); //C.
-        TMR2_Start();
-        
-
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-
-        __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
-        TMR2_Stop();
-                
-        TMR2_PeriodCountSet(o1[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();     
-        __delay_ms(drumdelay);
-        __delay_ms(35);
-        playLDrum();
-        __delay_ms(35);
-        __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
-        TMR2_Stop();
-        
-        TMR2_PeriodCountSet(o2[4]); //D# 
-        TMR2_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo - 150 - drumdelay - 2*128);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[6]); //F. 
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]);  //D# L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-   
-        
+    TMR2_Stop();
 
 
-        
-        __delay_ms(tempo - 2*128 - 1*143 - 2*drumdelay);
 
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[4]); //D#.
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[6]);  //F L
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
+    TMR2_PeriodCountSet(o1[9]); //G#.
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[2]); //C# L
+    TMR4_Start();
+    playHH();
 
-        __delay_ms(tempo-200 - 2*128 - drumdelay);
+    __delay_ms(tempo - 350 - 128);
 
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[9]);      //G#
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[11]);  //A# L
-        TMR4_Start();
-        
-        playLDrum();        
-        __delay_ms(tempo-375 - 143);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[8]);      //G
-        TMR2_Start();        
-        
-        playHH();
-        __delay_ms(tempo- 400 - 64);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[1]);      //C
-        TMR2_Start();
-        playHH();
-        
-        //----
-        
-        __delay_ms(150-128);
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[11]);  //A# L //start of high finisher
-        TMR4_Start();
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo - 143 - 2*drumdelay - 2*128);
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o1[11]); //A#.
+    TMR2_Start();
 
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o3[1]);  //C L
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        
-        __delay_ms(tempo - 143 - 2*drumdelay - 2*128);
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[11]);  //A# L
-        TMR4_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo-250 -2*128 - drumdelay);
-        
-        TMR4_Stop();
-        __delay_ms(100); //EDIT?
-        TMR4_PeriodCountSet(o2[11]);  //A# L
-        TMR4_Start();
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo-128 - 2*drumdelay - 2*141);
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[10]);  //A L
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        //jubbly jubbly drums
-        playHH();
-        __delay_ms(20);
-        fastHH();
-        __delay_ms(20);
-        fastHH();
-        
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]); //C  L
+    TMR4_Start();
 
-        __delay_ms(tempo - 128*2 - 20*2 - 2*32 - drumdelay);
-
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[8]);  //G L
-        TMR4_Start();
-        playHH();
-        __delay_ms(20);
-        fastHH();
-        __delay_ms(20);
-        fastHH();
-        __delay_ms(tempo - 200 - 128 - 32*2 - 20*2);
-
-        
-        //end verse 2
-        
-                
-        //start verse 3
-                TMR2_Stop();        
-        TMR2_PeriodCountSet(o3[1]); //C.
-        TMR2_Start();
-        
-
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-
-        __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
-        TMR2_Stop();
-                
-        TMR2_PeriodCountSet(o2[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();     
-        __delay_ms(drumdelay);
-        __delay_ms(70);
-        playLDrum();
-
-        __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
-        TMR2_Stop();
-        
-        TMR2_PeriodCountSet(o3[4]); //D# 
-        TMR2_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo  - 2*(128) - drumdelay - 200);
-        TMR2_Stop();
-        
-        TMR2_PeriodCountSet(o3[1]); //C.
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[4]); //D# L
-        TMR4_Start();
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo - 128 - 2*(143) - 2*drumdelay);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(tempo - 220 - (2*128) - 2*drumdelay);
-        TMR4_Stop();
-        TMR2_Stop();        
-        TMR2_PeriodCountSet(o2[8]); //G.
-        TMR2_Start(); 
-        TMR4_PeriodCountSet(o1[4]); //D# L
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(tempo - 350 - 128);
-        
-
-        TMR2_Stop();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
 
 
-        
-        TMR2_PeriodCountSet(o2[9]); //G#.
-        TMR2_Start();
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[2]); //C# L
-        TMR4_Start();
-        playHH();
+    __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
+    TMR2_Stop();
+    TMR4_Stop();
 
-        __delay_ms(tempo - 350 - 128);
+    TMR2_PeriodCountSet(o1[9]); //G#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[4]);  //D# L
+    TMR4_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
 
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[11]); //A#.
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[1]); //C  L
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
+    __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
+    TMR2_Stop();
+    TMR4_Stop();
 
-        
-        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o2[9]); //G#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[4]);  //D# L
-        TMR4_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        
-        __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o3[4]); //D#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[6]); // F L 
-        TMR4_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo-200 - 128*2 - drumdelay );
-        TMR4_Stop();
-        TMR2_Stop();
-        
-        
-        TMR2_PeriodCountSet(o2[8]); //G
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[6]); //F
-        TMR4_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo - 2*drumdelay - 2*141 - 128);
-        TMR2_Stop();
-        TMR4_Stop();
-        
-        TMR2_PeriodCountSet(o2[9]); //G#
-        TMR2_Start();
-        TMR4_PeriodCountSet(o1[4]); //D#
-        TMR4_Start();
-        
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();        
-        __delay_ms(drumdelay);
-
-        //finisher goes here
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        
-        __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
-        TMR4_Stop();
-        //end verse 3
-        __delay_ms(150);
+    TMR2_PeriodCountSet(o2[4]); //D#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[6]); // F L 
+    TMR4_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo-200 - 128*2 - drumdelay );
+    TMR4_Stop();
+    TMR2_Stop();
 
 
-        //start verse 4
-        
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o2[11]); //A#
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[7]); //F#
-        TMR4_Start();
-         
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
+    TMR2_PeriodCountSet(o1[8]); //G
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[6]); //F
+    TMR4_Start();
 
-        __delay_ms(tempo-150 - 128 - 141 - drumdelay);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[1]); //C
-        TMR2_Start();
-        playHH();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
 
-        __delay_ms(tempo-350 - 128);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[2]); //C#
-        TMR2_Start();
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
+    __delay_ms(tempo - 2*drumdelay - 2*141 - 128);
+    TMR2_Stop();
+    TMR4_Stop();
 
-        __delay_ms(tempo-200 - 2*128 - drumdelay);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[4]); //D#
-        TMR2_Start();
-        
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(tempo-200 - 141 - drumdelay - 128);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[6]); //F
-        TMR2_Start();
-        playHH();
-        //F# A# C C# D# F# F C F (C instead of F because no space)x
+    TMR2_PeriodCountSet(o1[9]); //G#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[4]); //D#
+    TMR4_Start();
 
-        __delay_ms(175 - 128);
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[11]); //A#
-        TMR4_Start();
-        playLDrum();
-        __delay_ms(drumdelay);
-        playLDrum();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();        
+    __delay_ms(drumdelay);
 
-        
-        __delay_ms(tempo-155 - 2*141 - drumdelay);
+    //finisher goes here
+    fastHH();
+    __delay_ms(33);
+    fastHH();
+    __delay_ms(33);
+    fastHH();
 
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[1]); //C
-        TMR4_Start();  
-        playHH();
-        __delay_ms(tempo-432-128);
-        TMR2_Stop(); 
-        
-        __delay_ms(95);  
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[2]); //C#
-        TMR4_Start();
-        playHH();
-        __delay_ms(195-128);
-        TMR2_PeriodCountSet(o3[6]); //F
-        TMR2_Start();
-        playHH();
-        __delay_ms(tempo-350-128-20);
-        
-  
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[4]); //D#
-        TMR4_Start();    
-        playLDrum();
-        __delay_ms(160-141);
-        
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[11]); //A#
-        TMR2_Start();
-        playHH();
-        __delay_ms(tempo-370-128);
+    __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
+    TMR2_Stop();
+    //end verse 1
+    __delay_ms(tempo-400);
 
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[7]); //F#
-        TMR4_Start(); 
-        playHH();
-        //__delay_ms(100);
-        TMR2_Stop();
-        __delay_ms(120-28);
-        TMR2_PeriodCountSet(o3[11]); //A#
-        TMR2_Start(); 
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[6]); //F
-        TMR4_Start();    
-        
-        playLDrum();
-        __delay_ms(drumdelay);
 
-        playHH();
-        __delay_ms(drumdelay+20);
+    //start verse 2 ------------------------------------------
+    TMR2_Stop();        
+    TMR2_PeriodCountSet(o2[1]); //C.
+    TMR2_Start();
 
-        playHH();
-        __delay_ms(drumdelay+20);
 
-        playHH();
-        __delay_ms(drumdelay+20);
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]); //C L
+    TMR4_Start();
 
-        playHH();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
 
-        __delay_ms(drumdelay+20);
+    __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
+    TMR2_Stop();
 
-        playLDrum();
-        //560 - 2*141 - 3*128 - 4 *(42) 
-        //-274
-        __delay_ms(tempo-274 - 128 - drumdelay-80);
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o2[1]); //C
-        TMR4_Start(); 
-        playHH();
-        __delay_ms(drumdelay);
-        playHH();
-        
-        __delay_ms(tempo - 150 - 2*128 - drumdelay);
+    TMR2_PeriodCountSet(o1[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();     
+    __delay_ms(drumdelay);
+    __delay_ms(35);
+    playLDrum();
+    __delay_ms(35);
+    __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
+    TMR2_Stop();
 
-        TMR2_Stop();
-        TMR2_PeriodCountSet(o3[10]); //A
-        TMR2_Start();
-        
-        TMR4_Stop();
-        TMR4_PeriodCountSet(o1[6]); //F
-        TMR4_Start(); 
+    TMR2_PeriodCountSet(o2[4]); //D# 
+    TMR2_Start();
 
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(drumdelay);
-        playLDrum();
-        __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
 
-        playHH();
-        __delay_ms(33);
-        fastHH();
-        __delay_ms(33);
-        fastLH();
-        __delay_ms(20);
-        fastLH();
-        __delay_ms(drumdelay);
-        playHH();
-        __delay_ms(33);
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        __delay_ms(33);
-        fastHH();
-        //end verse 4
-        TMR4_Stop();
-        TMR2_Stop();
-        __delay_ms(100);
-    }
+    __delay_ms(tempo - 150 - drumdelay - 2*128);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[6]); //F. 
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);  //D# L
+    TMR4_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+
+
+
+
+
+    __delay_ms(tempo - 2*128 - 1*143 - 2*drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[4]); //D#.
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);  //F L
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo-200 - 2*128 - drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[9]);      //G#
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);  //A# L
+    TMR4_Start();
+
+    playLDrum();        
+    __delay_ms(tempo-375 - 143);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[8]);      //G
+    TMR2_Start();        
+
+    playHH();
+    __delay_ms(tempo- 400 - 64);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[1]);      //C
+    TMR2_Start();
+    playHH();
+
+    //----
+
+    __delay_ms(150-128);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[11]);  //A# L //start of high finisher
+    TMR4_Start();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo - 143 - 2*drumdelay - 2*128);
+
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o3[1]);  //C L
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+
+    __delay_ms(tempo - 143 - 2*drumdelay - 2*128);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[11]);  //A# L
+    TMR4_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo-250 -2*128 - drumdelay);
+
+    TMR4_Stop();
+    __delay_ms(100); //EDIT?
+    TMR4_PeriodCountSet(o2[11]);  //A# L
+    TMR4_Start();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo-128 - 2*drumdelay - 2*141);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[10]);  //A L
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    //jubbly jubbly drums
+    playHH();
+    __delay_ms(20);
+    fastHH();
+    __delay_ms(20);
+    fastHH();
+
+
+    __delay_ms(tempo - 128*2 - 20*2 - 2*32 - drumdelay);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[8]);  //G L
+    TMR4_Start();
+    playHH();
+    __delay_ms(20);
+    fastHH();
+    __delay_ms(20);
+    fastHH();
+    __delay_ms(tempo - 200 - 128 - 32*2 - 20*2);
+
+
+    //end verse 2
+
+
+    //start verse 3
+            TMR2_Stop();        
+    TMR2_PeriodCountSet(o3[1]); //C.
+    TMR2_Start();
+
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]); //C L
+    TMR4_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo - (2*(128)) - (1*(143)) - (2*drumdelay));
+    TMR2_Stop();
+
+    TMR2_PeriodCountSet(o2[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();     
+    __delay_ms(drumdelay);
+    __delay_ms(70);
+    playLDrum();
+
+    __delay_ms(tempo - 2*(128) - 143 - 2*drumdelay - 70);
+    TMR2_Stop();
+
+    TMR2_PeriodCountSet(o3[4]); //D# 
+    TMR2_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo  - 2*(128) - drumdelay - 200);
+    TMR2_Stop();
+
+    TMR2_PeriodCountSet(o3[1]); //C.
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]); //D# L
+    TMR4_Start();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo - 128 - 2*(143) - 2*drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(tempo - 220 - (2*128) - 2*drumdelay);
+    TMR4_Stop();
+    TMR2_Stop();        
+    TMR2_PeriodCountSet(o2[8]); //G.
+    TMR2_Start(); 
+    TMR4_PeriodCountSet(o1[4]); //D# L
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(tempo - 350 - 128);
+
+
+    TMR2_Stop();
+
+
+
+    TMR2_PeriodCountSet(o2[9]); //G#.
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[2]); //C# L
+    TMR4_Start();
+    playHH();
+
+    __delay_ms(tempo - 350 - 128);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]); //A#.
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]); //C  L
+    TMR4_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+
+    __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
+    TMR2_Stop();
+    TMR4_Stop();
+
+    TMR2_PeriodCountSet(o2[9]); //G#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[4]);  //D# L
+    TMR4_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+
+    __delay_ms(tempo - 142 - 2*128 - 2*drumdelay);
+    TMR2_Stop();
+    TMR4_Stop();
+
+    TMR2_PeriodCountSet(o3[4]); //D#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[6]); // F L 
+    TMR4_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo-200 - 128*2 - drumdelay );
+    TMR4_Stop();
+    TMR2_Stop();
+
+
+    TMR2_PeriodCountSet(o2[8]); //G
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[6]); //F
+    TMR4_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo - 2*drumdelay - 2*141 - 128);
+    TMR2_Stop();
+    TMR4_Stop();
+
+    TMR2_PeriodCountSet(o2[9]); //G#
+    TMR2_Start();
+    TMR4_PeriodCountSet(o1[4]); //D#
+    TMR4_Start();
+
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();        
+    __delay_ms(drumdelay);
+
+    //finisher goes here
+    fastHH();
+    __delay_ms(33);
+    fastHH();
+    __delay_ms(33);
+    fastHH();
+
+    __delay_ms(tempo - 2*128 - 141 - 32*3 - 66); //subtract however long finisher takes from here
+    TMR4_Stop();
+    //end verse 3
+    __delay_ms(150);
+
+
+    //start verse 4
+
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]); //A#
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[7]); //F#
+    TMR4_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo-150 - 128 - 141 - drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[1]); //C
+    TMR2_Start();
+    playHH();
+
+    __delay_ms(tempo-350 - 128);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[2]); //C#
+    TMR2_Start();
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo-200 - 2*128 - drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[4]); //D#
+    TMR2_Start();
+
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(tempo-200 - 141 - drumdelay - 128);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[6]); //F
+    TMR2_Start();
+    playHH();
+    //F# A# C C# D# F# F C F (C instead of F because no space)x
+
+    __delay_ms(175 - 128);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]); //A#
+    TMR4_Start();
+    playLDrum();
+    __delay_ms(drumdelay);
+    playLDrum();
+
+
+    __delay_ms(tempo-155 - 2*141 - drumdelay);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]); //C
+    TMR4_Start();  
+    playHH();
+    __delay_ms(tempo-432-128);
+    TMR2_Stop(); 
+
+    __delay_ms(95);  
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[2]); //C#
+    TMR4_Start();
+    playHH();
+    __delay_ms(195-128);
+    TMR2_PeriodCountSet(o3[6]); //F
+    TMR2_Start();
+    playHH();
+    __delay_ms(tempo-350-128-20);
+
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[4]); //D#
+    TMR4_Start();    
+    playLDrum();
+    __delay_ms(160-141);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[11]); //A#
+    TMR2_Start();
+    playHH();
+    __delay_ms(tempo-370-128);
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[7]); //F#
+    TMR4_Start(); 
+    playHH();
+    //__delay_ms(100);
+    TMR2_Stop();
+    __delay_ms(120-28);
+    TMR2_PeriodCountSet(o3[11]); //A#
+    TMR2_Start(); 
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[6]); //F
+    TMR4_Start();    
+
+    playLDrum();
+    __delay_ms(drumdelay);
+
+    playHH();
+    __delay_ms(drumdelay+20);
+
+    playHH();
+    __delay_ms(drumdelay+20);
+
+    playHH();
+    __delay_ms(drumdelay+20);
+
+    playHH();
+
+    __delay_ms(drumdelay+20);
+
+    playLDrum();
+    //560 - 2*141 - 3*128 - 4 *(42) 
+    //-274
+    __delay_ms(tempo-274 - 128 - drumdelay-80);
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]); //C
+    TMR4_Start(); 
+    playHH();
+    __delay_ms(drumdelay);
+    playHH();
+
+    __delay_ms(tempo - 150 - 2*128 - drumdelay);
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[10]); //A
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]); //F
+    TMR4_Start(); 
+
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(drumdelay);
+    playLDrum();
+    __delay_ms(drumdelay);
+
+    playHH();
+    __delay_ms(33);
+    fastHH();
+    __delay_ms(33);
+    fastLH();
+    __delay_ms(20);
+    fastLH();
+    __delay_ms(drumdelay);
+    playHH();
+    __delay_ms(33);
+    fastHH();
+    __delay_ms(33);
+    fastHH();
+    __delay_ms(33);
+    fastHH();
+    //end verse 4
+    TMR4_Stop();
+    TMR2_Stop();
+    __delay_ms(100);
+}
+
+void main(void) {
+    // Initialize PWM, I/O pins, and I2C modules
+    SYSTEM_Initialize();
+    playTheme1();
 
      
     
