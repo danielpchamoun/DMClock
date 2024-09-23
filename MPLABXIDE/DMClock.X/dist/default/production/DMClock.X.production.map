@@ -3,13 +3,13 @@ Microchip MPLAB XC8 Compiler V2.46
 Linker command line:
 
 -W-3 \
-  --edf=C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\dat\20240111205957_en.msgs \
+  --edf=D:/Microchip/packs/Microchip/PIC16F1xxxx_DFP/1.24.387/xc8\pic\dat\20240111205957_en.msgs \
   -cn -h+dist/default/production\DMClock.X.production.sym \
   --cmf=dist/default/production\DMClock.X.production.cmf -z -Q16F18346 \
-  -oC:\Users\12243\AppData\Local\Temp\xcAscg4.\driver_tmp_3.o \
+  -oC:\Users\Daniel\AppData\Local\Temp\xcAsp14.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/DMClock.X.production.map \
-  --md=C:\Users\12243\AppData\Local\Temp\xcAscg4.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\Daniel\AppData\Local\Temp\xcAsp14.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx8 -ASTRCODE=00h-03FFFh \
   -ASTRING=00h-0FFhx64 -ACONST=00h-0FFhx64 -AENTRY=00h-0FFhx64 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -39,7 +39,7 @@ Linker command line:
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
   -DENTRY=2 -preset_vec=00h,intentry=04h,sivt,init,end_init -ppowerup=CODE \
   -pcinit=CODE -pfunctab=ENTRY -k \
-  C:\Users\12243\AppData\Local\Temp\xcAscg4.\driver_tmp_15.o \
+  C:\Users\Daniel\AppData\Local\Temp\xcAsp14.\driver_tmp_15.o \
   dist/default/production\DMClock.X.production.o 
 
 Object code version is 3.11
@@ -49,7 +49,7 @@ Machine type is 16F18346
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\12243\AppData\Local\Temp\xcAscg4.\driver_tmp_15.o
+C:\Users\Daniel\AppData\Local\Temp\xcAsp14.\driver_tmp_15.o
                 end_init                             C6       C6        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        4        0       4
