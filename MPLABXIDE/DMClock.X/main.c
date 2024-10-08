@@ -788,7 +788,6 @@ void playTheme1(void){
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
-    playTheme1();
 
      
     
@@ -865,6 +864,8 @@ void __interrupt() ISR(){
         if(PORTAbits.RA0 == 1){ //in DM Mode
              
             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){ //both time and alarm are held down
+                playTheme1();
+
                 if(IOCBPbits.IOCBP5){ //
                     PIR0bits.IOCIF = 0;
                 }
