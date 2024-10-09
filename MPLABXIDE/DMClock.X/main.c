@@ -829,23 +829,40 @@ void main(void) {
     PIR0bits.IOCIF = 0; //clearing I/O change interrupt flag program starts
     //PIR0bits.INTF = 0; //clearing interrupt flag before program starts
     
-    #define I2C_CLIENT_ADDR 0x00
-    #define DATALENGTH 2
+    #define DATALENGTH 8
+    #define SECONDS_REG 0x00
+    #define MINUTES_REG 0x01
+    #define HOURS_REG 0x02
 
     const i2c_host_interface_t *I2C = &I2C1_Host;
+
     uint8_t dataWrite[2];
-    uint8_t dataRead[2];
-    //rtc driver example of writing
-    //stored current time in 
-    if (I2C->Write(I2C_CLIENT_ADDR, dataWrite, DATALENGTH))
-    {
-        while(I2C->IsBusy())
-        {
-            I2C->Tasks();
-        }
-    }
     
-    return;
+    uint8_t* secondsRead[2];
+    uint8_t* minutesRead[2];
+    uint8_t* hoursRead[2];
+    
+    TMR6_Stop();
+    TMR4_Stop();
+    TMR2_Stop();
+
+    while(1){
+        //by default reads the time in HH:MM:SS format
+        I2C->Read(SECONDS_REG, secondsRead, DATALENGTH);
+        //I2C->Read(MINUTES_REG, minutesRead, DATALENGTH);
+        //I2C->Read(HOURS_REG, hoursRead, DATALENGTH);
+
+
+
+        
+        if(secondsRead == 0x00000010){
+            playLDrum();
+            TMR6_Stop();
+            TMR4_Stop();
+            TMR2_Stop();
+        }
+        
+    }
 }
 
 //interrupt service routine
