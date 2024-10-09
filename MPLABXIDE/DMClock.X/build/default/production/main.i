@@ -12489,42 +12489,32 @@ void main(void) {
 
     PIE0bits.IOCIE = 1;
     PIR0bits.IOCIF = 0;
-
-
-
-
-
-
-
+    PIR0bits.INTF = 0;
+# 842 "main.c"
     const i2c_host_interface_t *I2C = &I2C1_Host;
+    I2C->Initialize();
 
-    uint8_t dataWrite[2];
-
-    uint8_t* secondsRead[2];
-    uint8_t* minutesRead[2];
-    uint8_t* hoursRead[2];
-
-    TMR6_Stop();
-    TMR4_Stop();
-    TMR2_Stop();
+    uint8_t secondsRead;
+    uint8_t minutesRead;
+    uint8_t hoursRead;
+    uint8_t dataWrite;
 
     while(1){
 
-        I2C->Read(0x00, secondsRead, 8);
+        I2C->Read(0x00, &secondsRead, 8);
 
 
 
-
-
-
-        if(secondsRead == 0x00000010){
-            playLDrum();
-            TMR6_Stop();
+        if(secondsRead == 0b00000100){
             TMR4_Stop();
-            TMR2_Stop();
+            TMR4_PeriodCountSet(127);
+            TMR4_Start();
+            _delay((unsigned long)((50)*(32000000/4000.0)));
+            TMR4_Stop();
         }
-
+        _delay((unsigned long)((50)*(32000000/4000.0)));
     }
+
 }
 
 

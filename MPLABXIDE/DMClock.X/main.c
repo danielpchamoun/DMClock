@@ -827,42 +827,41 @@ void main(void) {
     //interrupt settings
     PIE0bits.IOCIE = 1; //enable I/O change interrupt flag
     PIR0bits.IOCIF = 0; //clearing I/O change interrupt flag program starts
-    //PIR0bits.INTF = 0; //clearing interrupt flag before program starts
+    PIR0bits.INTF = 0; //clearing interrupt flag before program starts
+
+    //playLDrum(); fix soldering issue
+
+    //playTheme1();
+
     
     #define DATALENGTH 8
+    #define SLAVE_ADDR 0x68
     #define SECONDS_REG 0x00
     #define MINUTES_REG 0x01
     #define HOURS_REG 0x02
 
-    const i2c_host_interface_t *I2C = &I2C1_Host;
+    const i2c_host_interface_t I2C = I2C1_Host;
+    I2C.Initialize();
 
-    uint8_t dataWrite[2];
+    uint8_t secondsRead;
+    uint8_t minutesRead;
+    uint8_t hoursRead;
+    uint8_t dataWrite;    
     
-    uint8_t* secondsRead[2];
-    uint8_t* minutesRead[2];
-    uint8_t* hoursRead[2];
-    
-    TMR6_Stop();
-    TMR4_Stop();
-    TMR2_Stop();
-
     while(1){
-        //by default reads the time in HH:MM:SS format
-        I2C->Read(SECONDS_REG, secondsRead, DATALENGTH);
-        //I2C->Read(MINUTES_REG, minutesRead, DATALENGTH);
-        //I2C->Read(HOURS_REG, hoursRead, DATALENGTH);
-
-
-
         
-        if(secondsRead == 0x00000010){
-            playLDrum();
-            TMR6_Stop();
+        
+        
+        if(secondsRead == 0b00000100){
             TMR4_Stop();
-            TMR2_Stop();
+            TMR4_PeriodCountSet(127);
+            TMR4_Start();
+            __delay_ms(50);
+            TMR4_Stop();
         }
-        
-    }
+        __delay_ms(50);
+    }    
+      
 }
 
 //interrupt service routine

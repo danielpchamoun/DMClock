@@ -153,8 +153,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S964 `ul 1 ]
 [n S964 . clkSpeed ]
 [v F7046 `(a ~T0 @X0 0 tf2`*S964`ul ]
-"837 main.c
-[; ;main.c: 837:     const i2c_host_interface_t *I2C = &I2C1_Host;
+"842 main.c
+[; ;main.c: 842:     const i2c_host_interface_t *I2C = &I2C1_Host;
 [c E6992 0 1 2 3 .. ]
 [n E6992 . I2C_ERROR_NONE I2C_ERROR_ADDR_NACK I2C_ERROR_DATA_NACK I2C_ERROR_BUS_COLLISION  ]
 [v F7050 `(E6992 ~T0 @X0 0 tf ]
@@ -3233,60 +3233,63 @@ Version 4.0 HI-TECH Software Intermediate Code
 "829
 [; ;main.c: 829:     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"837
-[; ;main.c: 837:     const i2c_host_interface_t *I2C = &I2C1_Host;
+"830
+[; ;main.c: 830:     PIR0bits.INTF = 0;
+[e = . . _PIR0bits 0 0 -> -> 0 `i `uc ]
+"842
+[; ;main.c: 842:     const i2c_host_interface_t *I2C = &I2C1_Host;
 [v _I2C `*CS966 ~T0 @X0 1 a ]
 [e = _I2C &U _I2C1_Host ]
-"839
-[; ;main.c: 839:     uint8_t dataWrite[2];
-[v _dataWrite `uc ~T0 @X0 -> 2 `i a ]
-"841
-[; ;main.c: 841:     uint8_t* secondsRead[2];
-[v _secondsRead `*uc ~T0 @X0 -> 2 `i a ]
-"842
-[; ;main.c: 842:     uint8_t* minutesRead[2];
-[v _minutesRead `*uc ~T0 @X0 -> 2 `i a ]
 "843
-[; ;main.c: 843:     uint8_t* hoursRead[2];
-[v _hoursRead `*uc ~T0 @X0 -> 2 `i a ]
+[; ;main.c: 843:     I2C->Initialize();
+[e ( *U . *U _I2C 0 ..  ]
 "845
-[; ;main.c: 845:     TMR6_Stop();
-[e ( _TMR6_Stop ..  ]
+[; ;main.c: 845:     uint8_t secondsRead;
+[v _secondsRead `uc ~T0 @X0 1 a ]
 "846
-[; ;main.c: 846:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
+[; ;main.c: 846:     uint8_t minutesRead;
+[v _minutesRead `uc ~T0 @X0 1 a ]
 "847
-[; ;main.c: 847:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"849
-[; ;main.c: 849:     while(1){
+[; ;main.c: 847:     uint8_t hoursRead;
+[v _hoursRead `uc ~T0 @X0 1 a ]
+"848
+[; ;main.c: 848:     uint8_t dataWrite;
+[v _dataWrite `uc ~T0 @X0 1 a ]
+"850
+[; ;main.c: 850:     while(1){
 [e :U 986 ]
 {
-"851
-[; ;main.c: 851:         I2C->Read(0x00, secondsRead, 8);
-[e ( *U . *U _I2C 3 (3 , , -> -> 0 `i `us -> &U _secondsRead `*uc -> -> 8 `i `ui ]
-"858
-[; ;main.c: 858:         if(secondsRead == 0x00000010){
-[e $ ! == &U _secondsRead -> -> 16 `i `**uc 988  ]
+"852
+[; ;main.c: 852:         I2C->Read(0x00, &secondsRead, 8);
+[e ( *U . *U _I2C 3 (3 , , -> -> 0 `i `us &U _secondsRead -> -> 8 `i `ui ]
+"856
+[; ;main.c: 856:         if(secondsRead == 0b00000100){
+[e $ ! == -> _secondsRead `i -> 4 `i 988  ]
 {
+"857
+[; ;main.c: 857:             TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"858
+[; ;main.c: 858:             TMR4_PeriodCountSet(127);
+[e ( _TMR4_PeriodCountSet (1 -> -> 127 `i `ui ]
 "859
-[; ;main.c: 859:             playLDrum();
-[e ( _playLDrum ..  ]
+[; ;main.c: 859:             TMR4_Start();
+[e ( _TMR4_Start ..  ]
 "860
-[; ;main.c: 860:             TMR6_Stop();
-[e ( _TMR6_Stop ..  ]
+[; ;main.c: 860:             _delay((unsigned long)((50)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "861
 [; ;main.c: 861:             TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
 "862
-[; ;main.c: 862:             TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"863
-[; ;main.c: 863:         }
+[; ;main.c: 862:         }
 }
 [e :U 988 ]
-"865
-[; ;main.c: 865:     }
+"863
+[; ;main.c: 863:         _delay((unsigned long)((50)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"864
+[; ;main.c: 864:     }
 }
 [e :U 985 ]
 [e $U 986  ]
