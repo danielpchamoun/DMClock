@@ -5,6 +5,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "362 mcc_generated_files/system/src/../../system/pins.h
 [; ;mcc_generated_files/system/src/../../system/pins.h: 362: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
+"76 mcc_generated_files/system/src/../../i2c_host/mssp1.h
+[; ;mcc_generated_files/system/src/../../i2c_host/mssp1.h: 76: void I2C1_Initialize(void);
+[v _I2C1_Initialize `(v ~T0 @X0 0 ef ]
 "54 mcc_generated_files/system/src/../../pwm/ccp1.h
 [; ;mcc_generated_files/system/src/../../pwm/ccp1.h: 54: void CCP1_Initialize(void);
 [v _CCP1_Initialize `(v ~T0 @X0 0 ef ]
@@ -1096,6 +1099,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;mcc_generated_files/system/src/system.c: 42:     PIN_MANAGER_Initialize();
 [e ( _PIN_MANAGER_Initialize ..  ]
+"43
+[; ;mcc_generated_files/system/src/system.c: 43:     I2C1_Initialize();
+[e ( _I2C1_Initialize ..  ]
 "44
 [; ;mcc_generated_files/system/src/system.c: 44:     CCP1_Initialize();
 [e ( _CCP1_Initialize ..  ]

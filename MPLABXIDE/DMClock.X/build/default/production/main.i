@@ -11678,6 +11678,7 @@ void SYSTEM_Initialize(void);
 
 extern __eeprom uint8_t alarm = 0xff;
 
+
 void playLDrum(void){
     TMR6_Stop();
     TMR6_PeriodCountSet(128);
@@ -12447,75 +12448,43 @@ void playTheme1(void){
     _delay((unsigned long)((100)*(32000000/4000.0)));
 }
 
+i2c_host_interface_t I2C;
+
+uint16_t SLAVE_ADDR = 0x68;
+uint8_t SECONDS_REG = 0x00;
+uint8_t MINUTES_REG = 0x01;
+uint8_t HOURS_REG = 0x02;
+
+uint8_t BCDToDecimal(uint8_t bcd) {
+    return ((bcd / 16 * 10) + (bcd % 16));
+}
+
+void RTC_ReadTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds) {
+    uint8_t rtcData[3];
+    if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) {
+        *seconds = BCDToDecimal(rtcData[0]);
+        *minutes = BCDToDecimal(rtcData[1]);
+        *hours = BCDToDecimal(rtcData[2]);
+    }
+}
+
+
 void main(void) {
 
     SYSTEM_Initialize();
 
 
-
-
-    TRISAbits.TRISA0 = 1;
-    TRISAbits.TRISA1 = 1;
-    TRISAbits.TRISA2 = 1;
-    TRISBbits.TRISB5 = 1;
-    TRISBbits.TRISB7 = 1;
-    TRISCbits.TRISC4 = 1;
-    TRISCbits.TRISC6 = 1;
-    TRISCbits.TRISC7 = 1;
-
-
-    ANSELAbits.ANSA0 = 0;
-    ANSELAbits.ANSA1 = 0;
-    ANSELAbits.ANSA2 = 0;
-    ANSELBbits.ANSB5 = 0;
-    ANSELBbits.ANSB7 = 0;
-    ANSELCbits.ANSC4 = 0;
-    ANSELCbits.ANSC6 = 0;
-    ANSELCbits.ANSC7 = 0;
-
-
-
-    TRISAbits.TRISA5 = 0;
-    TRISCbits.TRISC0 = 0;
-    TRISCbits.TRISC1 = 0;
-    TRISCbits.TRISC2 = 0;
-
-
-    LATAbits.LATA5 = 0;
-    LATCbits.LATC0 = 0;
-    LATCbits.LATC1 = 0;
-    LATCbits.LATC2 = 0;
-
-
     PIE0bits.IOCIE = 1;
     PIR0bits.IOCIF = 0;
     PIR0bits.INTF = 0;
-# 842 "main.c"
-    const i2c_host_interface_t *I2C = &I2C1_Host;
-    I2C->Initialize();
-
-    uint8_t secondsRead;
-    uint8_t minutesRead;
-    uint8_t hoursRead;
-    uint8_t dataWrite;
-
-    while(1){
-
-        I2C->Read(0x00, &secondsRead, 8);
 
 
-
-        if(secondsRead == 0b00000100){
-            TMR4_Stop();
-            TMR4_PeriodCountSet(127);
-            TMR4_Start();
-            _delay((unsigned long)((50)*(32000000/4000.0)));
-            TMR4_Stop();
-        }
-        _delay((unsigned long)((50)*(32000000/4000.0)));
-    }
-
+    playTheme1();
+# 837 "main.c"
 }
+
+
+
 
 
 void __attribute__((picinterrupt(("")))) ISR(){

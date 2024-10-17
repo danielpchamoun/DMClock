@@ -15,6 +15,7 @@
 
 //saved in non volatile eeprom
 extern __eeprom uint8_t alarm = 0xff;
+
 //low drum 5 + 128 + 10 = 143 ticks of delay
 void playLDrum(void){ 
     TMR6_Stop();
@@ -785,74 +786,45 @@ void playTheme1(void){
     __delay_ms(100);
 }
 
+i2c_host_interface_t I2C;
+
+uint16_t SLAVE_ADDR = 0x68;
+uint8_t SECONDS_REG = 0x00;
+uint8_t MINUTES_REG = 0x01;
+uint8_t HOURS_REG = 0x02;
+
+uint8_t BCDToDecimal(uint8_t bcd) {
+    return ((bcd / 16 * 10) + (bcd % 16));
+}
+
+void RTC_ReadTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds) {
+    uint8_t rtcData[3];
+    if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) {
+        *seconds = BCDToDecimal(rtcData[0]);
+        *minutes = BCDToDecimal(rtcData[1]);
+        *hours   = BCDToDecimal(rtcData[2]);
+    }
+}
+
+
 void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
-
-     
-    
-    //inputs
-    TRISAbits.TRISA0 = 1; //input
-    TRISAbits.TRISA1 = 1; //input
-    TRISAbits.TRISA2 = 1; //input
-    TRISBbits.TRISB5 = 1; //input
-    TRISBbits.TRISB7 = 1; //input
-    TRISCbits.TRISC4 = 1; //input
-    TRISCbits.TRISC6 = 1; //input
-    TRISCbits.TRISC7 = 1; //input
-    
-    //setting input bits to digital
-    ANSELAbits.ANSA0 = 0;
-    ANSELAbits.ANSA1 = 0;
-    ANSELAbits.ANSA2 = 0;
-    ANSELBbits.ANSB5 = 0;
-    ANSELBbits.ANSB7 = 0;
-    ANSELCbits.ANSC4 = 0;
-    ANSELCbits.ANSC6 = 0;
-    ANSELCbits.ANSC7 = 0;
-
-    
-    //outputs
-    TRISAbits.TRISA5 = 0; //output
-    TRISCbits.TRISC0 = 0; //output    
-    TRISCbits.TRISC1 = 0; //output    
-    TRISCbits.TRISC2 = 0; //output       
-
-    //setting output latches to 0
-    LATAbits.LATA5 = 0;      
-    LATCbits.LATC0 = 0;
-    LATCbits.LATC1 = 0;
-    LATCbits.LATC2 = 0;    
-    
+ 
     //interrupt settings
     PIE0bits.IOCIE = 1; //enable I/O change interrupt flag
     PIR0bits.IOCIF = 0; //clearing I/O change interrupt flag program starts
     PIR0bits.INTF = 0; //clearing interrupt flag before program starts
-
-    //playLDrum(); fix soldering issue
-
-    //playTheme1();
-
     
-    #define DATALENGTH 8
-    #define SLAVE_ADDR 0x68
-    #define SECONDS_REG 0x00
-    #define MINUTES_REG 0x01
-    #define HOURS_REG 0x02
-
-    const i2c_host_interface_t I2C = I2C1_Host;
-    I2C.Initialize();
-
-    uint8_t secondsRead;
-    uint8_t minutesRead;
-    uint8_t hoursRead;
-    uint8_t dataWrite;    
     
+    playTheme1();
+    /*
     while(1){
-        
-        
-        
-        if(secondsRead == 0b00000100){
+        uint8_t hours;
+        uint8_t minutes;
+        uint8_t seconds;
+        RTC_ReadTime(&hours,&minutes,&seconds);
+        if(seconds == 0){
             TMR4_Stop();
             TMR4_PeriodCountSet(127);
             TMR4_Start();
@@ -861,8 +833,11 @@ void main(void) {
         }
         __delay_ms(50);
     }    
-      
+      */
 }
+
+
+
 
 //interrupt service routine
 void __interrupt() ISR(){
