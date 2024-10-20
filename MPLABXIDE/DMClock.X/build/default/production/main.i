@@ -12466,21 +12466,24 @@ void playTheme2Part1(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[6]);
     TMR4_Start();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
     TMR4_Stop();
-    TMR4_PeriodCountSet(o2[6]);
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[6]);
     TMR4_Start();
+
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
     TMR4_Stop();
-    TMR4_PeriodCountSet(o2[6]);
+    TMR4_PeriodCountSet(o1[9]);
     TMR4_Start();
 
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
@@ -12489,75 +12492,118 @@ void playTheme2Part1(void){
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+
+
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+
     TMR4_Stop();
-    TMR4_PeriodCountSet(o1[6]);
+    TMR4_PeriodCountSet(o2[1]);
     TMR4_Start();
+
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
-
     TMR4_Stop();
-    TMR4_PeriodCountSet(o1[6]);
+    TMR4_PeriodCountSet(o1[4]);
     TMR4_Start();
 
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
+
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[8]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o3[1]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
+
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
-    _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[4]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
     TMR2_Stop();
+    TMR4_Stop();
+
 }
 
 void playTheme2Part2(void){
@@ -12571,65 +12617,106 @@ void playTheme2Part2(void){
     const int tempo = 300;
     const int drumdelay = 42;
 
-        TMR2_Stop();
+    TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
+
+
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((10)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
 
 
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((10)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[8]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o3[1]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
+
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
@@ -12640,6 +12727,9 @@ void playTheme2Part2(void){
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
@@ -12650,22 +12740,34 @@ void playTheme2Part2(void){
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[2]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
     TMR2_Stop();
 
@@ -12685,54 +12787,103 @@ void playTheme2Part3(void){
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
-    _delay((unsigned long)((tempo*3)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo*3-20)*(32000000/4000.0)));
 
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
 
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
-
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
 
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
-
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o3[1]);
     TMR2_Start();
-
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]);
+    TMR4_Start();
     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
 
-    _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[1]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
 
-    _delay((unsigned long)((tempo*3)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo/2 + tempo-20)*(32000000/4000.0)));
 
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[2]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[1]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
     TMR2_Stop();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
 
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 
 }
 
@@ -12746,13 +12897,32 @@ void playTheme2(void){
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
     const int tempo = 300;
-# 1103 "main.c"
+
+
+    playTheme2Part1();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+
+
+    playTheme2Part2();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+
+    playTheme2Part1();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+
+    playTheme2Part2();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+
+
     playTheme2Part3();
+
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
 
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
 
 
@@ -12761,18 +12931,24 @@ void playTheme2(void){
     TMR2_PeriodCountSet(o2[11]);
     TMR2_Start();
 
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
 
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
-
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[4]);
+    TMR4_Start();
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
@@ -12791,34 +12967,206 @@ void playTheme2(void){
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
 
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[4]);
     TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o2[4]);
+    TMR4_Start();
 
     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[6]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[6]);
+    TMR4_Start();
 
     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[8]);
     TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[4]);
+    TMR4_Start();
 
     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
 
     TMR2_Stop();
     TMR2_PeriodCountSet(o2[9]);
     TMR2_Start();
-    _delay((unsigned long)((tempo*3)*(32000000/4000.0)));
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[2]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo + (tempo/2) - 20)*(32000000/4000.0)));
     TMR2_Stop();
-    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o2[2]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[7]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[4]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
     playTheme2Part3();
 
+
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]);
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo*2 - 20)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR2_PeriodCountSet(o2[11]);
+    TMR2_Start();
+
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[1]);
+    TMR2_Start();
+
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[2]);
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[8]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR2_PeriodCountSet(o3[2]);
+    TMR2_Start();
+
+    _delay((unsigned long)((tempo/2-20)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[4]);
+    TMR2_Start();
+    TMR4_Stop();
+    _delay((unsigned long)((20)*(32000000/4000.0)));
+    TMR4_PeriodCountSet(o1[8]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[2]);
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]);
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[1]);
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o2[1]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[11]);
+    TMR4_Start();
+
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[2]);
+    TMR2_Start();
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o3[1]);
+    TMR2_Start();
+
+    _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[11]);
+    TMR2_Start();
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[9]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[9]);
+    TMR2_Start();
+
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[8]);
+    TMR2_Start();
+
+    TMR4_Stop();
+    TMR4_PeriodCountSet(o1[8]);
+    TMR4_Start();
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
+
+    TMR2_Stop();
+    TMR2_PeriodCountSet(o2[5]);
+    TMR2_Start();
+
+    _delay((unsigned long)((tempo)*(32000000/4000.0)));
 
 }
 
@@ -12854,7 +13202,7 @@ void main(void) {
 
     playTheme2();
     playTheme1();
-# 1227 "main.c"
+# 1560 "main.c"
 }
 
 
