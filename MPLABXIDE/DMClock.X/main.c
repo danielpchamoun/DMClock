@@ -797,7 +797,7 @@ void playTheme2Part1(void){
 
     const int tempo = 300;
     const int drumdelay = 42;
-    
+    TMR6_Stop();
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[6]); //F.
     TMR2_Start();    
@@ -814,8 +814,10 @@ void playTheme2Part1(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
     
-    __delay_ms(tempo);
+    __delay_ms(tempo-20);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
@@ -823,6 +825,10 @@ void playTheme2Part1(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
+    TMR6_Stop();  
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
     
     __delay_ms(tempo/2);
     
@@ -831,8 +837,9 @@ void playTheme2Part1(void){
     TMR2_PeriodCountSet(o2[8]); //G.
     TMR2_Start();
     
-
     __delay_ms(tempo/2);
+
+    TMR6_Stop();  
 
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[6]); //F.
@@ -850,25 +857,40 @@ void playTheme2Part1(void){
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
     
+    
     __delay_ms(tempo-20);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[6]); //F.
     TMR2_Start();
-    TMR4_Stop();  
+    TMR4_Stop();
+    
     __delay_ms(20);
+    
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
+    TMR6_Stop();  
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
     
-    __delay_ms(tempo);
     
+    __delay_ms(tempo-20);
+    
+            
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
     TMR2_Start();
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[8]); //G
     TMR4_Start();
+    TMR6_Stop();  
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+    
     __delay_ms(tempo);
+
+    TMR6_Stop();
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[4]); //D#.
@@ -893,7 +915,11 @@ void playTheme2Part1(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
-    __delay_ms(tempo);
+    
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+    
+    __delay_ms(tempo-20);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
@@ -901,7 +927,14 @@ void playTheme2Part1(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
+    TMR6_Stop();
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+    
     __delay_ms(tempo);
+    
+    TMR6_Stop();
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
@@ -926,6 +959,11 @@ void playTheme2Part1(void){
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
     
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+    
+    
     __delay_ms(tempo);
     
     TMR2_Stop();        
@@ -934,13 +972,24 @@ void playTheme2Part1(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();
+    
     __delay_ms(tempo);
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[4]); //D#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[2]); //C#
+    TMR6_Start();
+    
+    
     __delay_ms(tempo-20);
     TMR2_Stop();
     TMR4_Stop();
+    TMR6_Stop();        
+
 
 }
 
@@ -973,14 +1022,25 @@ void playTheme2Part2(void){
     __delay_ms(10);
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
-    __delay_ms(tempo);
-
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+    
+    
+    __delay_ms(tempo-20);
+    
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
     TMR2_Start();
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
+    
+    TMR6_Stop();
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+    
     __delay_ms(tempo/2);
 
     TMR2_Stop();        
@@ -995,6 +1055,8 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[1]); //C
     TMR4_Start();
+    TMR6_Stop();
+    
     __delay_ms(tempo);    
     
     
@@ -1004,6 +1066,7 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
+
     __delay_ms(tempo-10);
 
     TMR2_Stop();        
@@ -1013,14 +1076,23 @@ void playTheme2Part2(void){
     __delay_ms(10);
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
-    __delay_ms(tempo);
-
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+    
+    
+    __delay_ms(tempo-20);
+    
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
     TMR2_Start();
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[8]); //G
     TMR4_Start();
+    TMR6_Stop();
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+    
     __delay_ms(tempo);
 
     TMR2_Stop();        
@@ -1029,6 +1101,7 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    TMR6_Stop();
     __delay_ms(tempo);
 
     TMR2_Stop();        
@@ -1037,6 +1110,7 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
+
     __delay_ms(tempo-20);
 
     TMR2_Stop();        
@@ -1046,7 +1120,11 @@ void playTheme2Part2(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
-    __delay_ms(tempo);
+    
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+
+    __delay_ms(tempo-20);
 
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
@@ -1054,9 +1132,13 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
+    TMR6_Stop();
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
     
     __delay_ms(tempo/2);
-
+    
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[1]); //C.
     TMR2_Start();
@@ -1068,6 +1150,8 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[1]); //C
     TMR4_Start();
+    TMR6_Stop();
+    
     __delay_ms(tempo/2);
 
     TMR2_Stop();        
@@ -1081,6 +1165,9 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o1[4]); //D#
+    TMR6_Start();
     __delay_ms(tempo/2);
     
     TMR2_Stop();        
@@ -1089,6 +1176,9 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[1]); //C
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o1[2]); //C#
+    TMR6_Start();
     __delay_ms(tempo/2);
     
     
@@ -1098,6 +1188,9 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[2]); //C#
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o1[1]); //C
+    TMR6_Start();
     __delay_ms(tempo);
     
     TMR2_Stop();        
@@ -1106,8 +1199,16 @@ void playTheme2Part2(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o2[1]); //C
     TMR4_Start();
+    
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o1[6]); //F
+    TMR6_Start();
+    
     __delay_ms(tempo*2-20);
     TMR2_Stop();
+    TMR4_Stop();
+    TMR6_Stop();
+
     
 }
 
@@ -1128,16 +1229,34 @@ void playTheme2Part3(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
-    __delay_ms(tempo*3-20);
-
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+   
+    __delay_ms(tempo);    
+    __delay_ms(tempo);
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
+    
+    __delay_ms(tempo-20);
     TMR4_Stop();   
+    
     __delay_ms(20);
+    
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
     TMR2_Start();
     
     TMR4_PeriodCountSet(o1[11]); //A#
-    TMR4_Start();    
+    TMR4_Start();
+
+    
+
+    
+    
     __delay_ms(tempo);
     
     
@@ -1147,7 +1266,13 @@ void playTheme2Part3(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();
+    
     __delay_ms(tempo*2);
+    
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
@@ -1162,7 +1287,17 @@ void playTheme2Part3(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();    
-    __delay_ms(tempo);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[11]); //A#
+    TMR6_Start();
+
+    __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[1]); //C.
@@ -1170,8 +1305,16 @@ void playTheme2Part3(void){
     TMR4_Stop();        
     TMR4_PeriodCountSet(o1[1]); //C
     TMR4_Start();
-    __delay_ms(tempo*2);
-    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();    
+    __delay_ms(tempo);    
+    __delay_ms(tempo/2);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();
+
+    __delay_ms(tempo/2);    
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
     TMR2_Start();
@@ -1181,6 +1324,12 @@ void playTheme2Part3(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[1]); //C
     TMR4_Start();
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();
+    
+    
     __delay_ms(tempo);
     
     TMR2_Stop();        
@@ -1189,8 +1338,19 @@ void playTheme2Part3(void){
     
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[6]); //F
-    TMR4_Start();    
-    __delay_ms(tempo/2 + tempo-20);
+    TMR4_Start();
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start(); 
+    
+    __delay_ms(tempo);
+
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G ..
+    TMR6_Start();    
+    
+    __delay_ms(tempo/2-20);
 
     TMR4_Stop();
     __delay_ms(20);
@@ -1203,26 +1363,34 @@ void playTheme2Part3(void){
     TMR4_PeriodCountSet(o1[4]); //D#
     TMR4_Start();
     
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();
+    
     __delay_ms(tempo/2);
     
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[2]); //C#
     TMR4_Start();
+
     
     __delay_ms(tempo/2);
     
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[1]); //C
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();
     
     __delay_ms(tempo/2);
     TMR2_Stop();
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();    
-    
     __delay_ms(tempo/2);       
-    
+    TMR6_Stop();        
+
 }
 
 
@@ -1235,7 +1403,7 @@ void playTheme2(void){
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
     const int tempo = 300;
-    
+    /*
     //verse 1
     playTheme2Part1();
     __delay_ms(20);
@@ -1253,7 +1421,7 @@ void playTheme2(void){
     //verse 3
     playTheme2Part3();
 
-    
+    */
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
     TMR2_Start();
@@ -1261,6 +1429,11 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
+    
     __delay_ms(tempo*2-20);
         
 
@@ -1278,8 +1451,17 @@ void playTheme2(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();    
+
+    __delay_ms(tempo/2);
     
-    __delay_ms(tempo);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[2]); //C#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
@@ -1287,11 +1469,15 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o2[4]); //D#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();
     __delay_ms(tempo);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
     TMR2_Start();
+    
     
     __delay_ms(tempo/2);
     
@@ -1304,6 +1490,11 @@ void playTheme2(void){
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[6]); //F.
     TMR2_Start();
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+
     
     __delay_ms(tempo-20);
     
@@ -1323,6 +1514,9 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
     
     __delay_ms(tempo*2);
     

@@ -39,8 +39,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [s S964 `ul 1 ]
 [n S964 . clkSpeed ]
 [v F7046 `(a ~T0 @X0 0 tf2`*S964`ul ]
-"1511 main.c
-[; ;main.c: 1511: i2c_host_interface_t I2C;
+"1705 main.c
+[; ;main.c: 1705: i2c_host_interface_t I2C;
 [c E6992 0 1 2 3 .. ]
 [n E6992 . I2C_ERROR_NONE I2C_ERROR_ADDR_NACK I2C_ERROR_DATA_NACK I2C_ERROR_BUS_COLLISION  ]
 [v F7050 `(E6992 ~T0 @X0 0 tf ]
@@ -3136,6 +3136,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i F7171
 -> 42 `i
 ]
+"800
+[; ;main.c: 800:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
 "801
 [; ;main.c: 801:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
@@ -3178,321 +3181,417 @@ Version 4.0 HI-TECH Software Intermediate Code
 "816
 [; ;main.c: 816:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
+"817
+[; ;main.c: 817:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "818
-[; ;main.c: 818:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 818:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
 "820
-[; ;main.c: 820:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"821
-[; ;main.c: 821:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+[; ;main.c: 820:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "822
-[; ;main.c: 822:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
+[; ;main.c: 822:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "823
-[; ;main.c: 823:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
+[; ;main.c: 823:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "824
-[; ;main.c: 824:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 824:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
 "825
-[; ;main.c: 825:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
+[; ;main.c: 825:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"826
+[; ;main.c: 826:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
 "827
-[; ;main.c: 827:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7170 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 827:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"828
+[; ;main.c: 828:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"829
+[; ;main.c: 829:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "830
-[; ;main.c: 830:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
+[; ;main.c: 830:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "831
-[; ;main.c: 831:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"832
-[; ;main.c: 832:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"835
-[; ;main.c: 835:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[; ;main.c: 831:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"833
+[; ;main.c: 833:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> / F7170 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"836
+[; ;main.c: 836:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "837
-[; ;main.c: 837:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"838
-[; ;main.c: 838:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"839
-[; ;main.c: 839:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"841
-[; ;main.c: 841:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"842
-[; ;main.c: 842:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"843
-[; ;main.c: 843:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"845
-[; ;main.c: 845:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"847
-[; ;main.c: 847:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"848
-[; ;main.c: 848:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"849
-[; ;main.c: 849:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"850
-[; ;main.c: 850:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"851
-[; ;main.c: 851:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"853
-[; ;main.c: 853:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"855
-[; ;main.c: 855:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"856
-[; ;main.c: 856:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"857
-[; ;main.c: 857:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"858
-[; ;main.c: 858:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"859
-[; ;main.c: 859:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"860
-[; ;main.c: 860:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"861
-[; ;main.c: 861:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"863
-[; ;main.c: 863:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"865
-[; ;main.c: 865:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"866
-[; ;main.c: 866:     TMR2_PeriodCountSet(o2[8]);
+[; ;main.c: 837:     TMR2_PeriodCountSet(o2[8]);
 [e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"867
-[; ;main.c: 867:     TMR2_Start();
+"838
+[; ;main.c: 838:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"868
-[; ;main.c: 868:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"869
-[; ;main.c: 869:     TMR4_PeriodCountSet(o1[8]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"870
-[; ;main.c: 870:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"871
-[; ;main.c: 871:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"873
-[; ;main.c: 873:     TMR2_Stop();
+"840
+[; ;main.c: 840:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7170 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"842
+[; ;main.c: 842:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"844
+[; ;main.c: 844:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"874
-[; ;main.c: 874:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"875
-[; ;main.c: 875:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"876
-[; ;main.c: 876:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"877
-[; ;main.c: 877:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"878
-[; ;main.c: 878:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"879
-[; ;main.c: 879:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"881
-[; ;main.c: 881:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"882
-[; ;main.c: 882:     TMR2_PeriodCountSet(o2[6]);
+"845
+[; ;main.c: 845:     TMR2_PeriodCountSet(o2[6]);
 [e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"883
-[; ;main.c: 883:     TMR2_Start();
+"846
+[; ;main.c: 846:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"884
-[; ;main.c: 884:     TMR4_Stop();
+"848
+[; ;main.c: 848:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"885
-[; ;main.c: 885:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"886
-[; ;main.c: 886:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"887
-[; ;main.c: 887:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"889
-[; ;main.c: 889:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"890
-[; ;main.c: 890:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"891
-[; ;main.c: 891:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"892
-[; ;main.c: 892:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"893
-[; ;main.c: 893:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"894
-[; ;main.c: 894:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"895
-[; ;main.c: 895:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"896
-[; ;main.c: 896:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"898
-[; ;main.c: 898:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"899
-[; ;main.c: 899:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"900
-[; ;main.c: 900:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"901
-[; ;main.c: 901:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"902
-[; ;main.c: 902:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"903
-[; ;main.c: 903:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"904
-[; ;main.c: 904:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"906
-[; ;main.c: 906:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"907
-[; ;main.c: 907:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"908
-[; ;main.c: 908:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"909
-[; ;main.c: 909:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"910
-[; ;main.c: 910:     TMR4_PeriodCountSet(o2[1]);
+"849
+[; ;main.c: 849:     TMR4_PeriodCountSet(o2[1]);
 [e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"911
-[; ;main.c: 911:     TMR4_Start();
+"850
+[; ;main.c: 850:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"912
-[; ;main.c: 912:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+"852
+[; ;main.c: 852:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"914
-[; ;main.c: 914:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"915
-[; ;main.c: 915:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"916
-[; ;main.c: 916:     TMR2_Start();
+"854
+[; ;main.c: 854:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"855
+[; ;main.c: 855:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"917
-[; ;main.c: 917:     TMR4_Stop();
+"856
+[; ;main.c: 856:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"918
-[; ;main.c: 918:     TMR4_PeriodCountSet(o1[4]);
+"857
+[; ;main.c: 857:     TMR4_PeriodCountSet(o1[4]);
 [e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"919
-[; ;main.c: 919:     TMR4_Start();
+"858
+[; ;main.c: 858:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"920
-[; ;main.c: 920:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"922
-[; ;main.c: 922:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"923
-[; ;main.c: 923:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"924
-[; ;main.c: 924:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"925
-[; ;main.c: 925:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"926
-[; ;main.c: 926:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"927
-[; ;main.c: 927:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"929
-[; ;main.c: 929:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"931
-[; ;main.c: 931:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"932
-[; ;main.c: 932:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"933
-[; ;main.c: 933:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"934
-[; ;main.c: 934:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"935
-[; ;main.c: 935:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"936
-[; ;main.c: 936:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"937
-[; ;main.c: 937:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"938
-[; ;main.c: 938:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"939
-[; ;main.c: 939:     TMR4_PeriodCountSet(o2[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"940
-[; ;main.c: 940:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"941
-[; ;main.c: 941:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+"861
+[; ;main.c: 861:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"942
-[; ;main.c: 942:     TMR2_Stop();
+"863
+[; ;main.c: 863:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"943
-[; ;main.c: 943:     TMR4_Stop();
+"864
+[; ;main.c: 864:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"865
+[; ;main.c: 865:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"866
+[; ;main.c: 866:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
+"868
+[; ;main.c: 868:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"870
+[; ;main.c: 870:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"871
+[; ;main.c: 871:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"872
+[; ;main.c: 872:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"873
+[; ;main.c: 873:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"874
+[; ;main.c: 874:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"877
+[; ;main.c: 877:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"880
+[; ;main.c: 880:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"881
+[; ;main.c: 881:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"882
+[; ;main.c: 882:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"883
+[; ;main.c: 883:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"884
+[; ;main.c: 884:     TMR4_PeriodCountSet(o1[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"885
+[; ;main.c: 885:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"886
+[; ;main.c: 886:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"887
+[; ;main.c: 887:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"888
+[; ;main.c: 888:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"889
+[; ;main.c: 889:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"891
+[; ;main.c: 891:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"893
+[; ;main.c: 893:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"895
+[; ;main.c: 895:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"896
+[; ;main.c: 896:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"897
+[; ;main.c: 897:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"898
+[; ;main.c: 898:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"899
+[; ;main.c: 899:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"900
+[; ;main.c: 900:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"901
+[; ;main.c: 901:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"903
+[; ;main.c: 903:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"904
+[; ;main.c: 904:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"905
+[; ;main.c: 905:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"906
+[; ;main.c: 906:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"907
+[; ;main.c: 907:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"908
+[; ;main.c: 908:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"909
+[; ;main.c: 909:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"911
+[; ;main.c: 911:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"912
+[; ;main.c: 912:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"913
+[; ;main.c: 913:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"914
+[; ;main.c: 914:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"915
+[; ;main.c: 915:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"916
+[; ;main.c: 916:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"917
+[; ;main.c: 917:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"919
+[; ;main.c: 919:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"920
+[; ;main.c: 920:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"922
+[; ;main.c: 922:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"924
+[; ;main.c: 924:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"925
+[; ;main.c: 925:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"926
+[; ;main.c: 926:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"927
+[; ;main.c: 927:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"928
+[; ;main.c: 928:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"929
+[; ;main.c: 929:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"930
+[; ;main.c: 930:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"931
+[; ;main.c: 931:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"932
+[; ;main.c: 932:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"933
+[; ;main.c: 933:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"935
+[; ;main.c: 935:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"937
+[; ;main.c: 937:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"939
+[; ;main.c: 939:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"940
+[; ;main.c: 940:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"941
+[; ;main.c: 941:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"942
+[; ;main.c: 942:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"943
+[; ;main.c: 943:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"944
+[; ;main.c: 944:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
 "945
-[; ;main.c: 945: }
+[; ;main.c: 945:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"947
+[; ;main.c: 947:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"948
+[; ;main.c: 948:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"949
+[; ;main.c: 949:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"950
+[; ;main.c: 950:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"951
+[; ;main.c: 951:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"952
+[; ;main.c: 952:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"953
+[; ;main.c: 953:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"955
+[; ;main.c: 955:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"956
+[; ;main.c: 956:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"957
+[; ;main.c: 957:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"958
+[; ;main.c: 958:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"959
+[; ;main.c: 959:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"960
+[; ;main.c: 960:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"962
+[; ;main.c: 962:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"963
+[; ;main.c: 963:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"964
+[; ;main.c: 964:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"967
+[; ;main.c: 967:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"969
+[; ;main.c: 969:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"970
+[; ;main.c: 970:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"971
+[; ;main.c: 971:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"972
+[; ;main.c: 972:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"973
+[; ;main.c: 973:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"974
+[; ;main.c: 974:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"975
+[; ;main.c: 975:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"976
+[; ;main.c: 976:     TMR6_PeriodCountSet(o2[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"977
+[; ;main.c: 977:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"979
+[; ;main.c: 979:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7170 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"980
+[; ;main.c: 980:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"981
+[; ;main.c: 981:     TMR4_PeriodCountSet(o2[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"982
+[; ;main.c: 982:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"983
+[; ;main.c: 983:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"984
+[; ;main.c: 984:     TMR6_PeriodCountSet(o2[2]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"985
+[; ;main.c: 985:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"988
+[; ;main.c: 988:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7170 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"989
+[; ;main.c: 989:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"990
+[; ;main.c: 990:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"991
+[; ;main.c: 991:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"994
+[; ;main.c: 994: }
 [e :UE 984 ]
 }
-"947
-[; ;main.c: 947: void playTheme2Part2(void){
+"996
+[; ;main.c: 996: void playTheme2Part2(void){
 [v _playTheme2Part2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _playTheme2Part2 ]
@@ -3500,8 +3599,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7173 `ui ~T0 @X0 -> 12 `i s ]
 [i F7173
 :U ..
-"951
-[; ;main.c: 951:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+"1000
+[; ;main.c: 1000:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
 -> -> 252 `i `ui
 -> -> 238 `i `ui
 -> -> 224 `i `ui
@@ -3521,8 +3620,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7175 `ui ~T0 @X0 -> 12 `i s ]
 [i F7175
 :U ..
-"952
-[; ;main.c: 952:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
+"1001
+[; ;main.c: 1001:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
 -> -> 126 `i `ui
 -> -> 118 `i `ui
 -> -> 112 `i `ui
@@ -3542,8 +3641,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7177 `ui ~T0 @X0 -> 12 `i s ]
 [i F7177
 :U ..
-"953
-[; ;main.c: 953:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
+"1002
+[; ;main.c: 1002:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 -> -> 62 `i `ui
 -> -> 58 `i `ui
 -> -> 56 `i `ui
@@ -3560,165 +3659,45 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _o3 `ui ~T0 @X0 -> 12 `i a ]
 [e = _o3 F7177 ]
-"955
-[; ;main.c: 955:     const int tempo = 300;
+"1004
+[; ;main.c: 1004:     const int tempo = 300;
 [v F7179 `Ci ~T0 @X0 1 s tempo ]
 [i F7179
 -> 300 `i
 ]
-"956
-[; ;main.c: 956:     const int drumdelay = 42;
+"1005
+[; ;main.c: 1005:     const int drumdelay = 42;
 [v F7180 `Ci ~T0 @X0 1 s drumdelay ]
 [i F7180
 -> 42 `i
 ]
-"958
-[; ;main.c: 958:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"959
-[; ;main.c: 959:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"960
-[; ;main.c: 960:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"961
-[; ;main.c: 961:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"962
-[; ;main.c: 962:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"963
-[; ;main.c: 963:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"965
-[; ;main.c: 965:     _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7179 -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"969
-[; ;main.c: 969:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"970
-[; ;main.c: 970:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"971
-[; ;main.c: 971:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"972
-[; ;main.c: 972:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"973
-[; ;main.c: 973:     _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"974
-[; ;main.c: 974:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"975
-[; ;main.c: 975:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"976
-[; ;main.c: 976:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"978
-[; ;main.c: 978:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"979
-[; ;main.c: 979:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"980
-[; ;main.c: 980:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"981
-[; ;main.c: 981:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"982
-[; ;main.c: 982:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"983
-[; ;main.c: 983:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"984
-[; ;main.c: 984:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"986
-[; ;main.c: 986:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"987
-[; ;main.c: 987:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"988
-[; ;main.c: 988:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"990
-[; ;main.c: 990:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"992
-[; ;main.c: 992:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"993
-[; ;main.c: 993:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"994
-[; ;main.c: 994:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"995
-[; ;main.c: 995:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"996
-[; ;main.c: 996:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"997
-[; ;main.c: 997:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"998
-[; ;main.c: 998:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1002
-[; ;main.c: 1002:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1003
-[; ;main.c: 1003:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1004
-[; ;main.c: 1004:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1005
-[; ;main.c: 1005:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1006
-[; ;main.c: 1006:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
 "1007
-[; ;main.c: 1007:     _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7179 -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1009
-[; ;main.c: 1009:     TMR2_Stop();
+[; ;main.c: 1007:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"1010
-[; ;main.c: 1010:     TMR2_PeriodCountSet(o2[6]);
+"1008
+[; ;main.c: 1008:     TMR2_PeriodCountSet(o2[6]);
 [e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1011
-[; ;main.c: 1011:     TMR2_Start();
+"1009
+[; ;main.c: 1009:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"1012
-[; ;main.c: 1012:     TMR4_Stop();
+"1010
+[; ;main.c: 1010:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"1013
-[; ;main.c: 1013:     _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1014
-[; ;main.c: 1014:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1015
-[; ;main.c: 1015:     TMR4_Start();
+"1011
+[; ;main.c: 1011:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1012
+[; ;main.c: 1012:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"1016
-[; ;main.c: 1016:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1014
+[; ;main.c: 1014:     _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7179 -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1018
 [; ;main.c: 1018:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
 "1019
-[; ;main.c: 1019:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+[; ;main.c: 1019:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1020
 [; ;main.c: 1020:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
@@ -3726,239 +3705,467 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 1021:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
 "1022
-[; ;main.c: 1022:     TMR4_PeriodCountSet(o1[8]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 1022:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1023
-[; ;main.c: 1023:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
+[; ;main.c: 1023:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
 "1024
-[; ;main.c: 1024:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1024:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1025
+[; ;main.c: 1025:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
 "1026
-[; ;main.c: 1026:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
+[; ;main.c: 1026:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1027
-[; ;main.c: 1027:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1028
-[; ;main.c: 1028:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1029
-[; ;main.c: 1029:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
+[; ;main.c: 1027:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
 "1030
-[; ;main.c: 1030:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1031
-[; ;main.c: 1031:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1032
-[; ;main.c: 1032:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1034
-[; ;main.c: 1034:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1035
-[; ;main.c: 1035:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1036
-[; ;main.c: 1036:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1037
-[; ;main.c: 1037:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1038
-[; ;main.c: 1038:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1039
-[; ;main.c: 1039:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1040
-[; ;main.c: 1040:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[; ;main.c: 1030:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> - F7179 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1042
-[; ;main.c: 1042:     TMR2_Stop();
+"1032
+[; ;main.c: 1032:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"1043
-[; ;main.c: 1043:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1044
-[; ;main.c: 1044:     TMR2_Start();
+"1033
+[; ;main.c: 1033:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1034
+[; ;main.c: 1034:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"1045
-[; ;main.c: 1045:     TMR4_Stop();
+"1035
+[; ;main.c: 1035:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"1046
-[; ;main.c: 1046:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1047
-[; ;main.c: 1047:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1048
-[; ;main.c: 1048:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1049
-[; ;main.c: 1049:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1051
-[; ;main.c: 1051:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1052
-[; ;main.c: 1052:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1053
-[; ;main.c: 1053:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1054
-[; ;main.c: 1054:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1055
-[; ;main.c: 1055:     TMR4_PeriodCountSet(o1[9]);
+"1036
+[; ;main.c: 1036:     TMR4_PeriodCountSet(o1[9]);
 [e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1037
+[; ;main.c: 1037:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1039
+[; ;main.c: 1039:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1040
+[; ;main.c: 1040:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1041
+[; ;main.c: 1041:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1042
+[; ;main.c: 1042:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1044
+[; ;main.c: 1044:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1046
+[; ;main.c: 1046:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1047
+[; ;main.c: 1047:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1048
+[; ;main.c: 1048:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1050
+[; ;main.c: 1050:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1052
+[; ;main.c: 1052:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1053
+[; ;main.c: 1053:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1054
+[; ;main.c: 1054:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1055
+[; ;main.c: 1055:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
 "1056
-[; ;main.c: 1056:     TMR4_Start();
+[; ;main.c: 1056:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1057
+[; ;main.c: 1057:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
 "1058
-[; ;main.c: 1058:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1058:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
 "1060
-[; ;main.c: 1060:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1061
-[; ;main.c: 1061:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1062
-[; ;main.c: 1062:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1063
-[; ;main.c: 1063:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1065
-[; ;main.c: 1065:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1066
-[; ;main.c: 1066:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1067
-[; ;main.c: 1067:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1068
-[; ;main.c: 1068:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1069
-[; ;main.c: 1069:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1070
-[; ;main.c: 1070:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1071
-[; ;main.c: 1071:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1073
-[; ;main.c: 1073:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1074
-[; ;main.c: 1074:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1075
-[; ;main.c: 1075:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1076
-[; ;main.c: 1076:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1078
-[; ;main.c: 1078:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1079
-[; ;main.c: 1079:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1080
-[; ;main.c: 1080:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1081
-[; ;main.c: 1081:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1082
-[; ;main.c: 1082:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1083
-[; ;main.c: 1083:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1084
-[; ;main.c: 1084:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1086
-[; ;main.c: 1086:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1087
-[; ;main.c: 1087:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1088
-[; ;main.c: 1088:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1089
-[; ;main.c: 1089:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1090
-[; ;main.c: 1090:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1091
-[; ;main.c: 1091:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1092
-[; ;main.c: 1092:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1095
-[; ;main.c: 1095:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1096
-[; ;main.c: 1096:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1097
-[; ;main.c: 1097:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1098
-[; ;main.c: 1098:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1099
-[; ;main.c: 1099:     TMR4_PeriodCountSet(o2[2]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1100
-[; ;main.c: 1100:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1101
-[; ;main.c: 1101:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[; ;main.c: 1060:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1103
-[; ;main.c: 1103:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1104
-[; ;main.c: 1104:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1105
-[; ;main.c: 1105:     TMR2_Start();
+"1064
+[; ;main.c: 1064:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1065
+[; ;main.c: 1065:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"1106
-[; ;main.c: 1106:     TMR4_Stop();
+"1066
+[; ;main.c: 1066:     TMR4_Stop();
 [e ( _TMR4_Stop ..  ]
-"1107
-[; ;main.c: 1107:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1108
-[; ;main.c: 1108:     TMR4_Start();
+"1067
+[; ;main.c: 1067:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1068
+[; ;main.c: 1068:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"1109
-[; ;main.c: 1109:     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - * F7179 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1110
-[; ;main.c: 1110:     TMR2_Stop();
+"1070
+[; ;main.c: 1070:     _delay((unsigned long)((tempo-10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7179 -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1072
+[; ;main.c: 1072:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
+"1073
+[; ;main.c: 1073:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1074
+[; ;main.c: 1074:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1075
+[; ;main.c: 1075:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1076
+[; ;main.c: 1076:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1077
+[; ;main.c: 1077:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1078
+[; ;main.c: 1078:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1079
+[; ;main.c: 1079:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1080
+[; ;main.c: 1080:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1083
+[; ;main.c: 1083:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7179 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1085
+[; ;main.c: 1085:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1086
+[; ;main.c: 1086:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1087
+[; ;main.c: 1087:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1088
+[; ;main.c: 1088:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1089
+[; ;main.c: 1089:     TMR4_PeriodCountSet(o1[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1090
+[; ;main.c: 1090:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1091
+[; ;main.c: 1091:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1092
+[; ;main.c: 1092:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1093
+[; ;main.c: 1093:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1094
+[; ;main.c: 1094:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1096
+[; ;main.c: 1096:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1098
+[; ;main.c: 1098:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1099
+[; ;main.c: 1099:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1100
+[; ;main.c: 1100:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1101
+[; ;main.c: 1101:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1102
+[; ;main.c: 1102:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1103
+[; ;main.c: 1103:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1104
+[; ;main.c: 1104:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1105
+[; ;main.c: 1105:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1107
+[; ;main.c: 1107:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1108
+[; ;main.c: 1108:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1109
+[; ;main.c: 1109:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1110
+[; ;main.c: 1110:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1111
+[; ;main.c: 1111:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
 "1112
-[; ;main.c: 1112: }
+[; ;main.c: 1112:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1114
+[; ;main.c: 1114:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7179 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1116
+[; ;main.c: 1116:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1117
+[; ;main.c: 1117:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1118
+[; ;main.c: 1118:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1119
+[; ;main.c: 1119:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1120
+[; ;main.c: 1120:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1121
+[; ;main.c: 1121:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1122
+[; ;main.c: 1122:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1124
+[; ;main.c: 1124:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1125
+[; ;main.c: 1125:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1127
+[; ;main.c: 1127:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7179 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1129
+[; ;main.c: 1129:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1130
+[; ;main.c: 1130:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1131
+[; ;main.c: 1131:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1132
+[; ;main.c: 1132:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1133
+[; ;main.c: 1133:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1134
+[; ;main.c: 1134:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1135
+[; ;main.c: 1135:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1136
+[; ;main.c: 1136:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1137
+[; ;main.c: 1137:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1138
+[; ;main.c: 1138:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1140
+[; ;main.c: 1140:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1142
+[; ;main.c: 1142:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1143
+[; ;main.c: 1143:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1144
+[; ;main.c: 1144:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1145
+[; ;main.c: 1145:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1147
+[; ;main.c: 1147:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1148
+[; ;main.c: 1148:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1149
+[; ;main.c: 1149:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1150
+[; ;main.c: 1150:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1151
+[; ;main.c: 1151:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1152
+[; ;main.c: 1152:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1153
+[; ;main.c: 1153:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1155
+[; ;main.c: 1155:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1157
+[; ;main.c: 1157:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1158
+[; ;main.c: 1158:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1159
+[; ;main.c: 1159:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1160
+[; ;main.c: 1160:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1162
+[; ;main.c: 1162:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1163
+[; ;main.c: 1163:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1164
+[; ;main.c: 1164:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1165
+[; ;main.c: 1165:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1166
+[; ;main.c: 1166:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1167
+[; ;main.c: 1167:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1168
+[; ;main.c: 1168:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1169
+[; ;main.c: 1169:     TMR6_PeriodCountSet(o1[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1170
+[; ;main.c: 1170:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1171
+[; ;main.c: 1171:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1173
+[; ;main.c: 1173:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1174
+[; ;main.c: 1174:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1175
+[; ;main.c: 1175:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1176
+[; ;main.c: 1176:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1177
+[; ;main.c: 1177:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1178
+[; ;main.c: 1178:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1179
+[; ;main.c: 1179:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1180
+[; ;main.c: 1180:     TMR6_PeriodCountSet(o1[2]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1181
+[; ;main.c: 1181:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1182
+[; ;main.c: 1182:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7179 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1185
+[; ;main.c: 1185:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1186
+[; ;main.c: 1186:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1187
+[; ;main.c: 1187:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1188
+[; ;main.c: 1188:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1189
+[; ;main.c: 1189:     TMR4_PeriodCountSet(o2[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1190
+[; ;main.c: 1190:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1191
+[; ;main.c: 1191:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1192
+[; ;main.c: 1192:     TMR6_PeriodCountSet(o1[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1193
+[; ;main.c: 1193:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1194
+[; ;main.c: 1194:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7179 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1196
+[; ;main.c: 1196:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1197
+[; ;main.c: 1197:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1198
+[; ;main.c: 1198:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1199
+[; ;main.c: 1199:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1200
+[; ;main.c: 1200:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1201
+[; ;main.c: 1201:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1203
+[; ;main.c: 1203:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1204
+[; ;main.c: 1204:     TMR6_PeriodCountSet(o1[6]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1205
+[; ;main.c: 1205:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1207
+[; ;main.c: 1207:     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - * F7179 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1208
+[; ;main.c: 1208:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1209
+[; ;main.c: 1209:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1210
+[; ;main.c: 1210:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1213
+[; ;main.c: 1213: }
 [e :UE 985 ]
 }
-"1114
-[; ;main.c: 1114: void playTheme2Part3(void){
+"1215
+[; ;main.c: 1215: void playTheme2Part3(void){
 [v _playTheme2Part3 `(v ~T0 @X0 1 ef ]
 {
 [e :U _playTheme2Part3 ]
@@ -3966,8 +4173,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7182 `ui ~T0 @X0 -> 12 `i s ]
 [i F7182
 :U ..
-"1118
-[; ;main.c: 1118:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+"1219
+[; ;main.c: 1219:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
 -> -> 252 `i `ui
 -> -> 238 `i `ui
 -> -> 224 `i `ui
@@ -3987,8 +4194,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7184 `ui ~T0 @X0 -> 12 `i s ]
 [i F7184
 :U ..
-"1119
-[; ;main.c: 1119:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
+"1220
+[; ;main.c: 1220:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
 -> -> 126 `i `ui
 -> -> 118 `i `ui
 -> -> 112 `i `ui
@@ -4008,8 +4215,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7186 `ui ~T0 @X0 -> 12 `i s ]
 [i F7186
 :U ..
-"1120
-[; ;main.c: 1120:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
+"1221
+[; ;main.c: 1221:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 -> -> 62 `i `ui
 -> -> 58 `i `ui
 -> -> 56 `i `ui
@@ -4026,261 +4233,390 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _o3 `ui ~T0 @X0 -> 12 `i a ]
 [e = _o3 F7186 ]
-"1122
-[; ;main.c: 1122:     const int tempo = 300;
+"1223
+[; ;main.c: 1223:     const int tempo = 300;
 [v F7188 `Ci ~T0 @X0 1 s tempo ]
 [i F7188
 -> 300 `i
 ]
-"1123
-[; ;main.c: 1123:     const int drumdelay = 42;
+"1224
+[; ;main.c: 1224:     const int drumdelay = 42;
 [v F7189 `Ci ~T0 @X0 1 s drumdelay ]
 [i F7189
 -> 42 `i
 ]
-"1125
-[; ;main.c: 1125:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1126
-[; ;main.c: 1126:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1127
-[; ;main.c: 1127:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1128
-[; ;main.c: 1128:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1129
-[; ;main.c: 1129:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1130
-[; ;main.c: 1130:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1131
-[; ;main.c: 1131:     _delay((unsigned long)((tempo*3-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - * F7188 -> 3 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1133
-[; ;main.c: 1133:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1134
-[; ;main.c: 1134:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1135
-[; ;main.c: 1135:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1136
-[; ;main.c: 1136:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1137
-[; ;main.c: 1137:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1139
-[; ;main.c: 1139:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1140
-[; ;main.c: 1140:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1141
-[; ;main.c: 1141:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1144
-[; ;main.c: 1144:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1145
-[; ;main.c: 1145:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1146
-[; ;main.c: 1146:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1147
-[; ;main.c: 1147:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1148
-[; ;main.c: 1148:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1149
-[; ;main.c: 1149:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1150
-[; ;main.c: 1150:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> * F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1152
-[; ;main.c: 1152:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1153
-[; ;main.c: 1153:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1154
-[; ;main.c: 1154:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1156
-[; ;main.c: 1156:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1158
-[; ;main.c: 1158:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1159
-[; ;main.c: 1159:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1160
-[; ;main.c: 1160:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1161
-[; ;main.c: 1161:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1162
-[; ;main.c: 1162:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1163
-[; ;main.c: 1163:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1164
-[; ;main.c: 1164:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1165
-[; ;main.c: 1165:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1167
-[; ;main.c: 1167:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1168
-[; ;main.c: 1168:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1169
-[; ;main.c: 1169:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1170
-[; ;main.c: 1170:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1171
-[; ;main.c: 1171:     TMR4_PeriodCountSet(o1[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1172
-[; ;main.c: 1172:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1173
-[; ;main.c: 1173:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> * F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1175
-[; ;main.c: 1175:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1176
-[; ;main.c: 1176:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1177
-[; ;main.c: 1177:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1179
-[; ;main.c: 1179:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1180
-[; ;main.c: 1180:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1181
-[; ;main.c: 1181:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1182
-[; ;main.c: 1182:     TMR4_PeriodCountSet(o1[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1183
-[; ;main.c: 1183:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1184
-[; ;main.c: 1184:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1186
-[; ;main.c: 1186:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1187
-[; ;main.c: 1187:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1188
-[; ;main.c: 1188:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1190
-[; ;main.c: 1190:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1191
-[; ;main.c: 1191:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1192
-[; ;main.c: 1192:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1193
-[; ;main.c: 1193:     _delay((unsigned long)((tempo/2 + tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - + / F7188 -> 2 `i F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1195
-[; ;main.c: 1195:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1196
-[; ;main.c: 1196:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1197
-[; ;main.c: 1197:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1198
-[; ;main.c: 1198:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1200
-[; ;main.c: 1200:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1202
-[; ;main.c: 1202:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1203
-[; ;main.c: 1203:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1204
-[; ;main.c: 1204:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1206
-[; ;main.c: 1206:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1208
-[; ;main.c: 1208:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1209
-[; ;main.c: 1209:     TMR4_PeriodCountSet(o1[2]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1210
-[; ;main.c: 1210:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1212
-[; ;main.c: 1212:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1214
-[; ;main.c: 1214:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1215
-[; ;main.c: 1215:     TMR4_PeriodCountSet(o1[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1216
-[; ;main.c: 1216:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1218
-[; ;main.c: 1218:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1219
-[; ;main.c: 1219:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1220
-[; ;main.c: 1220:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1221
-[; ;main.c: 1221:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1222
-[; ;main.c: 1222:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1224
-[; ;main.c: 1224:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1226
-[; ;main.c: 1226: }
+[; ;main.c: 1226:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1227
+[; ;main.c: 1227:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1228
+[; ;main.c: 1228:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1229
+[; ;main.c: 1229:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1230
+[; ;main.c: 1230:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1231
+[; ;main.c: 1231:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1233
+[; ;main.c: 1233:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1234
+[; ;main.c: 1234:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1235
+[; ;main.c: 1235:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1237
+[; ;main.c: 1237:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1238
+[; ;main.c: 1238:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1240
+[; ;main.c: 1240:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1241
+[; ;main.c: 1241:     TMR6_PeriodCountSet(o2[6]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1242
+[; ;main.c: 1242:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1244
+[; ;main.c: 1244:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1245
+[; ;main.c: 1245:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1247
+[; ;main.c: 1247:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1249
+[; ;main.c: 1249:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1250
+[; ;main.c: 1250:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1251
+[; ;main.c: 1251:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1253
+[; ;main.c: 1253:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1254
+[; ;main.c: 1254:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1260
+[; ;main.c: 1260:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1263
+[; ;main.c: 1263:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1264
+[; ;main.c: 1264:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1265
+[; ;main.c: 1265:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1266
+[; ;main.c: 1266:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1267
+[; ;main.c: 1267:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1268
+[; ;main.c: 1268:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1270
+[; ;main.c: 1270:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1271
+[; ;main.c: 1271:     TMR6_PeriodCountSet(o2[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1272
+[; ;main.c: 1272:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1274
+[; ;main.c: 1274:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> * F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1277
+[; ;main.c: 1277:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1278
+[; ;main.c: 1278:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1279
+[; ;main.c: 1279:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1281
+[; ;main.c: 1281:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1283
+[; ;main.c: 1283:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1284
+[; ;main.c: 1284:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1285
+[; ;main.c: 1285:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1286
+[; ;main.c: 1286:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1287
+[; ;main.c: 1287:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1288
+[; ;main.c: 1288:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1289
+[; ;main.c: 1289:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1290
+[; ;main.c: 1290:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1291
+[; ;main.c: 1291:     TMR6_PeriodCountSet(o2[9]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1292
+[; ;main.c: 1292:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1294
+[; ;main.c: 1294:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1296
+[; ;main.c: 1296:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1297
+[; ;main.c: 1297:     TMR6_PeriodCountSet(o2[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1298
+[; ;main.c: 1298:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1300
+[; ;main.c: 1300:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1302
+[; ;main.c: 1302:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1303
+[; ;main.c: 1303:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1304
+[; ;main.c: 1304:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1305
+[; ;main.c: 1305:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1306
+[; ;main.c: 1306:     TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1307
+[; ;main.c: 1307:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1308
+[; ;main.c: 1308:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1309
+[; ;main.c: 1309:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1310
+[; ;main.c: 1310:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1311
+[; ;main.c: 1311:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1312
+[; ;main.c: 1312:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1313
+[; ;main.c: 1313:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1314
+[; ;main.c: 1314:     TMR6_PeriodCountSet(o2[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1315
+[; ;main.c: 1315:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1317
+[; ;main.c: 1317:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1318
+[; ;main.c: 1318:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1319
+[; ;main.c: 1319:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1320
+[; ;main.c: 1320:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1322
+[; ;main.c: 1322:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7188 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1323
+[; ;main.c: 1323:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1324
+[; ;main.c: 1324:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1325
+[; ;main.c: 1325:     TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1326
+[; ;main.c: 1326:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1328
+[; ;main.c: 1328:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1329
+[; ;main.c: 1329:     TMR6_PeriodCountSet(o2[8]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1330
+[; ;main.c: 1330:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1333
+[; ;main.c: 1333:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1335
+[; ;main.c: 1335:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1336
+[; ;main.c: 1336:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1337
+[; ;main.c: 1337:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1339
+[; ;main.c: 1339:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1340
+[; ;main.c: 1340:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1341
+[; ;main.c: 1341:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1343
+[; ;main.c: 1343:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1344
+[; ;main.c: 1344:     TMR6_PeriodCountSet(o2[9]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1345
+[; ;main.c: 1345:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1347
+[; ;main.c: 1347:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7188 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1349
+[; ;main.c: 1349:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1350
+[; ;main.c: 1350:     TMR6_PeriodCountSet(o2[8]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1351
+[; ;main.c: 1351:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1353
+[; ;main.c: 1353:     _delay((unsigned long)((tempo/2-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - / F7188 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1355
+[; ;main.c: 1355:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1356
+[; ;main.c: 1356:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1357
+[; ;main.c: 1357:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1358
+[; ;main.c: 1358:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1360
+[; ;main.c: 1360:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1362
+[; ;main.c: 1362:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1363
+[; ;main.c: 1363:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1364
+[; ;main.c: 1364:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1366
+[; ;main.c: 1366:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1367
+[; ;main.c: 1367:     TMR6_PeriodCountSet(o2[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1368
+[; ;main.c: 1368:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1370
+[; ;main.c: 1370:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1372
+[; ;main.c: 1372:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1373
+[; ;main.c: 1373:     TMR4_PeriodCountSet(o1[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1374
+[; ;main.c: 1374:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1377
+[; ;main.c: 1377:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1379
+[; ;main.c: 1379:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1380
+[; ;main.c: 1380:     TMR4_PeriodCountSet(o1[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1381
+[; ;main.c: 1381:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1382
+[; ;main.c: 1382:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1383
+[; ;main.c: 1383:     TMR6_PeriodCountSet(o2[8]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1384
+[; ;main.c: 1384:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1386
+[; ;main.c: 1386:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1387
+[; ;main.c: 1387:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1388
+[; ;main.c: 1388:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1389
+[; ;main.c: 1389:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1390
+[; ;main.c: 1390:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1391
+[; ;main.c: 1391:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7188 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1392
+[; ;main.c: 1392:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1394
+[; ;main.c: 1394: }
 [e :UE 986 ]
 }
-"1229
-[; ;main.c: 1229: void playTheme2(void){
+"1397
+[; ;main.c: 1397: void playTheme2(void){
 [v _playTheme2 `(v ~T0 @X0 1 ef ]
 {
 [e :U _playTheme2 ]
@@ -4288,8 +4624,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7191 `ui ~T0 @X0 -> 12 `i s ]
 [i F7191
 :U ..
-"1233
-[; ;main.c: 1233:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
+"1401
+[; ;main.c: 1401:     size_t o1[] = {252,238,224,212,200,189,178,168,158,149,141,133};
 -> -> 252 `i `ui
 -> -> 238 `i `ui
 -> -> 224 `i `ui
@@ -4309,8 +4645,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7193 `ui ~T0 @X0 -> 12 `i s ]
 [i F7193
 :U ..
-"1234
-[; ;main.c: 1234:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
+"1402
+[; ;main.c: 1402:     size_t o2[] = {126,118,112,105,99,94,88,83,79,74,70,66};
 -> -> 126 `i `ui
 -> -> 118 `i `ui
 -> -> 112 `i `ui
@@ -4330,8 +4666,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v F7195 `ui ~T0 @X0 -> 12 `i s ]
 [i F7195
 :U ..
-"1235
-[; ;main.c: 1235:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
+"1403
+[; ;main.c: 1403:     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 -> -> 62 `i `ui
 -> -> 58 `i `ui
 -> -> 56 `i `ui
@@ -4348,648 +4684,678 @@ Version 4.0 HI-TECH Software Intermediate Code
 ]
 [v _o3 `ui ~T0 @X0 -> 12 `i a ]
 [e = _o3 F7195 ]
-"1237
-[; ;main.c: 1237:     const int tempo = 300;
+"1405
+[; ;main.c: 1405:     const int tempo = 300;
 [v F7197 `Ci ~T0 @X0 1 s tempo ]
 [i F7197
 -> 300 `i
 ]
-"1240
-[; ;main.c: 1240:     playTheme2Part1();
-[e ( _playTheme2Part1 ..  ]
-"1241
-[; ;main.c: 1241:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1244
-[; ;main.c: 1244:     playTheme2Part2();
-[e ( _playTheme2Part2 ..  ]
-"1245
-[; ;main.c: 1245:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1247
-[; ;main.c: 1247:     playTheme2Part1();
-[e ( _playTheme2Part1 ..  ]
-"1248
-[; ;main.c: 1248:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1250
-[; ;main.c: 1250:     playTheme2Part2();
-[e ( _playTheme2Part2 ..  ]
-"1251
-[; ;main.c: 1251:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1254
-[; ;main.c: 1254:     playTheme2Part3();
-[e ( _playTheme2Part3 ..  ]
-"1257
-[; ;main.c: 1257:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1258
-[; ;main.c: 1258:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1259
-[; ;main.c: 1259:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1261
-[; ;main.c: 1261:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1262
-[; ;main.c: 1262:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1263
-[; ;main.c: 1263:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1264
-[; ;main.c: 1264:     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - * F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1267
-[; ;main.c: 1267:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1268
-[; ;main.c: 1268:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1269
-[; ;main.c: 1269:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1270
-[; ;main.c: 1270:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1272
-[; ;main.c: 1272:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1274
-[; ;main.c: 1274:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1275
-[; ;main.c: 1275:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1276
-[; ;main.c: 1276:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1277
-[; ;main.c: 1277:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1278
-[; ;main.c: 1278:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1279
-[; ;main.c: 1279:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1280
-[; ;main.c: 1280:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1282
-[; ;main.c: 1282:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1284
-[; ;main.c: 1284:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1285
-[; ;main.c: 1285:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1286
-[; ;main.c: 1286:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1287
-[; ;main.c: 1287:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1288
-[; ;main.c: 1288:     TMR4_PeriodCountSet(o2[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1289
-[; ;main.c: 1289:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1290
-[; ;main.c: 1290:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1292
-[; ;main.c: 1292:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1293
-[; ;main.c: 1293:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1294
-[; ;main.c: 1294:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1296
-[; ;main.c: 1296:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1298
-[; ;main.c: 1298:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1299
-[; ;main.c: 1299:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1300
-[; ;main.c: 1300:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1302
-[; ;main.c: 1302:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1304
-[; ;main.c: 1304:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1305
-[; ;main.c: 1305:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1306
-[; ;main.c: 1306:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1308
-[; ;main.c: 1308:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1310
-[; ;main.c: 1310:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1311
-[; ;main.c: 1311:     TMR2_PeriodCountSet(o2[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1312
-[; ;main.c: 1312:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1313
-[; ;main.c: 1313:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1314
-[; ;main.c: 1314:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1315
-[; ;main.c: 1315:     TMR4_PeriodCountSet(o2[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1316
-[; ;main.c: 1316:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1318
-[; ;main.c: 1318:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1320
-[; ;main.c: 1320:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1321
-[; ;main.c: 1321:     TMR2_PeriodCountSet(o2[6]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1322
-[; ;main.c: 1322:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1323
-[; ;main.c: 1323:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1324
-[; ;main.c: 1324:     TMR4_PeriodCountSet(o1[6]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1325
-[; ;main.c: 1325:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1327
-[; ;main.c: 1327:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> * F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1329
-[; ;main.c: 1329:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1330
-[; ;main.c: 1330:     TMR2_PeriodCountSet(o2[8]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1331
-[; ;main.c: 1331:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1332
-[; ;main.c: 1332:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1333
-[; ;main.c: 1333:     TMR4_PeriodCountSet(o2[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1334
-[; ;main.c: 1334:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1336
-[; ;main.c: 1336:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> * F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1338
-[; ;main.c: 1338:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1339
-[; ;main.c: 1339:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1340
-[; ;main.c: 1340:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1341
-[; ;main.c: 1341:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1342
-[; ;main.c: 1342:     TMR4_PeriodCountSet(o2[2]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1343
-[; ;main.c: 1343:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1345
-[; ;main.c: 1345:     _delay((unsigned long)((tempo + (tempo/2) - 20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - + F7197 / F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1346
-[; ;main.c: 1346:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1347
-[; ;main.c: 1347:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1348
-[; ;main.c: 1348:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1349
-[; ;main.c: 1349:     TMR4_PeriodCountSet(o2[2]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1350
-[; ;main.c: 1350:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1352
-[; ;main.c: 1352:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1354
-[; ;main.c: 1354:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1355
-[; ;main.c: 1355:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1356
-[; ;main.c: 1356:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1358
-[; ;main.c: 1358:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1360
-[; ;main.c: 1360:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1361
-[; ;main.c: 1361:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1362
-[; ;main.c: 1362:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1364
-[; ;main.c: 1364:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1366
-[; ;main.c: 1366:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1367
-[; ;main.c: 1367:     TMR4_PeriodCountSet(o1[7]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1368
-[; ;main.c: 1368:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1370
-[; ;main.c: 1370:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1372
-[; ;main.c: 1372:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1373
-[; ;main.c: 1373:     TMR4_PeriodCountSet(o1[4]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1374
-[; ;main.c: 1374:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1375
-[; ;main.c: 1375:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1377
-[; ;main.c: 1377:     playTheme2Part3();
-[e ( _playTheme2Part3 ..  ]
-"1381
-[; ;main.c: 1381:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1382
-[; ;main.c: 1382:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1383
-[; ;main.c: 1383:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1385
-[; ;main.c: 1385:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1386
-[; ;main.c: 1386:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1387
-[; ;main.c: 1387:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1389
-[; ;main.c: 1389:     _delay((unsigned long)((tempo*2 - 20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - * F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1391
-[; ;main.c: 1391:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1392
-[; ;main.c: 1392:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1393
-[; ;main.c: 1393:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1394
-[; ;main.c: 1394:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1396
-[; ;main.c: 1396:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1398
-[; ;main.c: 1398:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1399
-[; ;main.c: 1399:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1400
-[; ;main.c: 1400:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1402
-[; ;main.c: 1402:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1403
-[; ;main.c: 1403:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1404
-[; ;main.c: 1404:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1405
-[; ;main.c: 1405:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1406
-[; ;main.c: 1406:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1408
-[; ;main.c: 1408:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1409
-[; ;main.c: 1409:     TMR2_PeriodCountSet(o3[2]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1410
-[; ;main.c: 1410:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1412
-[; ;main.c: 1412:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1413
-[; ;main.c: 1413:     TMR4_PeriodCountSet(o1[8]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1414
-[; ;main.c: 1414:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1416
-[; ;main.c: 1416:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1418
-[; ;main.c: 1418:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1419
-[; ;main.c: 1419:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1420
-[; ;main.c: 1420:     TMR2_PeriodCountSet(o3[2]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1421
-[; ;main.c: 1421:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1423
-[; ;main.c: 1423:     _delay((unsigned long)((tempo/2-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - / F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1425
 [; ;main.c: 1425:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
 "1426
-[; ;main.c: 1426:     TMR2_PeriodCountSet(o3[4]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+[; ;main.c: 1426:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1427
 [; ;main.c: 1427:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"1428
-[; ;main.c: 1428:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
 "1429
-[; ;main.c: 1429:     _delay((unsigned long)((20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1429:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
 "1430
-[; ;main.c: 1430:     TMR4_PeriodCountSet(o1[8]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 1430:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
 "1431
 [; ;main.c: 1431:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
-"1432
-[; ;main.c: 1432:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1433
+[; ;main.c: 1433:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1434
+[; ;main.c: 1434:     TMR6_PeriodCountSet(o2[6]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1435
-[; ;main.c: 1435:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1436
-[; ;main.c: 1436:     TMR2_PeriodCountSet(o3[2]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+[; ;main.c: 1435:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
 "1437
-[; ;main.c: 1437:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1438
-[; ;main.c: 1438:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1439
-[; ;main.c: 1439:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 1437:     _delay((unsigned long)((tempo*2-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - * F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1440
-[; ;main.c: 1440:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
+[; ;main.c: 1440:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "1441
-[; ;main.c: 1441:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1441:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1442
+[; ;main.c: 1442:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1443
-[; ;main.c: 1443:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1444
-[; ;main.c: 1444:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+[; ;main.c: 1443:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
 "1445
-[; ;main.c: 1445:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1446
-[; ;main.c: 1446:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
+[; ;main.c: 1445:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1447
-[; ;main.c: 1447:     TMR4_PeriodCountSet(o1[11]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 1447:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "1448
-[; ;main.c: 1448:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
+[; ;main.c: 1448:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1449
-[; ;main.c: 1449:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1449:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1450
+[; ;main.c: 1450:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
 "1451
-[; ;main.c: 1451:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
+[; ;main.c: 1451:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1452
-[; ;main.c: 1452:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
-"1453
-[; ;main.c: 1453:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1454
-[; ;main.c: 1454:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1455
-[; ;main.c: 1455:     TMR4_PeriodCountSet(o2[1]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1456
-[; ;main.c: 1456:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1458
-[; ;main.c: 1458:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1459
-[; ;main.c: 1459:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1462
-[; ;main.c: 1462:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1463
-[; ;main.c: 1463:     TMR4_PeriodCountSet(o1[11]);
+[; ;main.c: 1452:     TMR4_PeriodCountSet(o1[11]);
 [e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1464
-[; ;main.c: 1464:     TMR4_Start();
+"1453
+[; ;main.c: 1453:     TMR4_Start();
 [e ( _TMR4_Start ..  ]
+"1454
+[; ;main.c: 1454:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1455
+[; ;main.c: 1455:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1456
+[; ;main.c: 1456:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1458
+[; ;main.c: 1458:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1460
+[; ;main.c: 1460:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1461
+[; ;main.c: 1461:     TMR6_PeriodCountSet(o2[2]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1462
+[; ;main.c: 1462:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1464
+[; ;main.c: 1464:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1466
-[; ;main.c: 1466:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1466:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1467
+[; ;main.c: 1467:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1468
-[; ;main.c: 1468:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
+[; ;main.c: 1468:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
 "1469
-[; ;main.c: 1469:     TMR2_PeriodCountSet(o3[2]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+[; ;main.c: 1469:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
 "1470
-[; ;main.c: 1470:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
+[; ;main.c: 1470:     TMR4_PeriodCountSet(o2[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1471
-[; ;main.c: 1471:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1471:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1472
+[; ;main.c: 1472:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
 "1473
-[; ;main.c: 1473:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
+[; ;main.c: 1473:     TMR6_PeriodCountSet(o2[4]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1474
-[; ;main.c: 1474:     TMR2_PeriodCountSet(o3[1]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+[; ;main.c: 1474:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
 "1475
-[; ;main.c: 1475:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
+[; ;main.c: 1475:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1477
-[; ;main.c: 1477:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1479
-[; ;main.c: 1479:     TMR2_Stop();
+[; ;main.c: 1477:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"1480
-[; ;main.c: 1480:     TMR2_PeriodCountSet(o2[11]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1481
-[; ;main.c: 1481:     TMR2_Start();
+"1478
+[; ;main.c: 1478:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1479
+[; ;main.c: 1479:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
 "1482
-[; ;main.c: 1482:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1483
-[; ;main.c: 1483:     TMR4_PeriodCountSet(o1[9]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+[; ;main.c: 1482:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
 "1484
-[; ;main.c: 1484:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
+[; ;main.c: 1484:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
 "1485
-[; ;main.c: 1485:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1487
-[; ;main.c: 1487:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1488
-[; ;main.c: 1488:     TMR2_PeriodCountSet(o2[9]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1489
-[; ;main.c: 1489:     TMR2_Start();
-[e ( _TMR2_Start ..  ]
-"1491
-[; ;main.c: 1491:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1494
-[; ;main.c: 1494:     TMR2_Stop();
-[e ( _TMR2_Stop ..  ]
-"1495
-[; ;main.c: 1495:     TMR2_PeriodCountSet(o2[8]);
+[; ;main.c: 1485:     TMR2_PeriodCountSet(o2[8]);
 [e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1496
-[; ;main.c: 1496:     TMR2_Start();
+"1486
+[; ;main.c: 1486:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
-"1498
-[; ;main.c: 1498:     TMR4_Stop();
-[e ( _TMR4_Stop ..  ]
-"1499
-[; ;main.c: 1499:     TMR4_PeriodCountSet(o1[8]);
-[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
-"1500
-[; ;main.c: 1500:     TMR4_Start();
-[e ( _TMR4_Start ..  ]
-"1501
-[; ;main.c: 1501:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"1503
-[; ;main.c: 1503:     TMR2_Stop();
+"1488
+[; ;main.c: 1488:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1490
+[; ;main.c: 1490:     TMR2_Stop();
 [e ( _TMR2_Stop ..  ]
-"1504
-[; ;main.c: 1504:     TMR2_PeriodCountSet(o2[5]);
-[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 5 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
-"1505
-[; ;main.c: 1505:     TMR2_Start();
+"1491
+[; ;main.c: 1491:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1492
+[; ;main.c: 1492:     TMR2_Start();
 [e ( _TMR2_Start ..  ]
+"1494
+[; ;main.c: 1494:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1495
+[; ;main.c: 1495:     TMR6_PeriodCountSet(o1[11]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1496
+[; ;main.c: 1496:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1499
+[; ;main.c: 1499:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1501
+[; ;main.c: 1501:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1502
+[; ;main.c: 1502:     TMR2_PeriodCountSet(o2[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1503
+[; ;main.c: 1503:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1504
+[; ;main.c: 1504:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1505
+[; ;main.c: 1505:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1506
+[; ;main.c: 1506:     TMR4_PeriodCountSet(o2[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
 "1507
-[; ;main.c: 1507:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+[; ;main.c: 1507:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
 "1509
-[; ;main.c: 1509: }
+[; ;main.c: 1509:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1511
+[; ;main.c: 1511:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1512
+[; ;main.c: 1512:     TMR2_PeriodCountSet(o2[6]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1513
+[; ;main.c: 1513:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1514
+[; ;main.c: 1514:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1515
+[; ;main.c: 1515:     TMR4_PeriodCountSet(o1[6]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 6 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1516
+[; ;main.c: 1516:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1517
+[; ;main.c: 1517:     TMR6_Stop();
+[e ( _TMR6_Stop ..  ]
+"1518
+[; ;main.c: 1518:     TMR6_PeriodCountSet(o2[1]);
+[e ( _TMR6_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1519
+[; ;main.c: 1519:     TMR6_Start();
+[e ( _TMR6_Start ..  ]
+"1521
+[; ;main.c: 1521:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> * F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1523
+[; ;main.c: 1523:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1524
+[; ;main.c: 1524:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1525
+[; ;main.c: 1525:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1526
+[; ;main.c: 1526:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1527
+[; ;main.c: 1527:     TMR4_PeriodCountSet(o2[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1528
+[; ;main.c: 1528:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1530
+[; ;main.c: 1530:     _delay((unsigned long)((tempo*2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> * F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1532
+[; ;main.c: 1532:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1533
+[; ;main.c: 1533:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1534
+[; ;main.c: 1534:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1535
+[; ;main.c: 1535:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1536
+[; ;main.c: 1536:     TMR4_PeriodCountSet(o2[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1537
+[; ;main.c: 1537:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1539
+[; ;main.c: 1539:     _delay((unsigned long)((tempo + (tempo/2) - 20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - + F7197 / F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1540
+[; ;main.c: 1540:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1541
+[; ;main.c: 1541:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1542
+[; ;main.c: 1542:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1543
+[; ;main.c: 1543:     TMR4_PeriodCountSet(o2[2]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1544
+[; ;main.c: 1544:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1546
+[; ;main.c: 1546:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1548
+[; ;main.c: 1548:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1549
+[; ;main.c: 1549:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1550
+[; ;main.c: 1550:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1552
+[; ;main.c: 1552:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1554
+[; ;main.c: 1554:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1555
+[; ;main.c: 1555:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1556
+[; ;main.c: 1556:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1558
+[; ;main.c: 1558:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1560
+[; ;main.c: 1560:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1561
+[; ;main.c: 1561:     TMR4_PeriodCountSet(o1[7]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 7 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1562
+[; ;main.c: 1562:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1564
+[; ;main.c: 1564:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1566
+[; ;main.c: 1566:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1567
+[; ;main.c: 1567:     TMR4_PeriodCountSet(o1[4]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1568
+[; ;main.c: 1568:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1569
+[; ;main.c: 1569:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1571
+[; ;main.c: 1571:     playTheme2Part3();
+[e ( _playTheme2Part3 ..  ]
+"1575
+[; ;main.c: 1575:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1576
+[; ;main.c: 1576:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1577
+[; ;main.c: 1577:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1579
+[; ;main.c: 1579:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1580
+[; ;main.c: 1580:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1581
+[; ;main.c: 1581:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1583
+[; ;main.c: 1583:     _delay((unsigned long)((tempo*2 - 20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - * F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1585
+[; ;main.c: 1585:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1586
+[; ;main.c: 1586:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1587
+[; ;main.c: 1587:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1588
+[; ;main.c: 1588:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1590
+[; ;main.c: 1590:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1592
+[; ;main.c: 1592:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1593
+[; ;main.c: 1593:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1594
+[; ;main.c: 1594:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1596
+[; ;main.c: 1596:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1597
+[; ;main.c: 1597:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1598
+[; ;main.c: 1598:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1599
+[; ;main.c: 1599:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1600
+[; ;main.c: 1600:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1602
+[; ;main.c: 1602:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1603
+[; ;main.c: 1603:     TMR2_PeriodCountSet(o3[2]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1604
+[; ;main.c: 1604:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1606
+[; ;main.c: 1606:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1607
+[; ;main.c: 1607:     TMR4_PeriodCountSet(o1[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1608
+[; ;main.c: 1608:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1610
+[; ;main.c: 1610:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1612
+[; ;main.c: 1612:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1613
+[; ;main.c: 1613:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1614
+[; ;main.c: 1614:     TMR2_PeriodCountSet(o3[2]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1615
+[; ;main.c: 1615:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1617
+[; ;main.c: 1617:     _delay((unsigned long)((tempo/2-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - / F7197 -> 2 `i -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1619
+[; ;main.c: 1619:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1620
+[; ;main.c: 1620:     TMR2_PeriodCountSet(o3[4]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 4 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1621
+[; ;main.c: 1621:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1622
+[; ;main.c: 1622:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1623
+[; ;main.c: 1623:     _delay((unsigned long)((20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1624
+[; ;main.c: 1624:     TMR4_PeriodCountSet(o1[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1625
+[; ;main.c: 1625:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1626
+[; ;main.c: 1626:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1629
+[; ;main.c: 1629:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1630
+[; ;main.c: 1630:     TMR2_PeriodCountSet(o3[2]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1631
+[; ;main.c: 1631:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1632
+[; ;main.c: 1632:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1633
+[; ;main.c: 1633:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1634
+[; ;main.c: 1634:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1635
+[; ;main.c: 1635:     _delay((unsigned long)((tempo-20)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> - F7197 -> 20 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1637
+[; ;main.c: 1637:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1638
+[; ;main.c: 1638:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1639
+[; ;main.c: 1639:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1640
+[; ;main.c: 1640:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1641
+[; ;main.c: 1641:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1642
+[; ;main.c: 1642:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1643
+[; ;main.c: 1643:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1645
+[; ;main.c: 1645:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1646
+[; ;main.c: 1646:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1647
+[; ;main.c: 1647:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1648
+[; ;main.c: 1648:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1649
+[; ;main.c: 1649:     TMR4_PeriodCountSet(o2[1]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1650
+[; ;main.c: 1650:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1652
+[; ;main.c: 1652:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1653
+[; ;main.c: 1653:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1656
+[; ;main.c: 1656:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1657
+[; ;main.c: 1657:     TMR4_PeriodCountSet(o1[11]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1658
+[; ;main.c: 1658:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1660
+[; ;main.c: 1660:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1662
+[; ;main.c: 1662:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1663
+[; ;main.c: 1663:     TMR2_PeriodCountSet(o3[2]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 2 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1664
+[; ;main.c: 1664:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1665
+[; ;main.c: 1665:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1667
+[; ;main.c: 1667:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1668
+[; ;main.c: 1668:     TMR2_PeriodCountSet(o3[1]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o3 * -> -> -> 1 `i `ui `ux -> -> # *U &U _o3 `ui `ux ]
+"1669
+[; ;main.c: 1669:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1671
+[; ;main.c: 1671:     _delay((unsigned long)((tempo/2)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> / F7197 -> 2 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1673
+[; ;main.c: 1673:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1674
+[; ;main.c: 1674:     TMR2_PeriodCountSet(o2[11]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 11 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1675
+[; ;main.c: 1675:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1676
+[; ;main.c: 1676:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1677
+[; ;main.c: 1677:     TMR4_PeriodCountSet(o1[9]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1678
+[; ;main.c: 1678:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1679
+[; ;main.c: 1679:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1681
+[; ;main.c: 1681:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1682
+[; ;main.c: 1682:     TMR2_PeriodCountSet(o2[9]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 9 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1683
+[; ;main.c: 1683:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1685
+[; ;main.c: 1685:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1688
+[; ;main.c: 1688:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1689
+[; ;main.c: 1689:     TMR2_PeriodCountSet(o2[8]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1690
+[; ;main.c: 1690:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1692
+[; ;main.c: 1692:     TMR4_Stop();
+[e ( _TMR4_Stop ..  ]
+"1693
+[; ;main.c: 1693:     TMR4_PeriodCountSet(o1[8]);
+[e ( _TMR4_PeriodCountSet (1 *U + &U _o1 * -> -> -> 8 `i `ui `ux -> -> # *U &U _o1 `ui `ux ]
+"1694
+[; ;main.c: 1694:     TMR4_Start();
+[e ( _TMR4_Start ..  ]
+"1695
+[; ;main.c: 1695:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1697
+[; ;main.c: 1697:     TMR2_Stop();
+[e ( _TMR2_Stop ..  ]
+"1698
+[; ;main.c: 1698:     TMR2_PeriodCountSet(o2[5]);
+[e ( _TMR2_PeriodCountSet (1 *U + &U _o2 * -> -> -> 5 `i `ui `ux -> -> # *U &U _o2 `ui `ux ]
+"1699
+[; ;main.c: 1699:     TMR2_Start();
+[e ( _TMR2_Start ..  ]
+"1701
+[; ;main.c: 1701:     _delay((unsigned long)((tempo)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> F7197 `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"1703
+[; ;main.c: 1703: }
 [e :UE 987 ]
 }
-"1511
-[; ;main.c: 1511: i2c_host_interface_t I2C;
+"1705
+[; ;main.c: 1705: i2c_host_interface_t I2C;
 [v _I2C `S966 ~T0 @X0 1 e ]
-"1513
-[; ;main.c: 1513: uint16_t SLAVE_ADDR = 0x68;
+"1707
+[; ;main.c: 1707: uint16_t SLAVE_ADDR = 0x68;
 [v _SLAVE_ADDR `us ~T0 @X0 1 e ]
 [i _SLAVE_ADDR
 -> -> 104 `i `us
 ]
-"1514
-[; ;main.c: 1514: uint8_t SECONDS_REG = 0x00;
+"1708
+[; ;main.c: 1708: uint8_t SECONDS_REG = 0x00;
 [v _SECONDS_REG `uc ~T0 @X0 1 e ]
 [i _SECONDS_REG
 -> -> 0 `i `uc
 ]
-"1515
-[; ;main.c: 1515: uint8_t MINUTES_REG = 0x01;
+"1709
+[; ;main.c: 1709: uint8_t MINUTES_REG = 0x01;
 [v _MINUTES_REG `uc ~T0 @X0 1 e ]
 [i _MINUTES_REG
 -> -> 1 `i `uc
 ]
-"1516
-[; ;main.c: 1516: uint8_t HOURS_REG = 0x02;
+"1710
+[; ;main.c: 1710: uint8_t HOURS_REG = 0x02;
 [v _HOURS_REG `uc ~T0 @X0 1 e ]
 [i _HOURS_REG
 -> -> 2 `i `uc
 ]
-"1518
-[; ;main.c: 1518: uint8_t BCDToDecimal(uint8_t bcd) {
+"1712
+[; ;main.c: 1712: uint8_t BCDToDecimal(uint8_t bcd) {
 [v _BCDToDecimal `(uc ~T0 @X0 1 ef1`uc ]
 {
 [e :U _BCDToDecimal ]
 [v _bcd `uc ~T0 @X0 1 r1 ]
 [f ]
-"1519
-[; ;main.c: 1519:     return ((bcd / 16 * 10) + (bcd % 16));
+"1713
+[; ;main.c: 1713:     return ((bcd / 16 * 10) + (bcd % 16));
 [e ) -> + * / -> _bcd `i -> 16 `i -> 10 `i % -> _bcd `i -> 16 `i `uc ]
 [e $UE 988  ]
-"1520
-[; ;main.c: 1520: }
+"1714
+[; ;main.c: 1714: }
 [e :UE 988 ]
 }
-"1522
-[; ;main.c: 1522: void RTC_ReadTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds) {
+"1716
+[; ;main.c: 1716: void RTC_ReadTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds) {
 [v _RTC_ReadTime `(v ~T0 @X0 1 ef3`*uc`*uc`*uc ]
 {
 [e :U _RTC_ReadTime ]
@@ -4997,354 +5363,354 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _minutes `*uc ~T0 @X0 1 r2 ]
 [v _seconds `*uc ~T0 @X0 1 r3 ]
 [f ]
-"1523
-[; ;main.c: 1523:     uint8_t rtcData[3];
+"1717
+[; ;main.c: 1717:     uint8_t rtcData[3];
 [v _rtcData `uc ~T0 @X0 -> 3 `i a ]
-"1524
-[; ;main.c: 1524:     if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) {
+"1718
+[; ;main.c: 1718:     if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) {
 [e $ ! != -> ( *U . _I2C 4 (4 , , , , _SLAVE_ADDR &U _SECONDS_REG -> -> 1 `i `ui &U _rtcData -> -> 3 `i `ui `i -> 0 `i 990  ]
 {
-"1525
-[; ;main.c: 1525:         *seconds = BCDToDecimal(rtcData[0]);
+"1719
+[; ;main.c: 1719:         *seconds = BCDToDecimal(rtcData[0]);
 [e = *U _seconds ( _BCDToDecimal (1 *U + &U _rtcData * -> -> -> 0 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"1526
-[; ;main.c: 1526:         *minutes = BCDToDecimal(rtcData[1]);
+"1720
+[; ;main.c: 1720:         *minutes = BCDToDecimal(rtcData[1]);
 [e = *U _minutes ( _BCDToDecimal (1 *U + &U _rtcData * -> -> -> 1 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"1527
-[; ;main.c: 1527:         *hours = BCDToDecimal(rtcData[2]);
+"1721
+[; ;main.c: 1721:         *hours = BCDToDecimal(rtcData[2]);
 [e = *U _hours ( _BCDToDecimal (1 *U + &U _rtcData * -> -> -> 2 `i `ui `ux -> -> # *U &U _rtcData `ui `ux ]
-"1528
-[; ;main.c: 1528:     }
+"1722
+[; ;main.c: 1722:     }
 }
 [e :U 990 ]
-"1529
-[; ;main.c: 1529: }
+"1723
+[; ;main.c: 1723: }
 [e :UE 989 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"1532
-[; ;main.c: 1532: void main(void) {
+"1726
+[; ;main.c: 1726: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"1534
-[; ;main.c: 1534:     SYSTEM_Initialize();
+"1728
+[; ;main.c: 1728:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"1537
-[; ;main.c: 1537:     PIE0bits.IOCIE = 1;
+"1731
+[; ;main.c: 1731:     PIE0bits.IOCIE = 1;
 [e = . . _PIE0bits 0 2 -> -> 1 `i `uc ]
-"1538
-[; ;main.c: 1538:     PIR0bits.IOCIF = 0;
+"1732
+[; ;main.c: 1732:     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1539
-[; ;main.c: 1539:     PIR0bits.INTF = 0;
+"1733
+[; ;main.c: 1733:     PIR0bits.INTF = 0;
 [e = . . _PIR0bits 0 0 -> -> 0 `i `uc ]
-"1541
-[; ;main.c: 1541:     playTheme2();
+"1735
+[; ;main.c: 1735:     playTheme2();
 [e ( _playTheme2 ..  ]
-"1542
-[; ;main.c: 1542:     playTheme1();
+"1736
+[; ;main.c: 1736:     playTheme1();
 [e ( _playTheme1 ..  ]
-"1560
-[; ;main.c: 1560: }
+"1754
+[; ;main.c: 1754: }
 [e :UE 991 ]
 }
 [v $root$_ISR `(v ~T0 @X0 0 e ]
-"1566
-[; ;main.c: 1566: void __attribute__((picinterrupt(("")))) ISR(){
+"1760
+[; ;main.c: 1760: void __attribute__((picinterrupt(("")))) ISR(){
 [v _ISR `(v ~T1 @X0 1 ef ]
 {
 [e :U _ISR ]
 [f ]
-"1567
-[; ;main.c: 1567:     if(PIR0bits.IOCIF){
+"1761
+[; ;main.c: 1761:     if(PIR0bits.IOCIF){
 [e $ ! != -> . . _PIR0bits 0 2 `i -> 0 `i 993  ]
 {
-"1568
-[; ;main.c: 1568:         if(IOCAPbits.IOCAP0){
+"1762
+[; ;main.c: 1762:         if(IOCAPbits.IOCAP0){
 [e $ ! != -> . . _IOCAPbits 0 0 `i -> 0 `i 994  ]
 {
-"1569
-[; ;main.c: 1569:             PIR0bits.IOCIF = 0;
+"1763
+[; ;main.c: 1763:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1570
-[; ;main.c: 1570:         }
+"1764
+[; ;main.c: 1764:         }
 }
 [e :U 994 ]
-"1571
-[; ;main.c: 1571:         if(IOCAPbits.IOCAP1){
+"1765
+[; ;main.c: 1765:         if(IOCAPbits.IOCAP1){
 [e $ ! != -> . . _IOCAPbits 0 1 `i -> 0 `i 995  ]
 {
-"1572
-[; ;main.c: 1572:             PIR0bits.IOCIF = 0;
+"1766
+[; ;main.c: 1766:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1573
-[; ;main.c: 1573:         }
+"1767
+[; ;main.c: 1767:         }
 }
 [e :U 995 ]
-"1574
-[; ;main.c: 1574:         if(IOCAPbits.IOCAP2){
+"1768
+[; ;main.c: 1768:         if(IOCAPbits.IOCAP2){
 [e $ ! != -> . . _IOCAPbits 0 2 `i -> 0 `i 996  ]
 {
-"1575
-[; ;main.c: 1575:             PIR0bits.IOCIF = 0;
+"1769
+[; ;main.c: 1769:             PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1576
-[; ;main.c: 1576:         }
+"1770
+[; ;main.c: 1770:         }
 }
 [e :U 996 ]
-"1578
-[; ;main.c: 1578:         if(PORTAbits.RA0 == 1){
+"1772
+[; ;main.c: 1772:         if(PORTAbits.RA0 == 1){
 [e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 997  ]
 {
-"1580
-[; ;main.c: 1580:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+"1774
+[; ;main.c: 1774:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
 [e $ ! && == -> . . _PORTCbits 0 4 `i -> 1 `i == -> . . _PORTCbits 0 6 `i -> 1 `i 998  ]
 {
-"1581
-[; ;main.c: 1581:                 playTheme1();
+"1775
+[; ;main.c: 1775:                 playTheme1();
 [e ( _playTheme1 ..  ]
-"1583
-[; ;main.c: 1583:                 if(IOCBPbits.IOCBP5){
+"1777
+[; ;main.c: 1777:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 999  ]
 {
-"1584
-[; ;main.c: 1584:                     PIR0bits.IOCIF = 0;
+"1778
+[; ;main.c: 1778:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1585
-[; ;main.c: 1585:                 }
+"1779
+[; ;main.c: 1779:                 }
 }
 [e :U 999 ]
-"1586
-[; ;main.c: 1586:                 if(IOCBPbits.IOCBP7){
+"1780
+[; ;main.c: 1780:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1000  ]
 {
-"1587
-[; ;main.c: 1587:                     PIR0bits.IOCIF = 0;
+"1781
+[; ;main.c: 1781:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1588
-[; ;main.c: 1588:                 }
+"1782
+[; ;main.c: 1782:                 }
 }
 [e :U 1000 ]
-"1589
-[; ;main.c: 1589:             }
+"1783
+[; ;main.c: 1783:             }
 }
 [e :U 998 ]
-"1590
-[; ;main.c: 1590:             if(PORTCbits.RC4 == 1){
+"1784
+[; ;main.c: 1784:             if(PORTCbits.RC4 == 1){
 [e $ ! == -> . . _PORTCbits 0 4 `i -> 1 `i 1001  ]
 {
-"1591
-[; ;main.c: 1591:                 if(IOCBPbits.IOCBP5){
+"1785
+[; ;main.c: 1785:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1002  ]
 {
-"1592
-[; ;main.c: 1592:                     PIR0bits.IOCIF = 0;
+"1786
+[; ;main.c: 1786:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1593
-[; ;main.c: 1593:                 }
+"1787
+[; ;main.c: 1787:                 }
 }
 [e :U 1002 ]
-"1594
-[; ;main.c: 1594:                 if(IOCBPbits.IOCBP7){
+"1788
+[; ;main.c: 1788:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1003  ]
 {
-"1595
-[; ;main.c: 1595:                     PIR0bits.IOCIF = 0;
+"1789
+[; ;main.c: 1789:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1596
-[; ;main.c: 1596:                 }
+"1790
+[; ;main.c: 1790:                 }
 }
 [e :U 1003 ]
-"1597
-[; ;main.c: 1597:             }
+"1791
+[; ;main.c: 1791:             }
 }
 [e :U 1001 ]
-"1598
-[; ;main.c: 1598:             if(PORTCbits.RC6 == 1){
+"1792
+[; ;main.c: 1792:             if(PORTCbits.RC6 == 1){
 [e $ ! == -> . . _PORTCbits 0 6 `i -> 1 `i 1004  ]
 {
-"1599
-[; ;main.c: 1599:                 if(IOCBPbits.IOCBP5){
+"1793
+[; ;main.c: 1793:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1005  ]
 {
-"1601
-[; ;main.c: 1601:                     PIR0bits.IOCIF = 0;
+"1795
+[; ;main.c: 1795:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1602
-[; ;main.c: 1602:                 }
+"1796
+[; ;main.c: 1796:                 }
 }
 [e :U 1005 ]
-"1603
-[; ;main.c: 1603:                 if(IOCBPbits.IOCBP7){
+"1797
+[; ;main.c: 1797:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1006  ]
 {
-"1605
-[; ;main.c: 1605:                     PIR0bits.IOCIF = 0;
+"1799
+[; ;main.c: 1799:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1606
-[; ;main.c: 1606:                 }
+"1800
+[; ;main.c: 1800:                 }
 }
 [e :U 1006 ]
-"1607
-[; ;main.c: 1607:             }
+"1801
+[; ;main.c: 1801:             }
 }
 [e :U 1004 ]
-"1609
-[; ;main.c: 1609:             if(IOCBPbits.IOCBP5){
+"1803
+[; ;main.c: 1803:             if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1007  ]
 {
-"1610
-[; ;main.c: 1610:                 PIR0bits.IOCIF = 0;
+"1804
+[; ;main.c: 1804:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1611
-[; ;main.c: 1611:             }
+"1805
+[; ;main.c: 1805:             }
 }
 [e :U 1007 ]
-"1612
-[; ;main.c: 1612:             if(IOCBPbits.IOCBP7){
+"1806
+[; ;main.c: 1806:             if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1008  ]
 {
-"1613
-[; ;main.c: 1613:                 PIR0bits.IOCIF = 0;
+"1807
+[; ;main.c: 1807:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1614
-[; ;main.c: 1614:             }
+"1808
+[; ;main.c: 1808:             }
 }
 [e :U 1008 ]
-"1615
-[; ;main.c: 1615:         }
+"1809
+[; ;main.c: 1809:         }
 }
 [e :U 997 ]
-"1617
-[; ;main.c: 1617:         if(PORTAbits.RA1 == 1 || PORTAbits.RA2 == 1){
+"1811
+[; ;main.c: 1811:         if(PORTAbits.RA1 == 1 || PORTAbits.RA2 == 1){
 [e $ ! || == -> . . _PORTAbits 0 1 `i -> 1 `i == -> . . _PORTAbits 0 2 `i -> 1 `i 1009  ]
 {
-"1618
-[; ;main.c: 1618:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
+"1812
+[; ;main.c: 1812:             if(PORTCbits.RC4 == 1 && PORTCbits.RC6 == 1){
 [e $ ! && == -> . . _PORTCbits 0 4 `i -> 1 `i == -> . . _PORTCbits 0 6 `i -> 1 `i 1010  ]
 {
-"1619
-[; ;main.c: 1619:                 if(IOCBPbits.IOCBP5){
+"1813
+[; ;main.c: 1813:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1011  ]
 {
-"1620
-[; ;main.c: 1620:                     PIR0bits.IOCIF = 0;
+"1814
+[; ;main.c: 1814:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1621
-[; ;main.c: 1621:                 }
+"1815
+[; ;main.c: 1815:                 }
 }
 [e :U 1011 ]
-"1622
-[; ;main.c: 1622:                 if(IOCBPbits.IOCBP7){
+"1816
+[; ;main.c: 1816:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1012  ]
 {
-"1623
-[; ;main.c: 1623:                     PIR0bits.IOCIF = 0;
+"1817
+[; ;main.c: 1817:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1625
-[; ;main.c: 1625:                 }
+"1819
+[; ;main.c: 1819:                 }
 }
 [e :U 1012 ]
-"1626
-[; ;main.c: 1626:             }
+"1820
+[; ;main.c: 1820:             }
 }
 [e :U 1010 ]
-"1627
-[; ;main.c: 1627:             if(PORTCbits.RC4 == 1){
+"1821
+[; ;main.c: 1821:             if(PORTCbits.RC4 == 1){
 [e $ ! == -> . . _PORTCbits 0 4 `i -> 1 `i 1013  ]
 {
-"1628
-[; ;main.c: 1628:                 if(IOCBPbits.IOCBP5){
+"1822
+[; ;main.c: 1822:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1014  ]
 {
-"1629
-[; ;main.c: 1629:                     PIR0bits.IOCIF = 0;
+"1823
+[; ;main.c: 1823:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1630
-[; ;main.c: 1630:                 }
+"1824
+[; ;main.c: 1824:                 }
 }
 [e :U 1014 ]
-"1631
-[; ;main.c: 1631:                 if(IOCBPbits.IOCBP7){
+"1825
+[; ;main.c: 1825:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1015  ]
 {
-"1632
-[; ;main.c: 1632:                     PIR0bits.IOCIF = 0;
+"1826
+[; ;main.c: 1826:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1633
-[; ;main.c: 1633:                 }
+"1827
+[; ;main.c: 1827:                 }
 }
 [e :U 1015 ]
-"1634
-[; ;main.c: 1634:             }
+"1828
+[; ;main.c: 1828:             }
 }
 [e :U 1013 ]
-"1635
-[; ;main.c: 1635:             if(PORTCbits.RC6 == 1){
+"1829
+[; ;main.c: 1829:             if(PORTCbits.RC6 == 1){
 [e $ ! == -> . . _PORTCbits 0 6 `i -> 1 `i 1016  ]
 {
-"1636
-[; ;main.c: 1636:                 if(IOCBPbits.IOCBP5){
+"1830
+[; ;main.c: 1830:                 if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1017  ]
 {
-"1637
-[; ;main.c: 1637:                     PIR0bits.IOCIF = 0;
+"1831
+[; ;main.c: 1831:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1638
-[; ;main.c: 1638:                 }
+"1832
+[; ;main.c: 1832:                 }
 }
 [e :U 1017 ]
-"1639
-[; ;main.c: 1639:                 if(IOCBPbits.IOCBP7){
+"1833
+[; ;main.c: 1833:                 if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1018  ]
 {
-"1640
-[; ;main.c: 1640:                     PIR0bits.IOCIF = 0;
+"1834
+[; ;main.c: 1834:                     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1641
-[; ;main.c: 1641:                 }
+"1835
+[; ;main.c: 1835:                 }
 }
 [e :U 1018 ]
-"1642
-[; ;main.c: 1642:             }
+"1836
+[; ;main.c: 1836:             }
 }
 [e :U 1016 ]
-"1644
-[; ;main.c: 1644:             if(IOCBPbits.IOCBP5){
+"1838
+[; ;main.c: 1838:             if(IOCBPbits.IOCBP5){
 [e $ ! != -> . . _IOCBPbits 0 2 `i -> 0 `i 1019  ]
 {
-"1645
-[; ;main.c: 1645:                 PIR0bits.IOCIF = 0;
+"1839
+[; ;main.c: 1839:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1646
-[; ;main.c: 1646:             }
+"1840
+[; ;main.c: 1840:             }
 }
 [e :U 1019 ]
-"1647
-[; ;main.c: 1647:             if(IOCBPbits.IOCBP7){
+"1841
+[; ;main.c: 1841:             if(IOCBPbits.IOCBP7){
 [e $ ! != -> . . _IOCBPbits 0 4 `i -> 0 `i 1020  ]
 {
-"1648
-[; ;main.c: 1648:                 PIR0bits.IOCIF = 0;
+"1842
+[; ;main.c: 1842:                 PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1649
-[; ;main.c: 1649:             }
+"1843
+[; ;main.c: 1843:             }
 }
 [e :U 1020 ]
-"1650
-[; ;main.c: 1650:         }
+"1844
+[; ;main.c: 1844:         }
 }
 [e :U 1009 ]
-"1651
-[; ;main.c: 1651:     }
+"1845
+[; ;main.c: 1845:     }
 }
 [e :U 993 ]
-"1654
-[; ;main.c: 1654:     PIR0bits.IOCIF = 0;
+"1848
+[; ;main.c: 1848:     PIR0bits.IOCIF = 0;
 [e = . . _PIR0bits 0 2 -> -> 0 `i `uc ]
-"1655
-[; ;main.c: 1655: }
+"1849
+[; ;main.c: 1849: }
 [e :UE 992 ]
 }
