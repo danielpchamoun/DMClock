@@ -1403,7 +1403,7 @@ void playTheme2(void){
     size_t o3[] = {62,58,56,52,49,46,44,41,39,37,35,33};
 
     const int tempo = 300;
-    /*
+
     //verse 1
     playTheme2Part1();
     __delay_ms(20);
@@ -1421,7 +1421,7 @@ void playTheme2(void){
     //verse 3
     playTheme2Part3();
 
-    */
+
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
     TMR2_Start();
@@ -1515,10 +1515,28 @@ void playTheme2(void){
     TMR4_PeriodCountSet(o1[6]); //F
     TMR4_Start();
     TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();        
     TMR6_PeriodCountSet(o2[1]); //C
     TMR6_Start();
     
-    __delay_ms(tempo*2);
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
@@ -1526,8 +1544,22 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o2[4]); //D#
     TMR4_Start();
-    
-    __delay_ms(tempo*2);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();
+    __delay_ms(tempo/2);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();    
+    __delay_ms(tempo/2);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[4]); //D#
+    TMR6_Start();    
+    __delay_ms(tempo/2);
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();    
+    __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
@@ -1535,41 +1567,67 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o2[2]); //C#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();
+    __delay_ms(tempo/2);
+
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();    
     
-    __delay_ms(tempo + (tempo/2) - 20);
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
+    
+    __delay_ms((tempo/2) - 20);
     TMR2_Stop(); 
     TMR4_Stop();
     __delay_ms(20);
     TMR4_PeriodCountSet(o2[2]); //C#
     TMR4_Start();
-    
-    __delay_ms(tempo/2);
-    
-    TMR4_Stop();
-    TMR4_PeriodCountSet(o1[11]); //A#
-    TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();
     
     __delay_ms(tempo/2);
     
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[11]); //A#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[1]); //C
+    TMR6_Start();
+    
+    
+    __delay_ms(tempo/2-20);
+    
+
+    TMR4_Stop();
+    __delay_ms(20);
+    TMR4_PeriodCountSet(o1[9]); //G#
+    TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();
     
     __delay_ms(tempo/2);
     
-    TMR4_Stop();
-    TMR4_PeriodCountSet(o1[7]); //F#
-    TMR4_Start();
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[11]); //A#
+    TMR6_Start();
     
-    __delay_ms(tempo/2);
-    
-    TMR4_Stop();
-    TMR4_PeriodCountSet(o1[4]); //D#
-    TMR4_Start();
     __delay_ms(tempo/2);
         
     playTheme2Part3();
-    
     
     
     TMR2_Stop();        
@@ -1579,13 +1637,21 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+
+    TMR6_Stop();        
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
     
     __delay_ms(tempo*2 - 20);
     
     TMR2_Stop();   
+    TMR6_Stop();
     __delay_ms(20);
     TMR2_PeriodCountSet(o2[11]); //A#.
     TMR2_Start();
+    
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
     
     __delay_ms(tempo-20);
     
@@ -1597,6 +1663,10 @@ void playTheme2(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();    
+    
     __delay_ms(tempo);
     
     TMR2_Stop();        
@@ -1606,13 +1676,26 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[8]); //G
     TMR4_Start();
-
-    __delay_ms(tempo-20);
+    
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[9]); //G#
+    TMR6_Start();    
+    
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[11]); //A#
+    TMR6_Start();    
+    __delay_ms(tempo/2-20);
     
     TMR2_Stop();
     __delay_ms(20);
     TMR2_PeriodCountSet(o3[2]); //C#.
     TMR2_Start();
+    
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
     
     __delay_ms(tempo/2-20);
     
@@ -1623,8 +1706,11 @@ void playTheme2(void){
     __delay_ms(20);
     TMR4_PeriodCountSet(o1[8]); //G
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start();
+    
     __delay_ms(tempo/2);
-
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[2]); //C#.
@@ -1632,7 +1718,17 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[9]); //G#
     TMR4_Start();
-    __delay_ms(tempo-20);
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[2]); //C#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+    
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
+    
+    __delay_ms(tempo/2-20);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
@@ -1640,7 +1736,16 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
-    __delay_ms(tempo);
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o1[11]); //A#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[2]); //C#
+    TMR6_Start();
+    
+    __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[1]); //C.
@@ -1648,50 +1753,74 @@ void playTheme2(void){
     TMR4_Stop();
     TMR4_PeriodCountSet(o2[1]); //C
     TMR4_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();
     
-    __delay_ms(tempo);
-    __delay_ms(tempo);   
-
+    __delay_ms(tempo*2);
             
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[11]); //A#
     TMR4_Start();
-    
-    __delay_ms(tempo);
+
+    __delay_ms(tempo);    
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[2]); //C#.
     TMR2_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[8]); //G
+    TMR6_Start(); 
+    
     __delay_ms(tempo/2);
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o3[1]); //C.
     TMR2_Start();
+    TMR6_Stop();
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();    
     
-    __delay_ms(tempo/2);
+    __delay_ms(tempo/2-20);
 
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[11]); //A#.
     TMR2_Start();
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[9]); //G#
-    TMR4_Start();
+    TMR4_Start();  
+    TMR6_Stop();
+    __delay_ms(20);
+    TMR6_PeriodCountSet(o2[6]); //F
+    TMR6_Start();    
+
     __delay_ms(tempo);
-    
+
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[9]); //G#.
     TMR2_Start();
+    TMR6_Stop();    
+    TMR6_PeriodCountSet(o2[5]); //E
+    TMR6_Start();    
 
-    __delay_ms(tempo);
+    __delay_ms(tempo/2);
+
+    TMR6_Stop();    
+    TMR6_PeriodCountSet(o2[3]); //D
+    TMR6_Start();  
     
+    __delay_ms(tempo/2);    
     
     TMR2_Stop();        
     TMR2_PeriodCountSet(o2[8]); //G.
     TMR2_Start();
-
     TMR4_Stop();
     TMR4_PeriodCountSet(o1[8]); //G
     TMR4_Start();
+    TMR6_Stop();    
+    TMR6_PeriodCountSet(o2[5]); //E
+    TMR6_Start();    
+
     __delay_ms(tempo);
     
     TMR2_Stop();        
@@ -1699,7 +1828,6 @@ void playTheme2(void){
     TMR2_Start();
 
     __delay_ms(tempo);
-    
 }
 
 i2c_host_interface_t I2C;
