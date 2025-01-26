@@ -8,10 +8,10 @@
                      displayName="MCC Generated Files"
                      projectFiles="true">
         <logicalFolder name="i2c_host" displayName="i2c_host" projectFiles="true">
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
+          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/mssp1.h</itemPath>
           <itemPath>mcc_generated_files/i2c_host/i2c_host_interface.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_types.h</itemPath>
-          <itemPath>mcc_generated_files/i2c_host/i2c_host_event_types.h</itemPath>
         </logicalFolder>
         <logicalFolder name="pwm" displayName="pwm" projectFiles="true">
           <itemPath>mcc_generated_files/pwm/pwm5.h</itemPath>
@@ -90,8 +90,8 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.46</languageToolchainVersion>
-        <platform>3</platform>
+        <languageToolchainVersion>2.50</languageToolchainVersion>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC16F1xxxx_DFP" vendor="Microchip" version="1.24.387"/>

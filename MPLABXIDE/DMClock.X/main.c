@@ -6,9 +6,9 @@
  */
 
 #include <xc.h>
-#include "mcc_generated_files\system\system.h"
-#include "mcc_generated_files\i2c_host\i2c_host_types.h"
-#include "mcc_generated_files\i2c_host\mssp1.h"
+#include "mcc_generated_files/system/system.h"
+#include "mcc_generated_files/i2c_host/i2c_host_types.h"
+#include "mcc_generated_files/i2c_host/mssp1.h"
 
 #define _XTAL_FREQ 32000000
 
@@ -1832,8 +1832,8 @@ void playTheme2(void){
 
 i2c_host_interface_t I2C;
 
-uint16_t SLAVE_ADDR = 0x68;
-uint8_t SECONDS_REG = 0x00;
+#define SLAVE_ADDR 0b1101000
+uint8_t SECONDS_REG = 0b00;
 uint8_t MINUTES_REG = 0x01;
 uint8_t HOURS_REG = 0x02;
 
@@ -1843,11 +1843,13 @@ uint8_t BCDToDecimal(uint8_t bcd) {
 
 void RTC_ReadTime(uint8_t *hours, uint8_t *minutes, uint8_t *seconds) {
     uint8_t rtcData[3];
-    if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) {
+    if (I2C.WriteRead(SLAVE_ADDR, &SECONDS_REG, 1, rtcData, 3)) { //issue with WriteRead!!!
         *seconds = BCDToDecimal(rtcData[0]);
         *minutes = BCDToDecimal(rtcData[1]);
         *hours   = BCDToDecimal(rtcData[2]);
     }
+     
+    *seconds = 1;
 }
 
 
@@ -1855,30 +1857,39 @@ void main(void) {
     // Initialize PWM, I/O pins, and I2C modules
     SYSTEM_Initialize();
  
+    INTERRUPT_GlobalInterruptEnable();
+    INTERRUPT_PeripheralInterruptEnable();
+    
     //interrupt settings
     PIE0bits.IOCIE = 1; //enable I/O change interrupt flag
     PIR0bits.IOCIF = 0; //clearing I/O change interrupt flag program starts
     PIR0bits.INTF = 0; //clearing interrupt flag before program starts
     
-    playTheme2();    
-    playTheme1();
 
-    /*
+    
     while(1){
         uint8_t hours;
         uint8_t minutes;
         uint8_t seconds;
-        RTC_ReadTime(&hours,&minutes,&seconds);
-        if(seconds == 0){
-            TMR4_Stop();
-            TMR4_PeriodCountSet(127);
+        RTC_ReadTime(&hours,&minutes,&seconds); //fix this!
+        
+        TMR2_Stop();
+        TMR4_Stop();
+        TMR6_Stop();
+        
+        if(seconds == 2||seconds == 3){
+        
+            
+            TMR4_PeriodCountSet(60);
             TMR4_Start();
             __delay_ms(50);
+
             TMR4_Stop();
+            __delay_ms(50);
         }
-        __delay_ms(50);
-    }    
-      */
+    } 
+       
+    
 }
 
 
